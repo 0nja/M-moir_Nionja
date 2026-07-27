@@ -180,7 +180,7 @@ function openDetail(id) {
     el.download.href = URL.createObjectURL(new Blob([md], { type: 'text/markdown' }));
     el.download.download = `${s.id}.design.md`;
 
-    const src = s.demo ? `public${s.demo}/index.html` : `preview/index.html?id=${s.id}`;
+    const src = s.demo ? `.${s.demo}/index.html` : `preview/index.html?id=${s.id}`;
     el.frame.src = src;
     el.url.textContent = `designhub.ai/${s.category.id}/${s.id}`;
 

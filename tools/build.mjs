@@ -49,7 +49,7 @@ for (const category of categories) {
             mode: style.mode,
             tags: style.tags,
             path: rel,
-            preview: style.demo ? `public${style.demo}/index.html` : `preview/index.html?id=${style.id}`,
+            preview: style.demo ? `.${style.demo}/index.html` : `preview/index.html?id=${style.id}`,
         });
 
         count += 1;

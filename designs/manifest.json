@@ -12,7 +12,7 @@
       "sans-serif"
     ],
     "path": "designs/saas-tech/modern-saas.md",
-    "preview": "public/demos/modern-saas-01/index.html"
+    "preview": "./demos/modern-saas-01/index.html"
   },
   {
     "id": "dev-tool-dark",
@@ -177,7 +177,7 @@
       "experimental"
     ],
     "path": "designs/minimal-editorial/brutalist-raw.md",
-    "preview": "public/demos/brutalist-01/index.html"
+    "preview": "./demos/brutalist-01/index.html"
   },
   {
     "id": "neo-brutalism-pop",
@@ -462,7 +462,7 @@
       "modern"
     ],
     "path": "designs/ui-trends/glassmorphism.md",
-    "preview": "public/demos/glassmorphism-01/index.html"
+    "preview": "./demos/glassmorphism-01/index.html"
   },
   {
     "id": "bento-grid",
