@@ -1,14 +1,1502 @@
 [
   {
-    "id": "modern-saas-01",
-    "path": "designs/saas-tech/modern-saas-01.md"
+    "id": "modern-saas",
+    "name": "Modern SaaS Landing",
+    "category": "saas-tech",
+    "mode": "light",
+    "tags": [
+      "light",
+      "minimal",
+      "spacious",
+      "professional",
+      "sans-serif"
+    ],
+    "path": "designs/saas-tech/modern-saas.md",
+    "preview": "public/demos/modern-saas-01/index.html"
   },
   {
-    "id": "brutalist-01",
-    "path": "designs/minimal-editorial/brutalist-01.md"
+    "id": "dev-tool-dark",
+    "name": "Dark Developer Tool",
+    "category": "saas-tech",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "dense",
+      "mono",
+      "technical",
+      "developer"
+    ],
+    "path": "designs/saas-tech/dev-tool-dark.md",
+    "preview": "preview/index.html?id=dev-tool-dark"
   },
   {
-    "id": "glassmorphism-01",
-    "path": "designs/tendances-ui/glassmorphism-01.md"
+    "id": "linear-refined",
+    "name": "Refined Product (Linear-like)",
+    "category": "saas-tech",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "gradients",
+      "premium",
+      "minimal",
+      "sans-serif"
+    ],
+    "path": "designs/saas-tech/linear-refined.md",
+    "preview": "preview/index.html?id=linear-refined"
+  },
+  {
+    "id": "ai-startup-glow",
+    "name": "AI Startup Glow",
+    "category": "saas-tech",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "gradients",
+      "glow",
+      "ai",
+      "bold"
+    ],
+    "path": "designs/saas-tech/ai-startup-glow.md",
+    "preview": "preview/index.html?id=ai-startup-glow"
+  },
+  {
+    "id": "api-console",
+    "name": "API & Console Product",
+    "category": "saas-tech",
+    "mode": "light",
+    "tags": [
+      "light",
+      "dense",
+      "mono",
+      "developer",
+      "technical"
+    ],
+    "path": "designs/saas-tech/api-console.md",
+    "preview": "preview/index.html?id=api-console"
+  },
+  {
+    "id": "enterprise-cloud",
+    "name": "Enterprise Cloud",
+    "category": "saas-tech",
+    "mode": "light",
+    "tags": [
+      "light",
+      "professional",
+      "corporate",
+      "structured",
+      "sans-serif"
+    ],
+    "path": "designs/saas-tech/enterprise-cloud.md",
+    "preview": "preview/index.html?id=enterprise-cloud"
+  },
+  {
+    "id": "fintech-app",
+    "name": "Fintech Mobile App",
+    "category": "saas-tech",
+    "mode": "light",
+    "tags": [
+      "light",
+      "friendly",
+      "mobile",
+      "finance",
+      "rounded"
+    ],
+    "path": "designs/saas-tech/fintech-app.md",
+    "preview": "preview/index.html?id=fintech-app"
+  },
+  {
+    "id": "open-source-repo",
+    "name": "Open Source Project",
+    "category": "saas-tech",
+    "mode": "light",
+    "tags": [
+      "light",
+      "neutral",
+      "developer",
+      "minimal",
+      "community"
+    ],
+    "path": "designs/saas-tech/open-source-repo.md",
+    "preview": "preview/index.html?id=open-source-repo"
+  },
+  {
+    "id": "conversion-pricing",
+    "name": "Conversion-first Pricing",
+    "category": "saas-tech",
+    "mode": "light",
+    "tags": [
+      "light",
+      "warm",
+      "commercial",
+      "bold",
+      "sans-serif"
+    ],
+    "path": "designs/saas-tech/conversion-pricing.md",
+    "preview": "preview/index.html?id=conversion-pricing"
+  },
+  {
+    "id": "nocode-playful",
+    "name": "No-code Playful",
+    "category": "saas-tech",
+    "mode": "light",
+    "tags": [
+      "light",
+      "playful",
+      "pastel",
+      "rounded",
+      "friendly"
+    ],
+    "path": "designs/saas-tech/nocode-playful.md",
+    "preview": "preview/index.html?id=nocode-playful"
+  },
+  {
+    "id": "swiss-grid",
+    "name": "Swiss International Style",
+    "category": "minimal-editorial",
+    "mode": "light",
+    "tags": [
+      "light",
+      "minimal",
+      "grid",
+      "typographic",
+      "monochrome"
+    ],
+    "path": "designs/minimal-editorial/swiss-grid.md",
+    "preview": "preview/index.html?id=swiss-grid"
+  },
+  {
+    "id": "brutalist-raw",
+    "name": "Brutalist Raw",
+    "category": "minimal-editorial",
+    "mode": "light",
+    "tags": [
+      "light",
+      "brutalism",
+      "monochrome",
+      "bold",
+      "experimental"
+    ],
+    "path": "designs/minimal-editorial/brutalist-raw.md",
+    "preview": "public/demos/brutalist-01/index.html"
+  },
+  {
+    "id": "neo-brutalism-pop",
+    "name": "Neo-Brutalism Pop",
+    "category": "minimal-editorial",
+    "mode": "light",
+    "tags": [
+      "light",
+      "playful",
+      "bold",
+      "high-contrast",
+      "pop"
+    ],
+    "path": "designs/minimal-editorial/neo-brutalism-pop.md",
+    "preview": "preview/index.html?id=neo-brutalism-pop"
+  },
+  {
+    "id": "serif-editorial",
+    "name": "Serif Editorial Magazine",
+    "category": "minimal-editorial",
+    "mode": "light",
+    "tags": [
+      "light",
+      "serif",
+      "editorial",
+      "elegant",
+      "reading"
+    ],
+    "path": "designs/minimal-editorial/serif-editorial.md",
+    "preview": "preview/index.html?id=serif-editorial"
+  },
+  {
+    "id": "mono-minimal",
+    "name": "Monospace Minimal",
+    "category": "minimal-editorial",
+    "mode": "light",
+    "tags": [
+      "light",
+      "mono",
+      "minimal",
+      "text-only",
+      "calm"
+    ],
+    "path": "designs/minimal-editorial/mono-minimal.md",
+    "preview": "preview/index.html?id=mono-minimal"
+  },
+  {
+    "id": "japanese-ma",
+    "name": "Japanese Ma (vide et respiration)",
+    "category": "minimal-editorial",
+    "mode": "light",
+    "tags": [
+      "light",
+      "minimal",
+      "spacious",
+      "calm",
+      "luxury"
+    ],
+    "path": "designs/minimal-editorial/japanese-ma.md",
+    "preview": "preview/index.html?id=japanese-ma"
+  },
+  {
+    "id": "type-poster",
+    "name": "Typographic Poster",
+    "category": "minimal-editorial",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "display",
+      "bold",
+      "typographic",
+      "poster"
+    ],
+    "path": "designs/minimal-editorial/type-poster.md",
+    "preview": "preview/index.html?id=type-poster"
+  },
+  {
+    "id": "newspaper-broadsheet",
+    "name": "Newspaper Broadsheet",
+    "category": "minimal-editorial",
+    "mode": "light",
+    "tags": [
+      "light",
+      "serif",
+      "dense",
+      "editorial",
+      "classic"
+    ],
+    "path": "designs/minimal-editorial/newspaper-broadsheet.md",
+    "preview": "preview/index.html?id=newspaper-broadsheet"
+  },
+  {
+    "id": "bauhaus-geometric",
+    "name": "Bauhaus Geometric",
+    "category": "minimal-editorial",
+    "mode": "light",
+    "tags": [
+      "light",
+      "geometric",
+      "bold",
+      "primary-colors",
+      "graphic"
+    ],
+    "path": "designs/minimal-editorial/bauhaus-geometric.md",
+    "preview": "preview/index.html?id=bauhaus-geometric"
+  },
+  {
+    "id": "ultra-minimal-one-page",
+    "name": "Ultra Minimal One-page",
+    "category": "minimal-editorial",
+    "mode": "light",
+    "tags": [
+      "light",
+      "minimal",
+      "text-only",
+      "calm",
+      "one-page"
+    ],
+    "path": "designs/minimal-editorial/ultra-minimal-one-page.md",
+    "preview": "preview/index.html?id=ultra-minimal-one-page"
+  },
+  {
+    "id": "y2k-chrome",
+    "name": "Y2K Chrome",
+    "category": "retro-nostalgia",
+    "mode": "light",
+    "tags": [
+      "light",
+      "y2k",
+      "gradients",
+      "glossy",
+      "retro"
+    ],
+    "path": "designs/retro-nostalgia/y2k-chrome.md",
+    "preview": "preview/index.html?id=y2k-chrome"
+  },
+  {
+    "id": "vaporwave-sunset",
+    "name": "Vaporwave Sunset",
+    "category": "retro-nostalgia",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "neon",
+      "gradients",
+      "retro",
+      "80s"
+    ],
+    "path": "designs/retro-nostalgia/vaporwave-sunset.md",
+    "preview": "preview/index.html?id=vaporwave-sunset"
+  },
+  {
+    "id": "web-90s",
+    "name": "90s Web Nostalgia",
+    "category": "retro-nostalgia",
+    "mode": "light",
+    "tags": [
+      "light",
+      "retro",
+      "90s",
+      "playful",
+      "chaotic"
+    ],
+    "path": "designs/retro-nostalgia/web-90s.md",
+    "preview": "preview/index.html?id=web-90s"
+  },
+  {
+    "id": "memphis-pattern",
+    "name": "Memphis Design",
+    "category": "retro-nostalgia",
+    "mode": "light",
+    "tags": [
+      "light",
+      "playful",
+      "pattern",
+      "80s",
+      "colorful"
+    ],
+    "path": "designs/retro-nostalgia/memphis-pattern.md",
+    "preview": "preview/index.html?id=memphis-pattern"
+  },
+  {
+    "id": "crt-terminal",
+    "name": "CRT Terminal",
+    "category": "retro-nostalgia",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "mono",
+      "terminal",
+      "retro",
+      "hacker"
+    ],
+    "path": "designs/retro-nostalgia/crt-terminal.md",
+    "preview": "preview/index.html?id=crt-terminal"
+  },
+  {
+    "id": "pixel-arcade",
+    "name": "Pixel Arcade",
+    "category": "retro-nostalgia",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "pixel",
+      "gaming",
+      "retro",
+      "playful"
+    ],
+    "path": "designs/retro-nostalgia/pixel-arcade.md",
+    "preview": "preview/index.html?id=pixel-arcade"
+  },
+  {
+    "id": "mid-century-modern",
+    "name": "Mid-Century Modern",
+    "category": "retro-nostalgia",
+    "mode": "light",
+    "tags": [
+      "light",
+      "vintage",
+      "warm",
+      "retro",
+      "elegant"
+    ],
+    "path": "designs/retro-nostalgia/mid-century-modern.md",
+    "preview": "preview/index.html?id=mid-century-modern"
+  },
+  {
+    "id": "vintage-letterpress",
+    "name": "Vintage Letterpress",
+    "category": "retro-nostalgia",
+    "mode": "light",
+    "tags": [
+      "light",
+      "vintage",
+      "texture",
+      "serif",
+      "artisanal"
+    ],
+    "path": "designs/retro-nostalgia/vintage-letterpress.md",
+    "preview": "preview/index.html?id=vintage-letterpress"
+  },
+  {
+    "id": "art-deco-gold",
+    "name": "Art Deco Gold",
+    "category": "retro-nostalgia",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "luxury",
+      "gold",
+      "geometric",
+      "elegant"
+    ],
+    "path": "designs/retro-nostalgia/art-deco-gold.md",
+    "preview": "preview/index.html?id=art-deco-gold"
+  },
+  {
+    "id": "skeuomorphic-2010",
+    "name": "Skeuomorphic 2010",
+    "category": "retro-nostalgia",
+    "mode": "light",
+    "tags": [
+      "light",
+      "skeuomorphic",
+      "texture",
+      "retro",
+      "detailed"
+    ],
+    "path": "designs/retro-nostalgia/skeuomorphic-2010.md",
+    "preview": "preview/index.html?id=skeuomorphic-2010"
+  },
+  {
+    "id": "glassmorphism",
+    "name": "Glassmorphism",
+    "category": "ui-trends",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "glassmorphism",
+      "blur",
+      "gradients",
+      "modern"
+    ],
+    "path": "designs/ui-trends/glassmorphism.md",
+    "preview": "public/demos/glassmorphism-01/index.html"
+  },
+  {
+    "id": "bento-grid",
+    "name": "Bento Grid",
+    "category": "ui-trends",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "bento",
+      "modular",
+      "modern",
+      "product"
+    ],
+    "path": "designs/ui-trends/bento-grid.md",
+    "preview": "preview/index.html?id=bento-grid"
+  },
+  {
+    "id": "aurora-gradient",
+    "name": "Aurora Gradient Mesh",
+    "category": "ui-trends",
+    "mode": "light",
+    "tags": [
+      "light",
+      "gradients",
+      "colorful",
+      "soft",
+      "modern"
+    ],
+    "path": "designs/ui-trends/aurora-gradient.md",
+    "preview": "preview/index.html?id=aurora-gradient"
+  },
+  {
+    "id": "neumorphism",
+    "name": "Neumorphism (Soft UI)",
+    "category": "ui-trends",
+    "mode": "light",
+    "tags": [
+      "light",
+      "neumorphism",
+      "soft",
+      "monochrome",
+      "calm"
+    ],
+    "path": "designs/ui-trends/neumorphism.md",
+    "preview": "preview/index.html?id=neumorphism"
+  },
+  {
+    "id": "claymorphism",
+    "name": "Claymorphism",
+    "category": "ui-trends",
+    "mode": "light",
+    "tags": [
+      "light",
+      "3d",
+      "playful",
+      "pastel",
+      "rounded"
+    ],
+    "path": "designs/ui-trends/claymorphism.md",
+    "preview": "preview/index.html?id=claymorphism"
+  },
+  {
+    "id": "dark-neon-cyber",
+    "name": "Dark Neon Cyber",
+    "category": "ui-trends",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "neon",
+      "cyberpunk",
+      "high-contrast",
+      "gaming"
+    ],
+    "path": "designs/ui-trends/dark-neon-cyber.md",
+    "preview": "preview/index.html?id=dark-neon-cyber"
+  },
+  {
+    "id": "spline-3d-hero",
+    "name": "3D Spline Hero",
+    "category": "ui-trends",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "3d",
+      "interactive",
+      "modern",
+      "spectacular"
+    ],
+    "path": "designs/ui-trends/spline-3d-hero.md",
+    "preview": "preview/index.html?id=spline-3d-hero"
+  },
+  {
+    "id": "scroll-storytelling",
+    "name": "Scroll Storytelling",
+    "category": "ui-trends",
+    "mode": "light",
+    "tags": [
+      "light",
+      "scroll",
+      "narrative",
+      "animated",
+      "modern"
+    ],
+    "path": "designs/ui-trends/scroll-storytelling.md",
+    "preview": "preview/index.html?id=scroll-storytelling"
+  },
+  {
+    "id": "grain-noise",
+    "name": "Grain & Noise Texture",
+    "category": "ui-trends",
+    "mode": "light",
+    "tags": [
+      "light",
+      "texture",
+      "grain",
+      "earthy",
+      "editorial"
+    ],
+    "path": "designs/ui-trends/grain-noise.md",
+    "preview": "preview/index.html?id=grain-noise"
+  },
+  {
+    "id": "kinetic-typography",
+    "name": "Kinetic Typography",
+    "category": "ui-trends",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "animated",
+      "typographic",
+      "bold",
+      "agency"
+    ],
+    "path": "designs/ui-trends/kinetic-typography.md",
+    "preview": "preview/index.html?id=kinetic-typography"
+  },
+  {
+    "id": "law-firm-classic",
+    "name": "Law Firm Classic",
+    "category": "corporate-pro",
+    "mode": "light",
+    "tags": [
+      "light",
+      "serif",
+      "corporate",
+      "elegant",
+      "trust"
+    ],
+    "path": "designs/corporate-pro/law-firm-classic.md",
+    "preview": "preview/index.html?id=law-firm-classic"
+  },
+  {
+    "id": "medical-clean",
+    "name": "Medical & Health Clean",
+    "category": "corporate-pro",
+    "mode": "light",
+    "tags": [
+      "light",
+      "calm",
+      "accessible",
+      "rounded",
+      "health"
+    ],
+    "path": "designs/corporate-pro/medical-clean.md",
+    "preview": "preview/index.html?id=medical-clean"
+  },
+  {
+    "id": "bank-trust",
+    "name": "Banking Trust",
+    "category": "corporate-pro",
+    "mode": "light",
+    "tags": [
+      "light",
+      "corporate",
+      "dense",
+      "finance",
+      "trust"
+    ],
+    "path": "designs/corporate-pro/bank-trust.md",
+    "preview": "preview/index.html?id=bank-trust"
+  },
+  {
+    "id": "consulting-modern",
+    "name": "Consulting Modern",
+    "category": "corporate-pro",
+    "mode": "light",
+    "tags": [
+      "light",
+      "photography",
+      "corporate",
+      "bold",
+      "expert"
+    ],
+    "path": "designs/corporate-pro/consulting-modern.md",
+    "preview": "preview/index.html?id=consulting-modern"
+  },
+  {
+    "id": "insurance-friendly",
+    "name": "Insurance Friendly",
+    "category": "corporate-pro",
+    "mode": "light",
+    "tags": [
+      "light",
+      "friendly",
+      "illustration",
+      "insurance",
+      "clear"
+    ],
+    "path": "designs/corporate-pro/insurance-friendly.md",
+    "preview": "preview/index.html?id=insurance-friendly"
+  },
+  {
+    "id": "industrial-b2b",
+    "name": "Industrial B2B",
+    "category": "corporate-pro",
+    "mode": "light",
+    "tags": [
+      "light",
+      "industrial",
+      "technical",
+      "b2b",
+      "structured"
+    ],
+    "path": "designs/corporate-pro/industrial-b2b.md",
+    "preview": "preview/index.html?id=industrial-b2b"
+  },
+  {
+    "id": "real-estate-luxury",
+    "name": "Real Estate Luxury",
+    "category": "corporate-pro",
+    "mode": "light",
+    "tags": [
+      "light",
+      "luxury",
+      "serif",
+      "photography",
+      "elegant"
+    ],
+    "path": "designs/corporate-pro/real-estate-luxury.md",
+    "preview": "preview/index.html?id=real-estate-luxury"
+  },
+  {
+    "id": "government-public",
+    "name": "Government & Public Service",
+    "category": "corporate-pro",
+    "mode": "light",
+    "tags": [
+      "light",
+      "accessible",
+      "official",
+      "structured",
+      "high-contrast"
+    ],
+    "path": "designs/corporate-pro/government-public.md",
+    "preview": "preview/index.html?id=government-public"
+  },
+  {
+    "id": "recruitment-hr",
+    "name": "HR & Recruitment",
+    "category": "corporate-pro",
+    "mode": "light",
+    "tags": [
+      "light",
+      "friendly",
+      "people",
+      "modern",
+      "cards"
+    ],
+    "path": "designs/corporate-pro/recruitment-hr.md",
+    "preview": "preview/index.html?id=recruitment-hr"
+  },
+  {
+    "id": "logistics-transport",
+    "name": "Logistics & Transport",
+    "category": "corporate-pro",
+    "mode": "light",
+    "tags": [
+      "light",
+      "dynamic",
+      "b2b",
+      "map",
+      "structured"
+    ],
+    "path": "designs/corporate-pro/logistics-transport.md",
+    "preview": "preview/index.html?id=logistics-transport"
+  },
+  {
+    "id": "photographer-fullbleed",
+    "name": "Photographer Full-Bleed",
+    "category": "creative-portfolio",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "photography",
+      "minimal",
+      "immersive",
+      "portfolio"
+    ],
+    "path": "designs/creative-portfolio/photographer-fullbleed.md",
+    "preview": "preview/index.html?id=photographer-fullbleed"
+  },
+  {
+    "id": "awwwards-experimental",
+    "name": "Awwwards Experimental",
+    "category": "creative-portfolio",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "experimental",
+      "animated",
+      "display",
+      "award"
+    ],
+    "path": "designs/creative-portfolio/awwwards-experimental.md",
+    "preview": "preview/index.html?id=awwwards-experimental"
+  },
+  {
+    "id": "agency-bold",
+    "name": "Creative Agency Bold",
+    "category": "creative-portfolio",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "video",
+      "bold",
+      "agency",
+      "display"
+    ],
+    "path": "designs/creative-portfolio/agency-bold.md",
+    "preview": "preview/index.html?id=agency-bold"
+  },
+  {
+    "id": "dev-portfolio-terminal",
+    "name": "Developer Portfolio Terminal",
+    "category": "creative-portfolio",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "mono",
+      "terminal",
+      "developer",
+      "portfolio"
+    ],
+    "path": "designs/creative-portfolio/dev-portfolio-terminal.md",
+    "preview": "preview/index.html?id=dev-portfolio-terminal"
+  },
+  {
+    "id": "illustrator-playful",
+    "name": "Illustrator Playful",
+    "category": "creative-portfolio",
+    "mode": "light",
+    "tags": [
+      "light",
+      "handdrawn",
+      "pastel",
+      "playful",
+      "illustration"
+    ],
+    "path": "designs/creative-portfolio/illustrator-playful.md",
+    "preview": "preview/index.html?id=illustrator-playful"
+  },
+  {
+    "id": "architecture-grid",
+    "name": "Architecture Studio",
+    "category": "creative-portfolio",
+    "mode": "light",
+    "tags": [
+      "light",
+      "minimal",
+      "grid",
+      "architecture",
+      "technical"
+    ],
+    "path": "designs/creative-portfolio/architecture-grid.md",
+    "preview": "preview/index.html?id=architecture-grid"
+  },
+  {
+    "id": "motion-reel",
+    "name": "Motion Designer Reel",
+    "category": "creative-portfolio",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "video",
+      "grid",
+      "motion",
+      "portfolio"
+    ],
+    "path": "designs/creative-portfolio/motion-reel.md",
+    "preview": "preview/index.html?id=motion-reel"
+  },
+  {
+    "id": "musician-artist",
+    "name": "Musician / Artist Page",
+    "category": "creative-portfolio",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "music",
+      "poster",
+      "grain",
+      "bold"
+    ],
+    "path": "designs/creative-portfolio/musician-artist.md",
+    "preview": "preview/index.html?id=musician-artist"
+  },
+  {
+    "id": "freelance-personal",
+    "name": "Freelance Personal Card",
+    "category": "creative-portfolio",
+    "mode": "light",
+    "tags": [
+      "light",
+      "personal",
+      "minimal",
+      "warm",
+      "one-column"
+    ],
+    "path": "designs/creative-portfolio/freelance-personal.md",
+    "preview": "preview/index.html?id=freelance-personal"
+  },
+  {
+    "id": "studio-asymmetric",
+    "name": "Studio Asymmetric",
+    "category": "creative-portfolio",
+    "mode": "light",
+    "tags": [
+      "light",
+      "asymmetric",
+      "experimental",
+      "design",
+      "editorial"
+    ],
+    "path": "designs/creative-portfolio/studio-asymmetric.md",
+    "preview": "preview/index.html?id=studio-asymmetric"
+  },
+  {
+    "id": "fashion-lookbook",
+    "name": "Fashion Lookbook",
+    "category": "ecommerce-d2c",
+    "mode": "light",
+    "tags": [
+      "light",
+      "fashion",
+      "editorial",
+      "serif",
+      "luxury"
+    ],
+    "path": "designs/ecommerce-d2c/fashion-lookbook.md",
+    "preview": "preview/index.html?id=fashion-lookbook"
+  },
+  {
+    "id": "clean-product-store",
+    "name": "Clean Product Store",
+    "category": "ecommerce-d2c",
+    "mode": "light",
+    "tags": [
+      "light",
+      "ecommerce",
+      "clean",
+      "grid",
+      "standard"
+    ],
+    "path": "designs/ecommerce-d2c/clean-product-store.md",
+    "preview": "preview/index.html?id=clean-product-store"
+  },
+  {
+    "id": "beauty-cosmetics",
+    "name": "Beauty & Cosmetics",
+    "category": "ecommerce-d2c",
+    "mode": "light",
+    "tags": [
+      "light",
+      "beauty",
+      "soft",
+      "serif",
+      "elegant"
+    ],
+    "path": "designs/ecommerce-d2c/beauty-cosmetics.md",
+    "preview": "preview/index.html?id=beauty-cosmetics"
+  },
+  {
+    "id": "sneaker-hype",
+    "name": "Sneaker Hype Drop",
+    "category": "ecommerce-d2c",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "streetwear",
+      "neon",
+      "bold",
+      "drop"
+    ],
+    "path": "designs/ecommerce-d2c/sneaker-hype.md",
+    "preview": "preview/index.html?id=sneaker-hype"
+  },
+  {
+    "id": "furniture-scandi",
+    "name": "Furniture Scandinavian",
+    "category": "ecommerce-d2c",
+    "mode": "light",
+    "tags": [
+      "light",
+      "scandinavian",
+      "natural",
+      "minimal",
+      "furniture"
+    ],
+    "path": "designs/ecommerce-d2c/furniture-scandi.md",
+    "preview": "preview/index.html?id=furniture-scandi"
+  },
+  {
+    "id": "food-delivery",
+    "name": "Food Delivery",
+    "category": "ecommerce-d2c",
+    "mode": "light",
+    "tags": [
+      "light",
+      "food",
+      "warm",
+      "cards",
+      "appetite"
+    ],
+    "path": "designs/ecommerce-d2c/food-delivery.md",
+    "preview": "preview/index.html?id=food-delivery"
+  },
+  {
+    "id": "jewelry-luxury",
+    "name": "Jewelry Luxury",
+    "category": "ecommerce-d2c",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "luxury",
+      "gold",
+      "macro",
+      "serif"
+    ],
+    "path": "designs/ecommerce-d2c/jewelry-luxury.md",
+    "preview": "preview/index.html?id=jewelry-luxury"
+  },
+  {
+    "id": "marketplace-dense",
+    "name": "Marketplace Dense Grid",
+    "category": "ecommerce-d2c",
+    "mode": "light",
+    "tags": [
+      "light",
+      "dense",
+      "marketplace",
+      "functional",
+      "grid"
+    ],
+    "path": "designs/ecommerce-d2c/marketplace-dense.md",
+    "preview": "preview/index.html?id=marketplace-dense"
+  },
+  {
+    "id": "subscription-box",
+    "name": "Subscription Box",
+    "category": "ecommerce-d2c",
+    "mode": "light",
+    "tags": [
+      "light",
+      "playful",
+      "subscription",
+      "illustration",
+      "steps"
+    ],
+    "path": "designs/ecommerce-d2c/subscription-box.md",
+    "preview": "preview/index.html?id=subscription-box"
+  },
+  {
+    "id": "digital-product-flat",
+    "name": "Digital Product (Gumroad-like)",
+    "category": "ecommerce-d2c",
+    "mode": "light",
+    "tags": [
+      "light",
+      "flat",
+      "bold",
+      "digital",
+      "one-page"
+    ],
+    "path": "designs/ecommerce-d2c/digital-product-flat.md",
+    "preview": "preview/index.html?id=digital-product-flat"
+  },
+  {
+    "id": "restaurant-warm",
+    "name": "Restaurant Warm",
+    "category": "lifestyle-local",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "warm",
+      "food",
+      "serif",
+      "local"
+    ],
+    "path": "designs/lifestyle-local/restaurant-warm.md",
+    "preview": "preview/index.html?id=restaurant-warm"
+  },
+  {
+    "id": "cafe-artisan",
+    "name": "Artisan Café",
+    "category": "lifestyle-local",
+    "mode": "light",
+    "tags": [
+      "light",
+      "artisanal",
+      "texture",
+      "handwritten",
+      "warm"
+    ],
+    "path": "designs/lifestyle-local/cafe-artisan.md",
+    "preview": "preview/index.html?id=cafe-artisan"
+  },
+  {
+    "id": "hotel-boutique",
+    "name": "Boutique Hotel",
+    "category": "lifestyle-local",
+    "mode": "light",
+    "tags": [
+      "light",
+      "hospitality",
+      "serif",
+      "photography",
+      "elegant"
+    ],
+    "path": "designs/lifestyle-local/hotel-boutique.md",
+    "preview": "preview/index.html?id=hotel-boutique"
+  },
+  {
+    "id": "travel-blog",
+    "name": "Travel Blog",
+    "category": "lifestyle-local",
+    "mode": "light",
+    "tags": [
+      "light",
+      "travel",
+      "photography",
+      "blog",
+      "colorful"
+    ],
+    "path": "designs/lifestyle-local/travel-blog.md",
+    "preview": "preview/index.html?id=travel-blog"
+  },
+  {
+    "id": "fitness-gym",
+    "name": "Fitness & Gym",
+    "category": "lifestyle-local",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "sport",
+      "bold",
+      "high-contrast",
+      "energetic"
+    ],
+    "path": "designs/lifestyle-local/fitness-gym.md",
+    "preview": "preview/index.html?id=fitness-gym"
+  },
+  {
+    "id": "yoga-wellness",
+    "name": "Yoga & Wellness",
+    "category": "lifestyle-local",
+    "mode": "light",
+    "tags": [
+      "light",
+      "calm",
+      "wellness",
+      "natural",
+      "spacious"
+    ],
+    "path": "designs/lifestyle-local/yoga-wellness.md",
+    "preview": "preview/index.html?id=yoga-wellness"
+  },
+  {
+    "id": "barber-shop",
+    "name": "Barber Shop",
+    "category": "lifestyle-local",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "vintage",
+      "badge",
+      "local",
+      "bold"
+    ],
+    "path": "designs/lifestyle-local/barber-shop.md",
+    "preview": "preview/index.html?id=barber-shop"
+  },
+  {
+    "id": "wedding-elegant",
+    "name": "Wedding Elegant",
+    "category": "lifestyle-local",
+    "mode": "light",
+    "tags": [
+      "light",
+      "romantic",
+      "script",
+      "floral",
+      "event"
+    ],
+    "path": "designs/lifestyle-local/wedding-elegant.md",
+    "preview": "preview/index.html?id=wedding-elegant"
+  },
+  {
+    "id": "local-agency-simple",
+    "name": "Local Agency Simple",
+    "category": "lifestyle-local",
+    "mode": "light",
+    "tags": [
+      "light",
+      "local",
+      "cards",
+      "map",
+      "practical"
+    ],
+    "path": "designs/lifestyle-local/local-agency-simple.md",
+    "preview": "preview/index.html?id=local-agency-simple"
+  },
+  {
+    "id": "event-festival",
+    "name": "Festival & Event",
+    "category": "lifestyle-local",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "event",
+      "gradients",
+      "display",
+      "colorful"
+    ],
+    "path": "designs/lifestyle-local/event-festival.md",
+    "preview": "preview/index.html?id=event-festival"
+  },
+  {
+    "id": "docs-technical",
+    "name": "Technical Documentation",
+    "category": "content-education",
+    "mode": "light",
+    "tags": [
+      "light",
+      "docs",
+      "structured",
+      "mono",
+      "reference"
+    ],
+    "path": "designs/content-education/docs-technical.md",
+    "preview": "preview/index.html?id=docs-technical"
+  },
+  {
+    "id": "blog-longform",
+    "name": "Long-form Reading Blog",
+    "category": "content-education",
+    "mode": "light",
+    "tags": [
+      "light",
+      "serif",
+      "reading",
+      "minimal",
+      "blog"
+    ],
+    "path": "designs/content-education/blog-longform.md",
+    "preview": "preview/index.html?id=blog-longform"
+  },
+  {
+    "id": "news-portal",
+    "name": "News Portal",
+    "category": "content-education",
+    "mode": "light",
+    "tags": [
+      "light",
+      "news",
+      "dense",
+      "grid",
+      "editorial"
+    ],
+    "path": "designs/content-education/news-portal.md",
+    "preview": "preview/index.html?id=news-portal"
+  },
+  {
+    "id": "course-platform",
+    "name": "Online Course Platform",
+    "category": "content-education",
+    "mode": "light",
+    "tags": [
+      "light",
+      "education",
+      "cards",
+      "progress",
+      "modern"
+    ],
+    "path": "designs/content-education/course-platform.md",
+    "preview": "preview/index.html?id=course-platform"
+  },
+  {
+    "id": "university-academic",
+    "name": "University Academic",
+    "category": "content-education",
+    "mode": "light",
+    "tags": [
+      "light",
+      "academic",
+      "institutional",
+      "serif",
+      "structured"
+    ],
+    "path": "designs/content-education/university-academic.md",
+    "preview": "preview/index.html?id=university-academic"
+  },
+  {
+    "id": "knowledge-wiki",
+    "name": "Knowledge Base / Wiki",
+    "category": "content-education",
+    "mode": "light",
+    "tags": [
+      "light",
+      "utility",
+      "search",
+      "compact",
+      "neutral"
+    ],
+    "path": "designs/content-education/knowledge-wiki.md",
+    "preview": "preview/index.html?id=knowledge-wiki"
+  },
+  {
+    "id": "newsletter-landing",
+    "name": "Newsletter Landing",
+    "category": "content-education",
+    "mode": "light",
+    "tags": [
+      "light",
+      "minimal",
+      "conversion",
+      "one-column",
+      "newsletter"
+    ],
+    "path": "designs/content-education/newsletter-landing.md",
+    "preview": "preview/index.html?id=newsletter-landing"
+  },
+  {
+    "id": "podcast-show",
+    "name": "Podcast Show",
+    "category": "content-education",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "audio",
+      "media",
+      "cards",
+      "modern"
+    ],
+    "path": "designs/content-education/podcast-show.md",
+    "preview": "preview/index.html?id=podcast-show"
+  },
+  {
+    "id": "kids-learning",
+    "name": "Kids Learning",
+    "category": "content-education",
+    "mode": "light",
+    "tags": [
+      "light",
+      "kids",
+      "colorful",
+      "rounded",
+      "playful"
+    ],
+    "path": "designs/content-education/kids-learning.md",
+    "preview": "preview/index.html?id=kids-learning"
+  },
+  {
+    "id": "changelog-release",
+    "name": "Changelog & Release Notes",
+    "category": "content-education",
+    "mode": "light",
+    "tags": [
+      "light",
+      "timeline",
+      "mono",
+      "product",
+      "structured"
+    ],
+    "path": "designs/content-education/changelog-release.md",
+    "preview": "preview/index.html?id=changelog-release"
+  },
+  {
+    "id": "web3-crypto",
+    "name": "Web3 & Crypto",
+    "category": "niche-special",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "web3",
+      "gradients",
+      "glass",
+      "data"
+    ],
+    "path": "designs/niche-special/web3-crypto.md",
+    "preview": "preview/index.html?id=web3-crypto"
+  },
+  {
+    "id": "gaming-esports",
+    "name": "Gaming & Esports",
+    "category": "niche-special",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "gaming",
+      "angular",
+      "bold",
+      "sport"
+    ],
+    "path": "designs/niche-special/gaming-esports.md",
+    "preview": "preview/index.html?id=gaming-esports"
+  },
+  {
+    "id": "dataviz-dashboard",
+    "name": "Data Dashboard",
+    "category": "niche-special",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "data",
+      "dense",
+      "dashboard",
+      "analytical"
+    ],
+    "path": "designs/niche-special/dataviz-dashboard.md",
+    "preview": "preview/index.html?id=dataviz-dashboard"
+  },
+  {
+    "id": "nonprofit-cause",
+    "name": "Nonprofit & Cause",
+    "category": "niche-special",
+    "mode": "light",
+    "tags": [
+      "light",
+      "nonprofit",
+      "human",
+      "photography",
+      "impact"
+    ],
+    "path": "designs/niche-special/nonprofit-cause.md",
+    "preview": "preview/index.html?id=nonprofit-cause"
+  },
+  {
+    "id": "ai-chat-interface",
+    "name": "AI Chat Interface",
+    "category": "niche-special",
+    "mode": "light",
+    "tags": [
+      "light",
+      "ai",
+      "chat",
+      "soft",
+      "product"
+    ],
+    "path": "designs/niche-special/ai-chat-interface.md",
+    "preview": "preview/index.html?id=ai-chat-interface"
+  },
+  {
+    "id": "hardware-product",
+    "name": "Hardware Product Page",
+    "category": "niche-special",
+    "mode": "light",
+    "tags": [
+      "light",
+      "product",
+      "minimal",
+      "premium",
+      "photography"
+    ],
+    "path": "designs/niche-special/hardware-product.md",
+    "preview": "preview/index.html?id=hardware-product"
+  },
+  {
+    "id": "movie-streaming",
+    "name": "Movie & Streaming",
+    "category": "niche-special",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "media",
+      "carousel",
+      "cinema",
+      "dense"
+    ],
+    "path": "designs/niche-special/movie-streaming.md",
+    "preview": "preview/index.html?id=movie-streaming"
+  },
+  {
+    "id": "church-community",
+    "name": "Church & Community",
+    "category": "niche-special",
+    "mode": "light",
+    "tags": [
+      "light",
+      "community",
+      "serif",
+      "warm",
+      "local"
+    ],
+    "path": "designs/niche-special/church-community.md",
+    "preview": "preview/index.html?id=church-community"
+  },
+  {
+    "id": "automotive-configurator",
+    "name": "Automotive Configurator",
+    "category": "niche-special",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "automotive",
+      "configurator",
+      "premium",
+      "technical"
+    ],
+    "path": "designs/niche-special/automotive-configurator.md",
+    "preview": "preview/index.html?id=automotive-configurator"
+  },
+  {
+    "id": "space-scientific",
+    "name": "Space & Scientific",
+    "category": "niche-special",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "science",
+      "data",
+      "mono",
+      "space"
+    ],
+    "path": "designs/niche-special/space-scientific.md",
+    "preview": "preview/index.html?id=space-scientific"
   }
 ]

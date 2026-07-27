@@ -1,74 +1,102 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignHub pour IA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>DesignHub AI — 100 designs à copier dans votre IA</title>
+    <meta name="description" content="Bibliothèque de 100 styles de sites décrits en design.md, prêts à coller dans ChatGPT, Claude ou Gemini.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-theme">
-    <!-- View: Home -->
-    <div id="home-view" class="view active">
-        <header class="app-header">
-            <div class="container header-content">
-                <div class="logo">Design<span>Hub</span> AI</div>
-                <p class="subtitle">Bibliothèque d'inspirations de design (`design.md`) pour développeurs IA.</p>
-            </div>
-        </header>
+<body>
 
-        <main class="container">
-            <!-- Filters -->
-            <div class="filters">
-                <select id="category-filter">
-                    <option value="all">Toutes les catégories</option>
-                    <!-- Filled by JS -->
-                </select>
-                <input type="text" id="search-input" placeholder="Rechercher (ex: minimal, dark...)">
-            </div>
-
-            <!-- Grid -->
-            <div id="designs-grid" class="grid">
-                <!-- Cards filled by JS -->
-            </div>
-        </main>
+<header class="topbar">
+    <div class="container topbar-inner">
+        <a class="brand" href="./">
+            <span class="brand-mark">DH</span>
+            <span>
+                <span class="brand-name">DesignHub</span>
+                <span class="brand-sub">Design&nbsp;→ design.md&nbsp;→ IA</span>
+            </span>
+        </a>
+        <span class="topbar-stat"><b id="stat-count">100</b> styles · <b id="stat-cats">10</b> catégories</span>
+        <button class="icon-btn" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">☀</button>
     </div>
+</header>
 
-    <!-- View: Demo Viewer -->
-    <div id="demo-view" class="view">
-        <div class="viewer-layout">
-            <!-- Sidebar with Markdown -->
-            <aside class="viewer-sidebar">
-                <div class="sidebar-header">
-                    <button id="btn-back" class="btn-icon">← Retour</button>
-                    <button id="btn-copy" class="btn-primary">Copier design.md</button>
+<main id="view-home">
+    <div class="container">
+        <section class="hero">
+            <h1>100 styles de sites,<br>décrits pour <em>être compris par une IA</em>.</h1>
+            <p>
+                Pas un constructeur de sites. Une bibliothèque d'inspirations : vous choisissez un design,
+                vous copiez son <code>design.md</code>, vous le collez dans ChatGPT, Claude, Gemini ou Codex —
+                l'IA sait exactement quoi produire.
+            </p>
+            <div class="hero-steps">
+                <span class="step"><b>01</b> Parcourir les modèles</span>
+                <span class="step"><b>02</b> Voir le front-end complet</span>
+                <span class="step"><b>03</b> Copier le design.md</span>
+                <span class="step"><b>04</b> Coller dans votre IA</span>
+            </div>
+        </section>
+
+        <section class="toolbar">
+            <div class="search-row">
+                <div class="search-wrap">
+                    <input type="search" id="search" placeholder="Rechercher un style, une ambiance, une police… (ex : brutalisme, sombre, serif)" autocomplete="off">
                 </div>
-                <div class="markdown-preview" id="markdown-content">
-                    <!-- Raw Markdown content displayed here -->
-                </div>
-            </aside>
-            
-            <!-- Iframe Demo -->
-            <main class="viewer-main">
-                <div class="browser-mockup">
-                    <div class="browser-header">
-                        <div class="dots">
-                            <span class="dot close"></span>
-                            <span class="dot min"></span>
-                            <span class="dot max"></span>
-                        </div>
-                        <div class="url-bar" id="demo-url">localhost:3000/demo</div>
-                    </div>
-                    <iframe id="demo-iframe" src="" frameborder="0"></iframe>
-                </div>
-            </main>
+                <select class="select" id="mode-filter" aria-label="Filtrer par mode">
+                    <option value="all">Clair et sombre</option>
+                    <option value="light">Mode clair</option>
+                    <option value="dark">Mode sombre</option>
+                </select>
+            </div>
+            <div class="chips" id="chips"></div>
+        </section>
+
+        <p class="result-line" id="result-line"></p>
+        <div class="grid" id="grid"></div>
+    </div>
+</main>
+
+<section class="detail" id="detail" hidden aria-label="Détail du design">
+    <aside class="panel">
+        <div class="panel-head">
+            <div class="panel-nav">
+                <button class="back-btn" id="btn-back">← Retour à la galerie</button>
+                <span class="nav-arrows">
+                    <button id="btn-prev" title="Style précédent" aria-label="Style précédent">↑</button>
+                    <button id="btn-next" title="Style suivant" aria-label="Style suivant">↓</button>
+                </span>
+            </div>
+            <div>
+                <h2 class="panel-title" id="d-title"></h2>
+                <p class="panel-tagline" id="d-tagline"></p>
+            </div>
+            <div class="panel-actions">
+                <button class="btn btn-primary" id="btn-copy">Copier le design.md</button>
+                <a class="btn" id="btn-download" download>Télécharger</a>
+            </div>
+        </div>
+        <div class="md" id="d-md"></div>
+    </aside>
+
+    <div class="stage">
+        <div class="browser">
+            <div class="browser-bar">
+                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                <span class="url" id="d-url"></span>
+            </div>
+            <iframe id="frame" title="Aperçu du design" loading="lazy"></iframe>
         </div>
     </div>
+</section>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">Copié dans le presse-papiers !</div>
+<div class="toast" id="toast">design.md copié dans le presse-papiers</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="app.js"></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>

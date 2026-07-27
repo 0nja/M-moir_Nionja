@@ -1,0 +1,723 @@
+[
+  {
+    "id": "glassmorphism",
+    "name": "Glassmorphism",
+    "tagline": "Panneaux de verre flous sur fond coloré.",
+    "intent": "Interface produit ou dashboard présenté à travers des cartes translucides qui laissent transparaître un fond coloré.",
+    "keywords": "translucide, aérien, moderne, lumineux",
+    "style": [
+      "Cartes en rgba(255,255,255,0.08) avec backdrop-filter blur 20px",
+      "Bordure claire 1px pour détacher le verre du fond",
+      "Fond coloré obligatoire, sinon l'effet disparaît",
+      "Superposition de deux niveaux de verre maximum"
+    ],
+    "tags": ["dark", "glassmorphism", "blur", "gradients", "modern"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#6EA8FE",
+      "secondary": "#B78AFF",
+      "bg": "#0E1030",
+      "surface": "rgba(255,255,255,0.08)",
+      "text": "#F4F6FF",
+      "muted": "#AFB6D8",
+      "border": "rgba(255,255,255,0.18)"
+    },
+    "bg": "aurora",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700",
+      "hero": "60px/700/-0.03em",
+      "h2": "34px/600/-0.02em",
+      "body_size": "17px, line-height 1.65",
+      "case": "none",
+      "detail": "Texte toujours blanc cassé, jamais coloré sur le verre"
+    },
+    "shape": {
+      "radius": "20px",
+      "border": "1px solid rgba(255,255,255,0.18)",
+      "shadow": "0 20px 50px -20px rgba(0,0,0,0.55)"
+    },
+    "layout": {
+      "container": "1180px",
+      "hero": "centered",
+      "features": "bento",
+      "spacing": "112px entre sections",
+      "grid": "cartes de verre superposées avec décalages"
+    },
+    "motion": {
+      "load": "fade + scale 0.96 vers 1",
+      "hover": "la carte s'éclaircit et le flou augmente",
+      "scroll": "les taches de couleur du fond se déplacent"
+    },
+    "components": [
+      "Navbar en verre flottante",
+      "Hero centré sur fond dégradé",
+      "Bento de cartes de verre",
+      "Panneau de statistiques translucide",
+      "Témoignages en cartes de verre",
+      "Pied de page translucide"
+    ],
+    "do": [
+      "Toujours placer une forme colorée derrière le verre",
+      "Garder un contraste de texte supérieur à 4.5:1",
+      "Limiter le nombre de couches translucides"
+    ],
+    "dont": [
+      "Pas de verre sur fond uni gris",
+      "Pas de texte de petite taille sur le verre",
+      "Ne pas empiler plus de deux niveaux de flou"
+    ],
+    "responsive": "Mobile : blur réduit à 12px pour les performances, bento en une colonne.",
+    "demo": "/demos/glassmorphism-01"
+  },
+  {
+    "id": "bento-grid",
+    "name": "Bento Grid",
+    "tagline": "Modules de tailles inégales assemblés comme une boîte bento.",
+    "intent": "Présenter beaucoup de fonctionnalités d'un coup d'œil, chacune dans un module dont la taille traduit l'importance.",
+    "keywords": "modulaire, dense, organisé, contemporain",
+    "style": [
+      "Grille 4 colonnes où les modules occupent 1, 2 ou 4 cases",
+      "Chaque module contient un visuel et une phrase courte",
+      "Gouttière constante de 16px",
+      "Fond neutre, modules légèrement plus clairs"
+    ],
+    "tags": ["dark", "bento", "modular", "modern", "product"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#F97316",
+      "secondary": "#27272A",
+      "bg": "#09090B",
+      "surface": "#18181B",
+      "text": "#FAFAFA",
+      "muted": "#A1A1AA",
+      "border": "#27272A"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700",
+      "hero": "56px/700/-0.03em",
+      "h2": "22px/600/-0.01em",
+      "body_size": "15px, line-height 1.55",
+      "case": "none",
+      "detail": "Titre de module en 20px, description en 14px gris"
+    },
+    "shape": {
+      "radius": "18px",
+      "border": "1px solid #27272A",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "centered",
+      "features": "bento",
+      "spacing": "96px entre sections",
+      "grid": "4 colonnes, modules 1x1, 2x1, 2x2"
+    },
+    "motion": {
+      "load": "les modules apparaissent en cascade diagonale",
+      "hover": "le module s'éclaircit et son visuel bouge",
+      "scroll": "reveal module par module"
+    },
+    "components": [
+      "Navbar simple",
+      "Hero court sur deux lignes",
+      "Grille bento principale",
+      "Second bento de secondaires",
+      "Bandeau de chiffres",
+      "Pied de page compact"
+    ],
+    "do": [
+      "Varier les tailles de modules pour créer un rythme",
+      "Garder une gouttière identique partout",
+      "Mettre un seul message par module"
+    ],
+    "dont": [
+      "Pas de module vide pour remplir la grille",
+      "Pas de texte long dans un petit module",
+      "Ne pas casser l'alignement de la grille"
+    ],
+    "responsive": "Mobile : 1 colonne, l'ordre suit l'importance décroissante des modules."
+  },
+  {
+    "id": "aurora-gradient",
+    "name": "Aurora Gradient Mesh",
+    "tagline": "Nappes de couleur floues qui se mélangent en fond.",
+    "intent": "Landing moderne dont l'identité visuelle repose entièrement sur un dégradé mesh animé.",
+    "keywords": "coloré, doux, atmosphérique, contemporain",
+    "style": [
+      "Trois à quatre taches de couleur floutées à 140px",
+      "Fond clair ou sombre selon la variante, contenu toujours net",
+      "Aucun autre élément décoratif que le dégradé",
+      "Boutons en aplat sombre pour trancher"
+    ],
+    "tags": ["light", "gradients", "colorful", "soft", "modern"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#6D28D9",
+      "secondary": "#F472B6",
+      "bg": "#FBFAFF",
+      "surface": "#FFFFFF",
+      "text": "#16121F",
+      "muted": "#645C77",
+      "border": "#E9E3F5"
+    },
+    "bg": "mesh",
+    "font": {
+      "heading": "Sora",
+      "body": "Inter",
+      "google": "Sora:wght@400;600;700|Inter:wght@400;500",
+      "hero": "62px/700/-0.03em",
+      "h2": "36px/600/-0.02em",
+      "body_size": "18px, line-height 1.65",
+      "case": "none",
+      "detail": "Le contenu est toujours posé sur une surface blanche opaque"
+    },
+    "shape": {
+      "radius": "16px",
+      "border": "1px solid #E9E3F5",
+      "shadow": "0 18px 40px -24px rgba(109,40,217,0.25)"
+    },
+    "layout": {
+      "container": "1140px",
+      "hero": "centered",
+      "features": "grid-3",
+      "spacing": "112px entre sections",
+      "grid": "12 colonnes classiques"
+    },
+    "motion": {
+      "load": "fade-up 20px",
+      "hover": "élévation légère",
+      "scroll": "les taches de couleur dérivent en boucle de 20 secondes"
+    },
+    "components": [
+      "Navbar transparente",
+      "Hero centré sur dégradé",
+      "Trois cartes de bénéfices",
+      "Section preuve sociale",
+      "CTA sur fond dégradé plus intense",
+      "Pied de page clair"
+    ],
+    "do": [
+      "Flouter fortement les taches pour éviter les bords visibles",
+      "Ajouter un léger grain pour supprimer les bandes",
+      "Poser le texte sur une surface opaque"
+    ],
+    "dont": [
+      "Pas de texte directement sur la zone la plus colorée",
+      "Pas plus de quatre couleurs",
+      "Ne pas animer trop vite le dégradé"
+    ],
+    "responsive": "Mobile : deux taches seulement, animation désactivée si prefers-reduced-motion."
+  },
+  {
+    "id": "neumorphism",
+    "name": "Neumorphism (Soft UI)",
+    "tagline": "Éléments extrudés du fond par double ombre claire et sombre.",
+    "intent": "Interface calme et tactile où les composants semblent sculptés dans la même matière que le fond.",
+    "keywords": "doux, monochrome, tactile, apaisant",
+    "style": [
+      "Fond et surfaces exactement de la même couleur",
+      "Double ombre : claire en haut à gauche, sombre en bas à droite",
+      "Aucune bordure, uniquement du relief",
+      "États enfoncés obtenus par ombres internes"
+    ],
+    "tags": ["light", "neumorphism", "soft", "monochrome", "calm"],
+    "difficulty": "advanced",
+    "mode": "light",
+    "colors": {
+      "primary": "#5B7CFA",
+      "secondary": "#E0E5EC",
+      "bg": "#E0E5EC",
+      "surface": "#E0E5EC",
+      "text": "#31394D",
+      "muted": "#7A8399",
+      "border": "transparent"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Poppins",
+      "body": "Poppins",
+      "google": "Poppins:wght@400;500;600",
+      "hero": "48px/600/-0.02em",
+      "h2": "28px/600/-0.01em",
+      "body_size": "16px, line-height 1.65",
+      "case": "none",
+      "detail": "Contraste faible assumé, mais texte principal toujours au-dessus de 4.5:1"
+    },
+    "shape": {
+      "radius": "24px",
+      "border": "aucune",
+      "shadow": "-8px -8px 16px #FFFFFF, 8px 8px 16px #A3B1C6"
+    },
+    "layout": {
+      "container": "1040px",
+      "hero": "centered",
+      "features": "grid-3",
+      "spacing": "96px entre sections",
+      "grid": "modules arrondis largement espacés"
+    },
+    "motion": {
+      "load": "fade doux",
+      "hover": "l'ombre s'agrandit légèrement",
+      "scroll": "aucune"
+    },
+    "components": [
+      "Navbar extrudée",
+      "Hero avec bouton en relief",
+      "Cartes de fonctionnalités extrudées",
+      "Champs de saisie enfoncés",
+      "Interrupteurs et curseurs",
+      "Pied de page discret"
+    ],
+    "do": [
+      "Utiliser une seule couleur de base pour tout",
+      "Toujours placer la lumière dans le même coin",
+      "Renforcer le contraste du texte pour l'accessibilité"
+    ],
+    "dont": [
+      "Pas de fond blanc ou noir pur, l'effet ne fonctionne pas",
+      "Pas de bordure visible",
+      "Ne pas utiliser ce style pour des formulaires critiques"
+    ],
+    "responsive": "Mobile : rayon réduit à 18px, ombres réduites de moitié."
+  },
+  {
+    "id": "claymorphism",
+    "name": "Claymorphism",
+    "tagline": "Volumes en pâte à modeler : gros arrondis et ombres internes colorées.",
+    "intent": "Produit grand public sympathique où les éléments ressemblent à des objets en argile molle.",
+    "keywords": "doux, volumineux, ludique, coloré",
+    "style": [
+      "Rayons très larges (32px et plus)",
+      "Ombre interne claire en haut et ombre portée colorée en bas",
+      "Palette pastel saturée sur fond lavande",
+      "Illustrations 3D arrondies"
+    ],
+    "tags": ["light", "3d", "playful", "pastel", "rounded"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#7A5AF8",
+      "secondary": "#FFB4A2",
+      "bg": "#F1ECFF",
+      "surface": "#FFFFFF",
+      "text": "#241B47",
+      "muted": "#6F6690",
+      "border": "transparent"
+    },
+    "bg": "mesh",
+    "font": {
+      "heading": "Nunito",
+      "body": "Nunito",
+      "google": "Nunito:wght@400;600;800",
+      "hero": "58px/800/-0.02em",
+      "h2": "34px/700/-0.01em",
+      "body_size": "17px, line-height 1.65",
+      "case": "none",
+      "detail": "Titres épais, jamais de graisse fine"
+    },
+    "shape": {
+      "radius": "32px",
+      "border": "aucune",
+      "shadow": "inset 0 -6px 12px rgba(0,0,0,0.06), inset 0 6px 12px #FFFFFF, 0 24px 40px -20px rgba(122,90,248,0.4)"
+    },
+    "layout": {
+      "container": "1120px",
+      "hero": "split",
+      "features": "cards-2",
+      "spacing": "104px entre sections",
+      "grid": "cartes larges et espacées"
+    },
+    "motion": {
+      "load": "spring léger avec dépassement",
+      "hover": "la carte se gonfle (scale 1.03)",
+      "scroll": "objets 3D qui flottent verticalement"
+    },
+    "components": [
+      "Navbar en pastille",
+      "Hero avec objet 3D",
+      "Deux grandes cartes de bénéfices",
+      "Étapes illustrées",
+      "Témoignages en bulles",
+      "CTA en gros bloc arrondi"
+    ],
+    "do": [
+      "Combiner ombre interne et ombre portée colorée",
+      "Garder un rayon constant très large",
+      "Utiliser des illustrations 3D douces"
+    ],
+    "dont": [
+      "Pas d'angle vif",
+      "Pas de couleur sombre en fond",
+      "Ne pas mettre de bordure"
+    ],
+    "responsive": "Mobile : rayon 24px, objets 3D réduits ou remplacés par des images plates."
+  },
+  {
+    "id": "dark-neon-cyber",
+    "name": "Dark Neon Cyber",
+    "tagline": "Noir, néons cyan et magenta, lignes de circuit.",
+    "intent": "Produit gaming, cybersécurité ou événement tech nocturne. Énergie et tension visuelle.",
+    "keywords": "cyberpunk, contrasté, électrique, nocturne",
+    "style": [
+      "Fond noir avec lignes de circuit fines",
+      "Bordures néon qui émettent une lueur",
+      "Angles coupés en diagonale sur les cartes",
+      "Texte accentué avec glitch occasionnel"
+    ],
+    "tags": ["dark", "neon", "cyberpunk", "high-contrast", "gaming"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#00F0FF",
+      "secondary": "#FF00A8",
+      "bg": "#05060A",
+      "surface": "#0C0F18",
+      "text": "#E8FBFF",
+      "muted": "#7B8CA6",
+      "border": "#16324A"
+    },
+    "bg": "grid",
+    "font": {
+      "heading": "Rajdhani",
+      "body": "Inter",
+      "google": "Rajdhani:wght@500;700|Inter:wght@400;500",
+      "hero": "66px/700/0.01em",
+      "h2": "36px/700/0.01em",
+      "body_size": "16px, line-height 1.6",
+      "case": "upper",
+      "detail": "Titres en majuscules condensées, chiffres en surbrillance cyan"
+    },
+    "shape": {
+      "radius": "2px, angles coupés à 12px sur un coin",
+      "border": "1px solid #00F0FF",
+      "shadow": "0 0 24px rgba(0,240,255,0.35)"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "fullbleed",
+      "features": "grid-3",
+      "spacing": "96px entre sections",
+      "grid": "grille technique visible en fond"
+    },
+    "motion": {
+      "load": "les bordures se dessinent trait par trait",
+      "hover": "glitch court de 150ms",
+      "scroll": "lignes de scan qui traversent la page"
+    },
+    "components": [
+      "Navbar angulaire",
+      "Hero pleine largeur avec visuel sombre",
+      "Cartes à angles coupés",
+      "Tableau de statistiques néon",
+      "Compte à rebours",
+      "Pied de page technique"
+    ],
+    "do": [
+      "Garder le fond très sombre pour maximiser le contraste",
+      "Utiliser exactement deux néons",
+      "Couper les angles de façon cohérente"
+    ],
+    "dont": [
+      "Pas de néon sur les paragraphes",
+      "Pas de coins arrondis classiques",
+      "Ne pas abuser du glitch"
+    ],
+    "responsive": "Mobile : grille de fond allégée, angles coupés conservés."
+  },
+  {
+    "id": "spline-3d-hero",
+    "name": "3D Spline Hero",
+    "tagline": "Objet 3D interactif au centre, interface minimale autour.",
+    "intent": "Produit qui se raconte par un objet 3D manipulable placé au cœur du hero.",
+    "keywords": "immersif, moderne, technique, spectaculaire",
+    "style": [
+      "Objet 3D occupant 60% du hero, réagissant à la souris",
+      "Interface volontairement discrète autour du 3D",
+      "Fond sombre uni pour isoler l'objet",
+      "Éclairage coloré unique sur l'objet"
+    ],
+    "tags": ["dark", "3d", "interactive", "modern", "spectacular"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#A78BFA",
+      "secondary": "#312E81",
+      "bg": "#0A0A0F",
+      "surface": "#141420",
+      "text": "#F5F5FA",
+      "muted": "#9A9AB0",
+      "border": "#22222E"
+    },
+    "bg": "radial-glow",
+    "font": {
+      "heading": "Space Grotesk",
+      "body": "Inter",
+      "google": "Space+Grotesk:wght@500;700|Inter:wght@400;500",
+      "hero": "54px/700/-0.03em",
+      "h2": "32px/600/-0.02em",
+      "body_size": "17px, line-height 1.6",
+      "case": "none",
+      "detail": "Textes courts, la démonstration passe par l'objet 3D"
+    },
+    "shape": {
+      "radius": "14px",
+      "border": "1px solid #22222E",
+      "shadow": "0 0 100px -40px #A78BFA"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "fullbleed",
+      "features": "grid-3",
+      "spacing": "120px entre sections",
+      "grid": "hero pleine hauteur, sections classiques ensuite"
+    },
+    "motion": {
+      "load": "l'objet 3D apparaît en rotation lente",
+      "hover": "l'objet suit le curseur avec inertie",
+      "scroll": "l'objet change d'angle au fil du défilement"
+    },
+    "components": [
+      "Navbar minimale",
+      "Hero 3D pleine hauteur",
+      "Trois points clés sous le pli",
+      "Section détail avec captures",
+      "Bandeau CTA",
+      "Pied de page sobre"
+    ],
+    "do": [
+      "Prévoir une image de repli si le 3D ne charge pas",
+      "Limiter le poids de la scène 3D",
+      "Garder l'interface autour très sobre"
+    ],
+    "dont": [
+      "Pas de texte par-dessus l'objet en mouvement",
+      "Pas de scène 3D chargée sur mobile sans repli",
+      "Ne pas ajouter d'autres animations concurrentes"
+    ],
+    "responsive": "Mobile : le 3D est remplacé par une image ou une vidéo courte en boucle."
+  },
+  {
+    "id": "scroll-storytelling",
+    "name": "Scroll Storytelling",
+    "tagline": "Sections collantes qui se transforment au défilement.",
+    "intent": "Raconter un produit ou une histoire étape par étape, le défilement pilotant l'animation.",
+    "keywords": "narratif, séquentiel, immersif, guidé",
+    "style": [
+      "Colonne de texte qui défile face à un visuel fixe",
+      "Le visuel change à chaque paragraphe atteint",
+      "Indicateur de progression latéral",
+      "Transitions au fondu, jamais brutales"
+    ],
+    "tags": ["light", "scroll", "narrative", "animated", "modern"],
+    "difficulty": "advanced",
+    "mode": "light",
+    "colors": {
+      "primary": "#0F766E",
+      "secondary": "#CCFBF1",
+      "bg": "#FAFAF7",
+      "surface": "#FFFFFF",
+      "text": "#141817",
+      "muted": "#5F6B68",
+      "border": "#E2E5E3"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Fraunces",
+      "body": "Inter",
+      "google": "Fraunces:wght@400;600;700|Inter:wght@400;500",
+      "hero": "58px/700/-0.02em",
+      "h2": "34px/600/-0.01em",
+      "body_size": "18px, line-height 1.75",
+      "case": "none",
+      "detail": "Chaque étape numérotée en gros chiffre discret"
+    },
+    "shape": {
+      "radius": "12px",
+      "border": "1px solid #E2E5E3",
+      "shadow": "0 14px 34px -22px rgba(0,0,0,0.25)"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "split",
+      "features": "steps",
+      "spacing": "sections de 100vh",
+      "grid": "texte 5 colonnes / visuel collant 7 colonnes"
+    },
+    "motion": {
+      "load": "fade simple",
+      "hover": "aucun effet marqué, le scroll porte l'attention",
+      "scroll": "changement de visuel à chaque étape, transitions de 400ms"
+    },
+    "components": [
+      "Navbar qui se réduit au défilement",
+      "Hero d'introduction",
+      "Séquence d'étapes collantes",
+      "Résumé récapitulatif",
+      "CTA final",
+      "Pied de page"
+    ],
+    "do": [
+      "Limiter à cinq étapes maximum",
+      "Prévoir un fonctionnement correct sans JavaScript",
+      "Respecter prefers-reduced-motion"
+    ],
+    "dont": [
+      "Pas de détournement du défilement (scroll hijacking)",
+      "Pas d'étape sans texte",
+      "Ne pas rendre le contenu dépendant de l'animation"
+    ],
+    "responsive": "Mobile : le visuel passe au-dessus du texte, les étapes deviennent séquentielles simples."
+  },
+  {
+    "id": "grain-noise",
+    "name": "Grain & Noise Texture",
+    "tagline": "Grain sur toute la page, couleurs terreuses, aplats matifiés.",
+    "intent": "Studio ou marque qui veut une image analogique et texturée plutôt que numérique et lisse.",
+    "keywords": "texturé, analogique, mat, chaleureux",
+    "style": [
+      "Overlay de grain SVG à 6% d'opacité sur toute la page",
+      "Couleurs terreuses désaturées",
+      "Images en duotone",
+      "Aucune ombre brillante, tout est mat"
+    ],
+    "tags": ["light", "texture", "grain", "earthy", "editorial"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#B4532A",
+      "secondary": "#DCD3C3",
+      "bg": "#EFE9DE",
+      "surface": "#F7F3EA",
+      "text": "#221E1A",
+      "muted": "#6B6258",
+      "border": "#D6CDBD"
+    },
+    "bg": "noise",
+    "font": {
+      "heading": "Instrument Serif",
+      "body": "Inter",
+      "google": "Instrument+Serif|Inter:wght@400;500",
+      "hero": "68px/400/-0.02em",
+      "h2": "36px/400/-0.01em",
+      "body_size": "17px, line-height 1.7",
+      "case": "none",
+      "detail": "Serif fin pour les titres, sans-serif neutre pour le corps"
+    },
+    "shape": {
+      "radius": "4px",
+      "border": "1px solid #D6CDBD",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1120px",
+      "hero": "editorial",
+      "features": "cards-2",
+      "spacing": "104px entre sections",
+      "grid": "asymétrique, marges inégales"
+    },
+    "motion": {
+      "load": "fade 400ms",
+      "hover": "l'image passe du duotone à la couleur",
+      "scroll": "reveal doux"
+    },
+    "components": [
+      "Navbar texte simple",
+      "Hero éditorial avec image duotone",
+      "Deux colonnes de projets",
+      "Bloc manifeste",
+      "Galerie texturée",
+      "Pied de page mat"
+    ],
+    "do": [
+      "Appliquer le grain en overlay global, pas par élément",
+      "Désaturer légèrement toutes les images",
+      "Garder les ombres absentes"
+    ],
+    "dont": [
+      "Pas de couleur fluo",
+      "Pas d'ombre portée brillante",
+      "Ne pas dépasser 8% d'opacité de grain"
+    ],
+    "responsive": "Mobile : grain conservé, colonnes empilées."
+  },
+  {
+    "id": "kinetic-typography",
+    "name": "Kinetic Typography",
+    "tagline": "Le texte bouge : marquees, mots qui pivotent, lettres animées.",
+    "intent": "Site d'agence ou de campagne où le mouvement du texte remplace les images.",
+    "keywords": "dynamique, typographique, rythmé, audacieux",
+    "style": [
+      "Bandeaux de texte défilant en continu à plusieurs vitesses",
+      "Mots qui se révèlent lettre par lettre",
+      "Contraste fort entre deux couleurs seulement",
+      "Aucune image, uniquement du texte en mouvement"
+    ],
+    "tags": ["dark", "animated", "typographic", "bold", "agency"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#E8FF3D",
+      "secondary": "#1C1C1C",
+      "bg": "#0D0D0D",
+      "surface": "#161616",
+      "text": "#FAFAFA",
+      "muted": "#9C9C9C",
+      "border": "#242424"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Anton",
+      "body": "Inter",
+      "google": "Anton|Inter:wght@400;500",
+      "hero": "120px/400/-0.02em",
+      "h2": "48px/400/-0.01em",
+      "body_size": "16px, line-height 1.6",
+      "case": "upper",
+      "detail": "Line-height 0.95 sur les titres, mots empilés"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #242424",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "100% avec marge 32px",
+      "hero": "poster",
+      "features": "marquee",
+      "spacing": "80px entre sections",
+      "grid": "bandes horizontales pleine largeur"
+    },
+    "motion": {
+      "load": "les lettres montent une à une depuis le bas",
+      "hover": "le mot change de couleur et s'incline",
+      "scroll": "vitesse des marquees liée à la vitesse de défilement"
+    },
+    "components": [
+      "Navbar minimale",
+      "Hero typographique animé",
+      "Marquee de services",
+      "Liste de projets avec survol coloré",
+      "Bandeau de contact défilant",
+      "Pied de page en gros texte"
+    ],
+    "do": [
+      "Garder deux couleurs maximum",
+      "Faire varier les vitesses de marquee pour créer du rythme",
+      "Respecter prefers-reduced-motion en figeant les marquees"
+    ],
+    "dont": [
+      "Pas d'image de fond",
+      "Pas de texte animé dans les paragraphes de lecture",
+      "Ne pas animer plus de trois éléments simultanément"
+    ],
+    "responsive": "Mobile : titre à 56px, marquees conservés, animations lettre par lettre simplifiées."
+  }
+]

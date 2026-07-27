@@ -1,0 +1,718 @@
+[
+  {
+    "id": "swiss-grid",
+    "name": "Swiss International Style",
+    "tagline": "Helvetica, grille stricte, accent rouge, aucun ornement.",
+    "intent": "Site de studio ou d'institution culturelle traité comme une affiche suisse : la grille et la typographie sont le seul décor.",
+    "keywords": "rationnel, rigoureux, intemporel, typographique",
+    "style": [
+      "Grille 12 colonnes visible et respectée sans exception",
+      "Un seul accent rouge sur fond blanc et noir",
+      "Alignement à gauche systématique, jamais de centrage",
+      "Filets horizontaux 1px pour séparer les sections"
+    ],
+    "tags": ["light", "minimal", "grid", "typographic", "monochrome"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#E30613",
+      "secondary": "#F2F2F2",
+      "bg": "#FFFFFF",
+      "surface": "#FAFAFA",
+      "text": "#000000",
+      "muted": "#666666",
+      "border": "#000000"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;700",
+      "hero": "80px/700/-0.04em",
+      "h2": "40px/700/-0.02em",
+      "body_size": "16px, line-height 1.5",
+      "case": "none",
+      "detail": "Numérotation des sections en 01. 02. 03., alignée à gauche"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #000000",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1320px",
+      "hero": "editorial",
+      "features": "grid-3",
+      "spacing": "80px entre sections",
+      "grid": "12 colonnes, gouttière 20px, filets visibles"
+    },
+    "motion": {
+      "load": "aucune ou fade 150ms",
+      "hover": "soulignement du lien uniquement",
+      "scroll": "aucune"
+    },
+    "components": [
+      "En-tête avec logo texte et menu aligné à droite",
+      "Hero typographique aligné à gauche",
+      "Grille de projets numérotés",
+      "Bloc texte en deux colonnes",
+      "Index de liens",
+      "Pied de page avec colophon"
+    ],
+    "do": [
+      "Aligner tout sur la grille, sans exception",
+      "Utiliser le rouge pour au maximum 3 éléments sur la page",
+      "Garder les angles vifs"
+    ],
+    "dont": [
+      "Pas d'ombre, pas d'arrondi, pas de dégradé",
+      "Pas de texte centré",
+      "Ne pas mélanger plus de deux graisses"
+    ],
+    "responsive": "Mobile : la grille passe à 4 colonnes, les filets restent, la taille du hero descend à 44px."
+  },
+  {
+    "id": "brutalist-raw",
+    "name": "Brutalist Raw",
+    "tagline": "HTML brut assumé : noir, blanc, bordures épaisses.",
+    "intent": "Portfolio ou manifeste qui revendique la rudesse du web. L'inconfort visuel fait partie du message.",
+    "keywords": "brut, direct, anti-design, franc",
+    "style": [
+      "Bordures noires 3px partout",
+      "Polices système, aucune webfont",
+      "Liens bleus soulignés, non stylisés",
+      "Blocs qui se chevauchent volontairement"
+    ],
+    "tags": ["light", "brutalism", "monochrome", "bold", "experimental"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#0000FF",
+      "secondary": "#FFFF00",
+      "bg": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "text": "#000000",
+      "muted": "#333333",
+      "border": "#000000"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Arial",
+      "body": "Arial",
+      "google": "",
+      "hero": "72px/700/-0.02em",
+      "h2": "36px/700/0",
+      "body_size": "16px, line-height 1.4",
+      "case": "upper",
+      "detail": "Titres en majuscules, texte parfois en 12px volontairement petit"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "3px solid #000000",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "100% moins 32px de marge",
+      "hero": "poster",
+      "features": "list",
+      "spacing": "48px entre sections",
+      "grid": "asymétrique, largeurs inégales assumées"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "inversion des couleurs (fond noir, texte blanc)",
+      "scroll": "aucune"
+    },
+    "components": [
+      "En-tête texte brut",
+      "Titre géant qui déborde",
+      "Liste de projets en tableau bordé",
+      "Bloc de texte non justifié",
+      "Adresse mail en clair",
+      "Pied de page en une ligne"
+    ],
+    "do": [
+      "Assumer les polices système",
+      "Laisser des bordures épaisses partout",
+      "Garder les liens visiblement cliquables"
+    ],
+    "dont": [
+      "Pas d'ombre douce ni de dégradé",
+      "Pas d'animation décorative",
+      "Ne pas arrondir un seul angle"
+    ],
+    "responsive": "Mobile : les blocs s'empilent, le titre reste énorme quitte à couper les mots.",
+    "demo": "/demos/brutalist-01"
+  },
+  {
+    "id": "neo-brutalism-pop",
+    "name": "Neo-Brutalism Pop",
+    "tagline": "Jaune, bordures noires, ombres dures décalées.",
+    "intent": "Produit jeune ou communauté créative. Le style attire l'œil par le contraste et la fausse maladresse.",
+    "keywords": "pop, énergique, contrasté, décalé",
+    "style": [
+      "Ombres pleines noires décalées de 6px, jamais floues",
+      "Aplats de couleurs saturées (jaune, cyan, rose)",
+      "Bordures noires 3px sur chaque élément",
+      "Éléments légèrement inclinés (-2 à 2 degrés)"
+    ],
+    "tags": ["light", "playful", "bold", "high-contrast", "pop"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#FFD500",
+      "secondary": "#00E0FF",
+      "bg": "#FFFDF5",
+      "surface": "#FFFFFF",
+      "text": "#111111",
+      "muted": "#444444",
+      "border": "#111111"
+    },
+    "bg": "dots",
+    "font": {
+      "heading": "Space Grotesk",
+      "body": "Space Grotesk",
+      "google": "Space+Grotesk:wght@500;700",
+      "hero": "68px/700/-0.02em",
+      "h2": "38px/700/-0.01em",
+      "body_size": "17px, line-height 1.55",
+      "case": "none",
+      "detail": "Mots clés dans des pastilles colorées bordées de noir"
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "3px solid #111111",
+      "shadow": "6px 6px 0 #111111"
+    },
+    "layout": {
+      "container": "1120px",
+      "hero": "split",
+      "features": "grid-3",
+      "spacing": "88px entre sections",
+      "grid": "cartes de tailles inégales"
+    },
+    "motion": {
+      "load": "apparition par translation nette, sans easing doux",
+      "hover": "l'élément se décale de 3px et l'ombre se réduit",
+      "scroll": "bandeau texte défilant en marquee"
+    },
+    "components": [
+      "Navbar bordée avec bouton jaune",
+      "Hero deux colonnes avec sticker autocollant",
+      "Marquee de mots clés",
+      "Cartes de fonctionnalités inclinées",
+      "Témoignages en post-it",
+      "CTA en gros bloc jaune"
+    ],
+    "do": [
+      "Garder toutes les ombres à la même distance et à la même couleur",
+      "Utiliser du noir pur pour les bordures et le texte",
+      "Oser les inclinaisons légères"
+    ],
+    "dont": [
+      "Pas d'ombre floue",
+      "Pas de couleur désaturée",
+      "Ne pas incliner le texte de plus de 3 degrés"
+    ],
+    "responsive": "Mobile : une colonne, ombres réduites à 4px, marquee conservé."
+  },
+  {
+    "id": "serif-editorial",
+    "name": "Serif Editorial Magazine",
+    "tagline": "Magazine imprimé : serif large, lettrines, colonnes.",
+    "intent": "Revue en ligne ou site d'auteur. Reproduire l'élégance d'un magazine papier haut de gamme.",
+    "keywords": "élégant, littéraire, contrasté, imprimé",
+    "style": [
+      "Serif à fort contraste pour les titres, sans-serif discrète pour les métadonnées",
+      "Lettrine sur le premier paragraphe",
+      "Filets fins et petites capitales pour les rubriques",
+      "Images en pleine largeur avec légende en italique"
+    ],
+    "tags": ["light", "serif", "editorial", "elegant", "reading"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#8B1E1E",
+      "secondary": "#F4EFE7",
+      "bg": "#FFFDF9",
+      "surface": "#F7F2EA",
+      "text": "#1A1614",
+      "muted": "#6E645C",
+      "border": "#DED5C8"
+    },
+    "bg": "paper",
+    "font": {
+      "heading": "Playfair Display",
+      "body": "Source Serif 4",
+      "google": "Playfair+Display:wght@400;700;900|Source+Serif+4:wght@400;600",
+      "hero": "76px/900/-0.02em",
+      "h2": "40px/700/-0.01em",
+      "body_size": "19px, line-height 1.75",
+      "case": "none",
+      "detail": "Lettrine 72px flottante à gauche, rubriques en petites capitales espacées"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #DED5C8",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1140px, colonne de lecture 680px",
+      "hero": "editorial",
+      "features": "list",
+      "spacing": "96px entre sections",
+      "grid": "asymétrique : article large + colonne latérale"
+    },
+    "motion": {
+      "load": "fade lent 500ms",
+      "hover": "soulignement fin qui se dessine",
+      "scroll": "barre de progression de lecture en haut"
+    },
+    "components": [
+      "Bandeau de titre du magazine",
+      "Une : article vedette pleine largeur",
+      "Grille d'articles secondaires",
+      "Corps d'article en colonne étroite",
+      "Citation en gros italique",
+      "Pied de page avec ours et abonnement"
+    ],
+    "do": [
+      "Limiter la colonne de texte à 70 caractères",
+      "Utiliser l'italique pour les légendes et citations",
+      "Soigner la hiérarchie : rubrique, titre, chapô, corps"
+    ],
+    "dont": [
+      "Pas de texte serif en dessous de 17px",
+      "Pas de fond blanc pur, préférer un blanc chaud",
+      "Ne pas centrer les paragraphes"
+    ],
+    "responsive": "Mobile : une colonne, lettrine conservée, titre à 40px."
+  },
+  {
+    "id": "mono-minimal",
+    "name": "Monospace Minimal",
+    "tagline": "Tout en mono, petit, aligné, presque un fichier texte.",
+    "intent": "Page personnelle de développeur ou de chercheur. L'esthétique du terminal appliquée à un document sobre.",
+    "keywords": "sobre, technique, discret, textuel",
+    "style": [
+      "Une seule police monospace pour tout le document",
+      "Corps de texte 14px, interligne généreuse",
+      "Séparateurs faits de tirets ou de traits fins",
+      "Aucune image, uniquement du texte et des liens"
+    ],
+    "tags": ["light", "mono", "minimal", "text-only", "calm"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#0F5132",
+      "secondary": "#E9ECEF",
+      "bg": "#FCFCFA",
+      "surface": "#F4F4F1",
+      "text": "#1B1B1B",
+      "muted": "#777777",
+      "border": "#DDDDD8"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "JetBrains Mono",
+      "body": "JetBrains Mono",
+      "google": "JetBrains+Mono:wght@400;500;700",
+      "hero": "32px/700/0",
+      "h2": "20px/700/0",
+      "body_size": "14px, line-height 1.8",
+      "case": "none",
+      "detail": "Les liens sont préfixés par -> et les sections par ##"
+    },
+    "shape": {
+      "radius": "2px",
+      "border": "1px solid #DDDDD8",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "680px",
+      "hero": "editorial",
+      "features": "list",
+      "spacing": "56px entre sections",
+      "grid": "colonne unique"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "le lien passe en fond vert clair",
+      "scroll": "aucune"
+    },
+    "components": [
+      "En-tête : nom et une ligne de description",
+      "Liste de projets avec année alignée à droite",
+      "Section notes / écrits",
+      "Bloc de contact en texte brut",
+      "Pied de page avec date de dernière mise à jour"
+    ],
+    "do": [
+      "Aligner les dates et les colonnes au caractère près",
+      "Rester sous 680px de largeur",
+      "Écrire court"
+    ],
+    "dont": [
+      "Pas d'image décorative",
+      "Pas de seconde police",
+      "Ne pas ajouter d'animation"
+    ],
+    "responsive": "Mobile : padding 20px, tailles inchangées, colonnes de dates passées sous le titre."
+  },
+  {
+    "id": "japanese-ma",
+    "name": "Japanese Ma (vide et respiration)",
+    "tagline": "Le vide comme composant : immense espace, texte minuscule.",
+    "intent": "Site de marque artisanale ou de galerie. L'espace négatif structure la page plus que les éléments.",
+    "keywords": "calme, épuré, contemplatif, précis",
+    "style": [
+      "Espacements verticaux de 200px et plus entre les blocs",
+      "Texte de petite taille, très espacé en letter-spacing",
+      "Une seule image par écran, jamais deux",
+      "Palette de trois valeurs seulement"
+    ],
+    "tags": ["light", "minimal", "spacious", "calm", "luxury"],
+    "difficulty": "advanced",
+    "mode": "light",
+    "colors": {
+      "primary": "#8C7B6B",
+      "secondary": "#EFEAE3",
+      "bg": "#FCFBF9",
+      "surface": "#F5F2ED",
+      "text": "#2B2825",
+      "muted": "#8A837B",
+      "border": "#E5E0D8"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Cormorant Garamond",
+      "body": "Noto Sans JP",
+      "google": "Cormorant+Garamond:wght@300;400;500|Noto+Sans+JP:wght@300;400",
+      "hero": "40px/300/0.08em",
+      "h2": "22px/400/0.06em",
+      "body_size": "14px, line-height 2.1",
+      "case": "none",
+      "detail": "Letter-spacing élevé partout, weight 300 dominant"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "aucune",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "960px",
+      "hero": "centered",
+      "features": "list",
+      "spacing": "200px entre sections",
+      "grid": "colonne centrale étroite, marges immenses"
+    },
+    "motion": {
+      "load": "fade très lent 1200ms",
+      "hover": "opacité qui descend à 0.6",
+      "scroll": "apparition progressive à mesure du défilement"
+    },
+    "components": [
+      "Logo seul en haut, centré",
+      "Une phrase d'introduction isolée",
+      "Image unique pleine hauteur",
+      "Trois lignes de texte espacées",
+      "Coordonnées en bas, discrètes"
+    ],
+    "do": [
+      "Multiplier les espaces vides, ne pas les combler",
+      "Garder des graisses légères",
+      "Utiliser une seule image forte par section"
+    ],
+    "dont": [
+      "Pas de bouton coloré ni de CTA agressif",
+      "Pas de grille dense",
+      "Ne jamais remplir un espace vide par décoration"
+    ],
+    "responsive": "Mobile : espacement réduit à 120px, tout reste centré."
+  },
+  {
+    "id": "type-poster",
+    "name": "Typographic Poster",
+    "tagline": "Le titre occupe l'écran entier, tout le reste est secondaire.",
+    "intent": "Page d'annonce, de conférence ou de manifeste. La typographie est l'image.",
+    "keywords": "affiche, monumental, graphique, direct",
+    "style": [
+      "Titre en display de 160px qui touche les bords",
+      "Texte secondaire volontairement minuscule en comparaison",
+      "Deux couleurs seulement, très contrastées",
+      "Bloc de texte placé en bas de l'écran"
+    ],
+    "tags": ["dark", "display", "bold", "typographic", "poster"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#F5FF41",
+      "secondary": "#1A1A1A",
+      "bg": "#101010",
+      "surface": "#1A1A1A",
+      "text": "#F7F7F7",
+      "muted": "#9A9A9A",
+      "border": "#2A2A2A"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Archivo Black",
+      "body": "Inter",
+      "google": "Archivo+Black|Inter:wght@400;500",
+      "hero": "160px/900/-0.05em",
+      "h2": "48px/900/-0.03em",
+      "body_size": "15px, line-height 1.5",
+      "case": "upper",
+      "detail": "Le titre est coupé en plusieurs lignes serrées, line-height 0.9"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #2A2A2A",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "100% avec marge 40px",
+      "hero": "poster",
+      "features": "list",
+      "spacing": "0, les sections occupent chacune 100vh",
+      "grid": "pleine page, texte ancré en bas à gauche"
+    },
+    "motion": {
+      "load": "les lignes du titre montent une par une",
+      "hover": "le mot survolé passe en jaune",
+      "scroll": "changement de couleur de fond entre les sections"
+    },
+    "components": [
+      "Titre plein écran",
+      "Ligne d'informations en bas (date, lieu)",
+      "Section programme en liste",
+      "Grand bloc CTA",
+      "Pied de page minimal"
+    ],
+    "do": [
+      "Serrer le line-height du titre en dessous de 1",
+      "Garder un seul accent coloré",
+      "Laisser le titre déborder si nécessaire"
+    ],
+    "dont": [
+      "Pas d'image derrière le titre",
+      "Pas de troisième couleur",
+      "Ne pas centrer le bloc d'information"
+    ],
+    "responsive": "Mobile : titre à 64px, toujours coupé sur plusieurs lignes serrées."
+  },
+  {
+    "id": "newspaper-broadsheet",
+    "name": "Newspaper Broadsheet",
+    "tagline": "Colonnes serrées, filets, hiérarchie de une.",
+    "intent": "Site d'information qui assume l'héritage du journal papier : beaucoup de titres, peu d'images.",
+    "keywords": "dense, hiérarchisé, journalistique, classique",
+    "style": [
+      "Trois à quatre colonnes de texte séparées par des filets verticaux",
+      "Titre de une en très gros serif",
+      "Fond blanc cassé légèrement jauni",
+      "Photos en noir et blanc uniquement"
+    ],
+    "tags": ["light", "serif", "dense", "editorial", "classic"],
+    "difficulty": "advanced",
+    "mode": "light",
+    "colors": {
+      "primary": "#1A1A1A",
+      "secondary": "#E8E4DA",
+      "bg": "#FBF9F4",
+      "surface": "#FFFFFF",
+      "text": "#151515",
+      "muted": "#5A554E",
+      "border": "#C9C3B8"
+    },
+    "bg": "paper",
+    "font": {
+      "heading": "Libre Baskerville",
+      "body": "Libre Baskerville",
+      "google": "Libre+Baskerville:wght@400;700|Inter:wght@400;600",
+      "hero": "64px/700/-0.02em",
+      "h2": "28px/700/0",
+      "body_size": "15px, line-height 1.6",
+      "case": "none",
+      "detail": "Chapô en italique, signature de l'auteur en petites capitales sans-serif"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #C9C3B8",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1320px",
+      "hero": "editorial",
+      "features": "grid-4",
+      "spacing": "40px entre sections, filets de séparation",
+      "grid": "4 colonnes avec filets verticaux"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "titre souligné",
+      "scroll": "aucune"
+    },
+    "components": [
+      "Bandeau titre avec date et édition",
+      "Barre de rubriques",
+      "Article de une sur 2 colonnes",
+      "Colonne de brèves",
+      "Grille d'articles par rubrique",
+      "Pied de page avec ours"
+    ],
+    "do": [
+      "Multiplier les niveaux de titre pour guider l'œil",
+      "Séparer les colonnes par des filets fins",
+      "Dater et signer chaque article"
+    ],
+    "dont": [
+      "Pas de couleur d'accent vive",
+      "Pas de grands espaces vides",
+      "Ne pas dépasser 15px pour le corps de texte"
+    ],
+    "responsive": "Mobile : une colonne, les filets deviennent horizontaux, hiérarchie conservée."
+  },
+  {
+    "id": "bauhaus-geometric",
+    "name": "Bauhaus Geometric",
+    "tagline": "Cercles, carrés, triangles en rouge, jaune, bleu.",
+    "intent": "Site d'école, de festival ou de studio graphique construit sur des formes primaires et des couleurs primaires.",
+    "keywords": "géométrique, primaire, constructif, graphique",
+    "style": [
+      "Formes géométriques pleines utilisées comme blocs de mise en page",
+      "Rouge, jaune, bleu primaires sur fond crème",
+      "Titres en sans-serif géométrique, souvent à la verticale",
+      "Compositions asymétriques mais équilibrées"
+    ],
+    "tags": ["light", "geometric", "bold", "primary-colors", "graphic"],
+    "difficulty": "advanced",
+    "mode": "light",
+    "colors": {
+      "primary": "#D62828",
+      "secondary": "#FCBF1E",
+      "bg": "#F5F1E8",
+      "surface": "#FFFFFF",
+      "text": "#101010",
+      "muted": "#5B5B5B",
+      "border": "#101010"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Archivo",
+      "body": "Archivo",
+      "google": "Archivo:wght@400;600;800",
+      "hero": "72px/800/-0.03em",
+      "h2": "36px/800/-0.01em",
+      "body_size": "16px, line-height 1.55",
+      "case": "upper",
+      "detail": "Certains titres pivotés à 90 degrés le long de la marge"
+    },
+    "shape": {
+      "radius": "0px sauf les cercles décoratifs",
+      "border": "2px solid #101010",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "split",
+      "features": "bento",
+      "spacing": "72px entre sections",
+      "grid": "modules carrés de tailles multiples"
+    },
+    "motion": {
+      "load": "les formes entrent depuis les bords",
+      "hover": "la forme change de couleur primaire",
+      "scroll": "rotation lente d'un cercle de fond"
+    },
+    "components": [
+      "En-tête avec bloc de couleur",
+      "Hero composé de trois formes et d'un titre",
+      "Modules carrés de contenu",
+      "Bande diagonale de couleur",
+      "Liste de dates",
+      "Pied de page en aplat bleu"
+    ],
+    "do": [
+      "N'utiliser que les trois couleurs primaires plus le noir",
+      "Composer avec des modules carrés",
+      "Aligner les formes sur la grille"
+    ],
+    "dont": [
+      "Pas de dégradé ni de couleur intermédiaire",
+      "Pas d'arrondi sur les blocs de contenu",
+      "Ne pas centrer la composition"
+    ],
+    "responsive": "Mobile : modules en une colonne, formes décoratives réduites."
+  },
+  {
+    "id": "ultra-minimal-one-page",
+    "name": "Ultra Minimal One-page",
+    "tagline": "Un texte noir sur blanc, rien d'autre.",
+    "intent": "Carte de visite en ligne. Le contenu tient en un écran, aucun élément superflu.",
+    "keywords": "réduit, direct, silencieux, essentiel",
+    "style": [
+      "Une seule colonne centrée verticalement dans la fenêtre",
+      "Aucun bouton, uniquement des liens texte soulignés",
+      "Aucun fond, aucune bordure, aucune ombre",
+      "Une seule taille de texte hormis le nom"
+    ],
+    "tags": ["light", "minimal", "text-only", "calm", "one-page"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#F0F0F0",
+      "bg": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "text": "#111111",
+      "muted": "#888888",
+      "border": "#E5E5E5"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500",
+      "hero": "24px/500/-0.01em",
+      "h2": "16px/500/0",
+      "body_size": "16px, line-height 1.7",
+      "case": "none",
+      "detail": "Le nom n'est pas plus gros que deux fois le corps de texte"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "aucune",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "520px",
+      "hero": "centered",
+      "features": "list",
+      "spacing": "32px entre blocs",
+      "grid": "colonne unique centrée dans le viewport"
+    },
+    "motion": {
+      "load": "fade 300ms sur l'ensemble du bloc",
+      "hover": "le lien perd son soulignement",
+      "scroll": "aucune, la page ne défile pas"
+    },
+    "components": [
+      "Nom et fonction en une ligne",
+      "Deux phrases de présentation",
+      "Liste de liens externes",
+      "Adresse mail"
+    ],
+    "do": [
+      "Tenir en un seul écran, sans défilement",
+      "Écrire au maximum cent mots",
+      "Garder les liens soulignés par défaut"
+    ],
+    "dont": [
+      "Pas de photo ni de logo",
+      "Pas de navigation",
+      "Ne pas ajouter de section supplémentaire"
+    ],
+    "responsive": "Mobile : padding 24px, le bloc reste centré verticalement."
+  }
+]

@@ -1,0 +1,732 @@
+[
+  {
+    "id": "docs-technical",
+    "name": "Technical Documentation",
+    "tagline": "Trois colonnes : navigation, contenu, sommaire.",
+    "intent": "Documentation d'un produit technique : trouver l'information en moins de trois clics.",
+    "keywords": "structuré, lisible, technique, navigable",
+    "style": [
+      "Navigation latérale gauche arborescente",
+      "Sommaire de page à droite qui suit la lecture",
+      "Blocs de code avec onglets de langage",
+      "Encadrés colorés pour note, avertissement et danger"
+    ],
+    "tags": ["light", "docs", "structured", "mono", "reference"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#4F46E5",
+      "secondary": "#EEF2FF",
+      "bg": "#FFFFFF",
+      "surface": "#F8FAFC",
+      "text": "#0F172A",
+      "muted": "#64748B",
+      "border": "#E2E8F0"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700|JetBrains+Mono:wght@400;500",
+      "hero": "36px/700/-0.02em",
+      "h2": "24px/600/-0.01em",
+      "body_size": "16px, line-height 1.7",
+      "case": "none",
+      "detail": "Code en JetBrains Mono 14px, code inline sur fond gris arrondi"
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #E2E8F0",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1440px",
+      "hero": "sidebar",
+      "features": "list",
+      "spacing": "40px entre sections",
+      "grid": "sidebar 260px + contenu 760px + sommaire 220px"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "surlignage des entrées de navigation",
+      "scroll": "l'entrée active du sommaire se met à jour"
+    },
+    "components": [
+      "Barre supérieure avec recherche et sélecteur de version",
+      "Navigation latérale arborescente",
+      "Fil d'Ariane",
+      "Contenu avec titres ancrés",
+      "Blocs de code à onglets",
+      "Encadrés note / attention / danger",
+      "Navigation précédent / suivant",
+      "Sommaire latéral droit"
+    ],
+    "do": [
+      "Ancrer chaque titre avec un lien copiable",
+      "Fournir une recherche rapide au clavier",
+      "Indiquer la version de la documentation"
+    ],
+    "dont": [
+      "Pas de contenu caché derrière des onglets non indexables",
+      "Pas d'animation qui gêne la lecture",
+      "Ne pas dépasser 760px pour la colonne de texte"
+    ],
+    "responsive": "Mobile : navigation en panneau coulissant, sommaire en accordéon en haut."
+  },
+  {
+    "id": "blog-longform",
+    "name": "Long-form Reading Blog",
+    "tagline": "Une colonne de 680px, serif, lecture confortable.",
+    "intent": "Blog d'auteur ou revue : offrir la meilleure expérience de lecture possible sur de longs textes.",
+    "keywords": "lisible, calme, littéraire, sobre",
+    "style": [
+      "Colonne de lecture de 680px maximum",
+      "Serif de lecture à 19px, interligne 1.8",
+      "Aucune distraction latérale",
+      "Images pleine largeur de colonne avec légende"
+    ],
+    "tags": ["light", "serif", "reading", "minimal", "blog"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#1A56DB",
+      "secondary": "#F3F4F6",
+      "bg": "#FFFEFB",
+      "surface": "#FFFFFF",
+      "text": "#1F2328",
+      "muted": "#6B7280",
+      "border": "#E7E5E0"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Source Serif 4",
+      "body": "Source Serif 4",
+      "google": "Source+Serif+4:wght@400;600;700|Inter:wght@400;500",
+      "hero": "44px/700/-0.02em",
+      "h2": "28px/600/-0.01em",
+      "body_size": "19px, line-height 1.8",
+      "case": "none",
+      "detail": "Métadonnées (date, temps de lecture) en sans-serif 14px gris"
+    },
+    "shape": {
+      "radius": "6px",
+      "border": "1px solid #E7E5E0",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "680px",
+      "hero": "editorial",
+      "features": "list",
+      "spacing": "64px entre sections",
+      "grid": "colonne unique"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "lien souligné",
+      "scroll": "barre de progression fine en haut"
+    },
+    "components": [
+      "En-tête minimal avec nom du blog",
+      "Titre, chapô et métadonnées",
+      "Corps d'article",
+      "Citations en retrait",
+      "Notes de bas de page",
+      "Articles suivants",
+      "Newsletter en fin d'article"
+    ],
+    "do": [
+      "Limiter la ligne à 70 caractères",
+      "Afficher le temps de lecture estimé",
+      "Garder les liens visibles dans le texte"
+    ],
+    "dont": [
+      "Pas de pop-up pendant la lecture",
+      "Pas de colonne latérale distrayante",
+      "Ne pas descendre sous 18px pour le corps"
+    ],
+    "responsive": "Mobile : padding 20px, corps à 18px, structure inchangée."
+  },
+  {
+    "id": "news-portal",
+    "name": "News Portal",
+    "tagline": "Dense, hiérarchisé, couleurs par rubrique.",
+    "intent": "Site d'actualité généraliste : beaucoup d'articles visibles d'un coup, hiérarchie claire.",
+    "keywords": "dense, réactif, hiérarchisé, informatif",
+    "style": [
+      "Une à la une sur deux colonnes, brèves à droite",
+      "Couleur distincte par rubrique",
+      "Horodatage sur chaque article",
+      "Beaucoup de titres, peu de texte courant"
+    ],
+    "tags": ["light", "news", "dense", "grid", "editorial"],
+    "difficulty": "advanced",
+    "mode": "light",
+    "colors": {
+      "primary": "#B91C1C",
+      "secondary": "#F3F4F6",
+      "bg": "#FFFFFF",
+      "surface": "#F9FAFB",
+      "text": "#111827",
+      "muted": "#6B7280",
+      "border": "#E5E7EB"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Roboto Slab",
+      "body": "Inter",
+      "google": "Roboto+Slab:wght@500;700|Inter:wght@400;500;600",
+      "hero": "40px/700/-0.02em",
+      "h2": "22px/700/-0.01em",
+      "body_size": "15px, line-height 1.55",
+      "case": "none",
+      "detail": "Rubrique en majuscules 11px colorée au-dessus de chaque titre"
+    },
+    "shape": {
+      "radius": "2px",
+      "border": "1px solid #E5E7EB",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1320px",
+      "hero": "editorial",
+      "features": "grid-4",
+      "spacing": "32px entre blocs",
+      "grid": "12 colonnes, blocs de rubriques"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "titre souligné",
+      "scroll": "bandeau d'actualité en direct"
+    },
+    "components": [
+      "Bandeau de dernière minute",
+      "Navbar de rubriques",
+      "Une principale",
+      "Colonne de brèves",
+      "Blocs par rubrique",
+      "Les plus lus",
+      "Newsletter",
+      "Pied de page dense"
+    ],
+    "do": [
+      "Horodater chaque article",
+      "Distinguer les rubriques par la couleur et le libellé",
+      "Charger la page en moins de deux secondes"
+    ],
+    "dont": [
+      "Pas de titre sans date",
+      "Pas de publicité qui décale la mise en page",
+      "Ne pas mélanger information et contenu sponsorisé sans mention"
+    ],
+    "responsive": "Mobile : une colonne, rubriques en onglets défilants."
+  },
+  {
+    "id": "course-platform",
+    "name": "Online Course Platform",
+    "tagline": "Cartes de cours, barres de progression, violet motivant.",
+    "intent": "Plateforme d'apprentissage en ligne : donner envie de commencer et de continuer.",
+    "keywords": "motivant, structuré, moderne, progressif",
+    "style": [
+      "Cartes de cours avec vignette, durée et niveau",
+      "Barres de progression visibles partout",
+      "Violet et indigo comme couleurs de progression",
+      "Badges de réussite"
+    ],
+    "tags": ["light", "education", "cards", "progress", "modern"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#6366F1",
+      "secondary": "#EEF2FF",
+      "bg": "#FBFBFE",
+      "surface": "#FFFFFF",
+      "text": "#161629",
+      "muted": "#63637A",
+      "border": "#E4E4F0"
+    },
+    "bg": "soft-gradient",
+    "font": {
+      "heading": "Outfit",
+      "body": "Inter",
+      "google": "Outfit:wght@500;600;700|Inter:wght@400;500",
+      "hero": "50px/700/-0.02em",
+      "h2": "30px/600/-0.01em",
+      "body_size": "16px, line-height 1.65",
+      "case": "none",
+      "detail": "Durée et niveau en badges, progression en pourcentage"
+    },
+    "shape": {
+      "radius": "14px",
+      "border": "1px solid #E4E4F0",
+      "shadow": "0 10px 26px -20px rgba(99,102,241,0.4)"
+    },
+    "layout": {
+      "container": "1240px",
+      "hero": "split",
+      "features": "gallery",
+      "spacing": "80px entre sections",
+      "grid": "cartes de cours en 3 colonnes"
+    },
+    "motion": {
+      "load": "fade-up",
+      "hover": "la carte se soulève et la vignette s'agrandit",
+      "scroll": "les barres de progression se remplissent"
+    },
+    "components": [
+      "Navbar avec recherche de cours",
+      "Hero avec proposition de valeur",
+      "Catégories de cours",
+      "Grille de cours",
+      "Parcours recommandé",
+      "Témoignages d'apprenants",
+      "Formules d'abonnement",
+      "Pied de page"
+    ],
+    "do": [
+      "Afficher durée, niveau et nombre de leçons",
+      "Rendre la progression visible dès l'accueil",
+      "Proposer un premier cours gratuit"
+    ],
+    "dont": [
+      "Pas de cours sans description de prérequis",
+      "Pas de promesse d'emploi garantie",
+      "Ne pas cacher la durée réelle"
+    ],
+    "responsive": "Mobile : cartes en une colonne, filtres en panneau."
+  },
+  {
+    "id": "university-academic",
+    "name": "University Academic",
+    "tagline": "Marine et blanc, blason, structure institutionnelle.",
+    "intent": "Établissement d'enseignement supérieur : orienter étudiants, chercheurs et futurs candidats.",
+    "keywords": "institutionnel, sérieux, structuré, traditionnel",
+    "style": [
+      "Blason ou logo institutionnel toujours visible",
+      "Bleu marine et blanc avec un accent doré",
+      "Navigation par public (étudiants, chercheurs, entreprises)",
+      "Photographies du campus"
+    ],
+    "tags": ["light", "academic", "institutional", "serif", "structured"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#12294E",
+      "secondary": "#C8A951",
+      "bg": "#FFFFFF",
+      "surface": "#F4F6F9",
+      "text": "#141A24",
+      "muted": "#5A6478",
+      "border": "#D9DEE7"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Lora",
+      "body": "Source Sans 3",
+      "google": "Lora:wght@500;600;700|Source+Sans+3:wght@400;600",
+      "hero": "46px/600/-0.01em",
+      "h2": "28px/600/0",
+      "body_size": "17px, line-height 1.7",
+      "case": "none",
+      "detail": "Filet doré sous les titres de section, dates en sans-serif"
+    },
+    "shape": {
+      "radius": "4px",
+      "border": "1px solid #D9DEE7",
+      "shadow": "0 2px 8px rgba(18,41,78,0.06)"
+    },
+    "layout": {
+      "container": "1280px",
+      "hero": "split",
+      "features": "grid-4",
+      "spacing": "72px entre sections",
+      "grid": "12 colonnes"
+    },
+    "motion": {
+      "load": "fade 300ms",
+      "hover": "soulignement doré",
+      "scroll": "aucune"
+    },
+    "components": [
+      "Barre d'accès rapide par public",
+      "Navbar avec méga-menu de formations",
+      "Hero campus",
+      "Chiffres clés de l'établissement",
+      "Formations par domaine",
+      "Actualités et agenda",
+      "Recherche et laboratoires",
+      "Pied de page institutionnel"
+    ],
+    "do": [
+      "Segmenter la navigation par public",
+      "Afficher les dates de candidature en évidence",
+      "Donner accès aux annuaires et à l'intranet"
+    ],
+    "dont": [
+      "Pas de ton commercial",
+      "Pas de navigation à plus de trois niveaux visibles",
+      "Ne pas négliger l'accessibilité"
+    ],
+    "responsive": "Mobile : méga-menu en accordéon, chiffres clés en 2 colonnes."
+  },
+  {
+    "id": "knowledge-wiki",
+    "name": "Knowledge Base / Wiki",
+    "tagline": "Recherche d'abord, arborescence, articles courts.",
+    "intent": "Base de connaissances interne ou centre d'aide : répondre à une question précise le plus vite possible.",
+    "keywords": "utilitaire, compact, navigable, neutre",
+    "style": [
+      "Barre de recherche centrale dominante dès l'accueil",
+      "Catégories en cartes avec compteur d'articles",
+      "Articles courts avec sommaire",
+      "Interface neutre, aucune décoration"
+    ],
+    "tags": ["light", "utility", "search", "compact", "neutral"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#0F766E",
+      "secondary": "#F0FDFA",
+      "bg": "#FFFFFF",
+      "surface": "#F7F9F9",
+      "text": "#14211F",
+      "muted": "#5E6E6C",
+      "border": "#E1E7E6"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700",
+      "hero": "34px/700/-0.02em",
+      "h2": "22px/600/-0.01em",
+      "body_size": "16px, line-height 1.7",
+      "case": "none",
+      "detail": "Résultats de recherche avec extrait et surlignage du terme"
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #E1E7E6",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1080px",
+      "hero": "centered",
+      "features": "grid-3",
+      "spacing": "48px entre sections",
+      "grid": "cartes de catégories en 3 colonnes"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "fond de carte plus clair",
+      "scroll": "aucune"
+    },
+    "components": [
+      "Hero avec recherche centrale",
+      "Catégories en cartes",
+      "Articles populaires",
+      "Page article avec sommaire",
+      "Bloc « Cet article vous a-t-il aidé ? »",
+      "Contact support en dernier recours"
+    ],
+    "do": [
+      "Placer la recherche au centre de l'accueil",
+      "Proposer des articles liés en fin de page",
+      "Mesurer l'utilité des articles"
+    ],
+    "dont": [
+      "Pas d'article de plus de 800 mots",
+      "Pas de jargon interne non expliqué",
+      "Ne pas cacher le contact support"
+    ],
+    "responsive": "Mobile : catégories en une colonne, recherche en pleine largeur."
+  },
+  {
+    "id": "newsletter-landing",
+    "name": "Newsletter Landing",
+    "tagline": "Une colonne, une promesse, un champ email.",
+    "intent": "Page d'inscription à une newsletter : convertir en moins de dix secondes.",
+    "keywords": "direct, court, personnel, efficace",
+    "style": [
+      "Une seule colonne centrée de 560px",
+      "Champ email et bouton dès le premier écran",
+      "Aperçu des derniers numéros",
+      "Palette sobre avec un accent"
+    ],
+    "tags": ["light", "minimal", "conversion", "one-column", "newsletter"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#DC2626",
+      "secondary": "#FEF2F2",
+      "bg": "#FFFCFC",
+      "surface": "#FFFFFF",
+      "text": "#1A1414",
+      "muted": "#6E6360",
+      "border": "#EFE3E1"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Newsreader",
+      "body": "Inter",
+      "google": "Newsreader:wght@500;600|Inter:wght@400;500",
+      "hero": "42px/600/-0.02em",
+      "h2": "24px/600/-0.01em",
+      "body_size": "17px, line-height 1.75",
+      "case": "none",
+      "detail": "Nombre d'abonnés affiché sous le champ email"
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #EFE3E1",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "560px",
+      "hero": "centered",
+      "features": "list",
+      "spacing": "48px entre sections",
+      "grid": "colonne unique"
+    },
+    "motion": {
+      "load": "fade 200ms",
+      "hover": "bouton légèrement plus sombre",
+      "scroll": "aucune"
+    },
+    "components": [
+      "Titre et promesse en une phrase",
+      "Champ email et bouton",
+      "Preuve sociale (nombre d'abonnés)",
+      "Aperçu des trois derniers numéros",
+      "Ce que vous recevrez, en trois points",
+      "Fréquence d'envoi et désinscription"
+    ],
+    "do": [
+      "Annoncer la fréquence d'envoi",
+      "Montrer un extrait réel d'un numéro",
+      "Garder un seul champ de formulaire"
+    ],
+    "dont": [
+      "Pas de formulaire à plus d'un champ",
+      "Pas de promesse floue sur le contenu",
+      "Ne pas cacher le lien de désinscription"
+    ],
+    "responsive": "Mobile : structure identique, padding 20px."
+  },
+  {
+    "id": "podcast-show",
+    "name": "Podcast Show",
+    "tagline": "Sombre, lecteur audio, formes d'onde, liste d'épisodes.",
+    "intent": "Émission audio : écouter immédiatement, parcourir les épisodes, s'abonner sur les plateformes.",
+    "keywords": "sonore, sombre, rythmé, éditorial",
+    "style": [
+      "Lecteur persistant en bas de page",
+      "Formes d'onde décoratives",
+      "Vignettes d'épisodes carrées",
+      "Fond sombre avec accent chaud"
+    ],
+    "tags": ["dark", "audio", "media", "cards", "modern"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#F59E0B",
+      "secondary": "#1C1917",
+      "bg": "#0C0A09",
+      "surface": "#1A1614",
+      "text": "#FAFAF9",
+      "muted": "#A8A29E",
+      "border": "#292524"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Sora",
+      "body": "Inter",
+      "google": "Sora:wght@600;700|Inter:wght@400;500",
+      "hero": "52px/700/-0.03em",
+      "h2": "26px/600/-0.01em",
+      "body_size": "16px, line-height 1.65",
+      "case": "none",
+      "detail": "Durée de l'épisode et numéro de saison en mono"
+    },
+    "shape": {
+      "radius": "12px",
+      "border": "1px solid #292524",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1140px",
+      "hero": "split",
+      "features": "list",
+      "spacing": "72px entre sections",
+      "grid": "liste d'épisodes pleine largeur"
+    },
+    "motion": {
+      "load": "fade-up",
+      "hover": "bouton de lecture qui apparaît sur la vignette",
+      "scroll": "le lecteur reste fixe en bas"
+    },
+    "components": [
+      "Navbar avec liens plateformes",
+      "Hero avec dernier épisode et lecteur",
+      "Liste d'épisodes avec durée",
+      "Présentation des animateurs",
+      "Invités récents",
+      "Newsletter",
+      "Lecteur persistant"
+    ],
+    "do": [
+      "Permettre l'écoute sans quitter la page",
+      "Afficher la durée de chaque épisode",
+      "Lier vers toutes les plateformes d'écoute"
+    ],
+    "dont": [
+      "Pas de lecture automatique",
+      "Pas d'épisode sans description",
+      "Ne pas masquer le lecteur au défilement"
+    ],
+    "responsive": "Mobile : lecteur compact en bas, épisodes en cartes."
+  },
+  {
+    "id": "kids-learning",
+    "name": "Kids Learning",
+    "tagline": "Couleurs vives, formes rondes, gros boutons.",
+    "intent": "Plateforme éducative pour enfants : navigation évidente, éléments larges, ton joyeux.",
+    "keywords": "joyeux, coloré, simple, rassurant",
+    "style": [
+      "Palette primaire vive sur fond clair",
+      "Boutons très larges avec icônes",
+      "Personnages illustrés guides",
+      "Coins très arrondis partout"
+    ],
+    "tags": ["light", "kids", "colorful", "rounded", "playful"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#F43F5E",
+      "secondary": "#38BDF8",
+      "bg": "#FFFDF5",
+      "surface": "#FFFFFF",
+      "text": "#2A2438",
+      "muted": "#6E6880",
+      "border": "#F0E9DC"
+    },
+    "bg": "dots",
+    "font": {
+      "heading": "Fredoka",
+      "body": "Nunito",
+      "google": "Fredoka:wght@500;600;700|Nunito:wght@400;600;700",
+      "hero": "54px/700/-0.01em",
+      "h2": "34px/600/0",
+      "body_size": "18px, line-height 1.7",
+      "case": "none",
+      "detail": "Boutons de 56px de haut minimum, icônes de 32px"
+    },
+    "shape": {
+      "radius": "24px",
+      "border": "3px solid #F0E9DC",
+      "shadow": "0 6px 0 rgba(0,0,0,0.08)"
+    },
+    "layout": {
+      "container": "1080px",
+      "hero": "centered",
+      "features": "grid-3",
+      "spacing": "72px entre sections",
+      "grid": "grandes cartes d'activités"
+    },
+    "motion": {
+      "load": "rebond joyeux",
+      "hover": "la carte grossit et le personnage salue",
+      "scroll": "éléments qui flottent"
+    },
+    "components": [
+      "Navbar simple avec gros boutons",
+      "Hero avec personnage",
+      "Activités par âge",
+      "Progression de l'enfant",
+      "Espace parents",
+      "Pied de page avec sécurité et confidentialité"
+    ],
+    "do": [
+      "Faire des zones cliquables très larges",
+      "Utiliser des icônes en plus du texte",
+      "Prévoir un espace parents distinct"
+    ],
+    "dont": [
+      "Pas de publicité ciblée",
+      "Pas de texte long",
+      "Ne pas collecter de données sans consentement parental"
+    ],
+    "responsive": "Mobile : une carte par ligne, boutons pleine largeur."
+  },
+  {
+    "id": "changelog-release",
+    "name": "Changelog & Release Notes",
+    "tagline": "Frise verticale, versions, tags de type de changement.",
+    "intent": "Page de notes de version : suivre l'évolution d'un produit dans le temps.",
+    "keywords": "chronologique, factuel, technique, clair",
+    "style": [
+      "Frise verticale avec date à gauche et contenu à droite",
+      "Badges colorés par type (nouveauté, correction, rupture)",
+      "Numéros de version en mono",
+      "Captures d'écran optionnelles par entrée"
+    ],
+    "tags": ["light", "timeline", "mono", "product", "structured"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#7C3AED",
+      "secondary": "#F5F3FF",
+      "bg": "#FFFFFF",
+      "surface": "#FAFAFA",
+      "text": "#18181B",
+      "muted": "#71717A",
+      "border": "#E4E4E7"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700|JetBrains+Mono:wght@400;500",
+      "hero": "36px/700/-0.02em",
+      "h2": "22px/600/-0.01em",
+      "body_size": "16px, line-height 1.7",
+      "case": "none",
+      "detail": "Version en mono dans une pastille violette, date en gris à gauche"
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #E4E4E7",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "860px",
+      "hero": "editorial",
+      "features": "steps",
+      "spacing": "56px entre entrées",
+      "grid": "colonne de dates 120px + contenu"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "la ligne de la frise s'épaissit",
+      "scroll": "chargement des entrées plus anciennes"
+    },
+    "components": [
+      "En-tête avec abonnement RSS",
+      "Filtres par type de changement",
+      "Frise des versions",
+      "Entrée détaillée avec capture",
+      "Lien vers la documentation",
+      "Pied de page"
+    ],
+    "do": [
+      "Dater et numéroter chaque entrée",
+      "Signaler explicitement les ruptures de compatibilité",
+      "Proposer un flux RSS"
+    ],
+    "dont": [
+      "Pas d'entrée sans version ni date",
+      "Pas de description vague du type « améliorations diverses »",
+      "Ne pas mélanger les types de changement dans un même bloc"
+    ],
+    "responsive": "Mobile : date au-dessus du contenu, frise sur le côté gauche conservée."
+  }
+]

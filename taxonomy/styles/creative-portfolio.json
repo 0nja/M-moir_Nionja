@@ -1,0 +1,724 @@
+[
+  {
+    "id": "photographer-fullbleed",
+    "name": "Photographer Full-Bleed",
+    "tagline": "Noir absolu, images bord à bord, interface invisible.",
+    "intent": "Portfolio de photographe où l'image occupe tout l'écran et l'interface disparaît.",
+    "keywords": "immersif, sombre, photographique, silencieux",
+    "style": [
+      "Images en pleine fenêtre sans marge",
+      "Interface réduite à un logo et un menu masqué",
+      "Fond noir absolu pour ne pas concurrencer les images",
+      "Légendes minuscules en bas à gauche"
+    ],
+    "tags": ["dark", "photography", "minimal", "immersive", "portfolio"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#FFFFFF",
+      "secondary": "#1A1A1A",
+      "bg": "#000000",
+      "surface": "#0A0A0A",
+      "text": "#F2F2F2",
+      "muted": "#8A8A8A",
+      "border": "#1F1F1F"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@300;400;500",
+      "hero": "28px/400/0.12em",
+      "h2": "18px/400/0.1em",
+      "body_size": "13px, line-height 1.6",
+      "case": "upper",
+      "detail": "Typographie volontairement petite et très espacée, jamais dominante"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "aucune",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "100%",
+      "hero": "fullbleed",
+      "features": "gallery",
+      "spacing": "0, les images se succèdent",
+      "grid": "images pleine largeur ou mosaïque 2 colonnes"
+    },
+    "motion": {
+      "load": "fondu de l'image 800ms",
+      "hover": "la légende apparaît en surimpression",
+      "scroll": "transition douce entre les images"
+    },
+    "components": [
+      "Logo seul en haut à gauche",
+      "Menu en icône qui ouvre un panneau plein écran",
+      "Séries d'images plein écran",
+      "Page série avec mosaïque",
+      "Page à propos très courte",
+      "Contact en une ligne"
+    ],
+    "do": [
+      "Servir des images optimisées en plusieurs résolutions",
+      "Laisser les images respirer sans texte par-dessus",
+      "Garder l'interface presque invisible"
+    ],
+    "dont": [
+      "Pas de bordure ni d'ombre sur les images",
+      "Pas de watermark visible",
+      "Ne pas ajouter de couleur d'accent"
+    ],
+    "responsive": "Mobile : images en pleine largeur, mosaïque en une colonne, menu plein écran."
+  },
+  {
+    "id": "awwwards-experimental",
+    "name": "Awwwards Experimental",
+    "tagline": "Curseur personnalisé, typographie géante, transitions travaillées.",
+    "intent": "Portfolio de designer ou studio qui vise la reconnaissance : chaque interaction est soignée à l'excès.",
+    "keywords": "expérimental, spectaculaire, interactif, avant-gardiste",
+    "style": [
+      "Curseur remplacé par un cercle qui réagit aux éléments",
+      "Titres de 120px et plus qui débordent volontairement",
+      "Transitions de page en fondu masqué",
+      "Fond sombre avec un accent électrique"
+    ],
+    "tags": ["dark", "experimental", "animated", "display", "award"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#D6FF3D",
+      "secondary": "#1A1A22",
+      "bg": "#0B0B0F",
+      "surface": "#14141C",
+      "text": "#F5F5F7",
+      "muted": "#8E8E9A",
+      "border": "#22222C"
+    },
+    "bg": "noise",
+    "font": {
+      "heading": "Clash Display",
+      "body": "Inter",
+      "google": "Syne:wght@600;800|Inter:wght@400;500",
+      "hero": "140px/800/-0.05em",
+      "h2": "56px/700/-0.03em",
+      "body_size": "16px, line-height 1.6",
+      "case": "none",
+      "detail": "Line-height 0.9 sur les titres, mots séparés sur plusieurs lignes"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #22222C",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "100% avec marge 40px",
+      "hero": "poster",
+      "features": "gallery",
+      "spacing": "160px entre sections",
+      "grid": "asymétrique, décalages volontaires"
+    },
+    "motion": {
+      "load": "écran de chargement avec compteur puis révélation",
+      "hover": "le curseur grossit et le projet se déforme légèrement",
+      "scroll": "défilement lissé (smooth scroll) et parallaxe multi-couche"
+    },
+    "components": [
+      "Écran de chargement chiffré",
+      "Curseur personnalisé",
+      "Hero typographique géant",
+      "Liste de projets en survol image",
+      "Section à propos avec texte animé",
+      "Contact plein écran"
+    ],
+    "do": [
+      "Soigner chaque transition, c'est le cœur du style",
+      "Prévoir un fonctionnement dégradé sans JavaScript",
+      "Respecter prefers-reduced-motion"
+    ],
+    "dont": [
+      "Pas de contenu inaccessible derrière une animation",
+      "Pas de chargement supérieur à trois secondes",
+      "Ne pas sacrifier la lisibilité au style"
+    ],
+    "responsive": "Mobile : curseur personnalisé désactivé, titres à 56px, parallaxe réduite."
+  },
+  {
+    "id": "agency-bold",
+    "name": "Creative Agency Bold",
+    "tagline": "Vidéo en fond, énorme titre, orange saturé.",
+    "intent": "Agence créative qui affirme sa personnalité dès la première seconde par le mouvement et l'échelle.",
+    "keywords": "audacieux, énergique, affirmé, cinématique",
+    "style": [
+      "Vidéo en boucle muette derrière le hero, assombrie",
+      "Titre en display de 100px superposé",
+      "Orange saturé comme signature",
+      "Sections séparées par des aplats de couleur pleine"
+    ],
+    "tags": ["dark", "video", "bold", "agency", "display"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#FF4D00",
+      "secondary": "#151515",
+      "bg": "#0F0F0F",
+      "surface": "#1B1B1B",
+      "text": "#FAFAFA",
+      "muted": "#9E9E9E",
+      "border": "#2A2A2A"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Anton",
+      "body": "Inter",
+      "google": "Anton|Inter:wght@400;500;600",
+      "hero": "100px/400/-0.02em",
+      "h2": "48px/400/-0.01em",
+      "body_size": "17px, line-height 1.65",
+      "case": "upper",
+      "detail": "Titres en majuscules serrées, line-height 0.95"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #2A2A2A",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1280px",
+      "hero": "fullbleed",
+      "features": "split-alt",
+      "spacing": "120px entre sections",
+      "grid": "pleine largeur avec bandes de couleur"
+    },
+    "motion": {
+      "load": "le titre se révèle par masque montant",
+      "hover": "l'image du projet passe en couleur et se translate",
+      "scroll": "changement de couleur de fond par section"
+    },
+    "components": [
+      "Navbar sur fond vidéo",
+      "Hero vidéo avec titre",
+      "Bandeau de services défilant",
+      "Projets en alternance",
+      "Bloc équipe",
+      "CTA orange pleine largeur",
+      "Pied de page"
+    ],
+    "do": [
+      "Compresser la vidéo et prévoir une image de repli",
+      "Assombrir la vidéo pour garder le titre lisible",
+      "Garder l'orange comme unique accent"
+    ],
+    "dont": [
+      "Pas de vidéo avec son",
+      "Pas de vidéo lourde sur mobile",
+      "Ne pas multiplier les polices display"
+    ],
+    "responsive": "Mobile : vidéo remplacée par une image fixe, titre à 44px."
+  },
+  {
+    "id": "dev-portfolio-terminal",
+    "name": "Developer Portfolio Terminal",
+    "tagline": "Portfolio présenté comme une session de terminal.",
+    "intent": "Développeur qui présente son parcours sous forme de commandes et de sorties console.",
+    "keywords": "technique, ludique, sobre, personnel",
+    "style": [
+      "Fenêtre de terminal centrée avec barre de titre",
+      "Commandes tapées automatiquement, sorties formatées",
+      "Palette sombre avec accents ambre",
+      "Le reste de la page suit la même esthétique mono"
+    ],
+    "tags": ["dark", "mono", "terminal", "developer", "portfolio"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#F5A524",
+      "secondary": "#1E1E24",
+      "bg": "#111116",
+      "surface": "#1A1A20",
+      "text": "#E6E6EA",
+      "muted": "#8A8A94",
+      "border": "#2A2A32"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "JetBrains Mono",
+      "body": "JetBrains Mono",
+      "google": "JetBrains+Mono:wght@400;600;700",
+      "hero": "36px/700/0",
+      "h2": "22px/600/0",
+      "body_size": "15px, line-height 1.7",
+      "case": "none",
+      "detail": "Invite de commande colorée : utilisateur en vert, chemin en bleu"
+    },
+    "shape": {
+      "radius": "10px",
+      "border": "1px solid #2A2A32",
+      "shadow": "0 20px 50px -30px rgba(0,0,0,0.8)"
+    },
+    "layout": {
+      "container": "900px",
+      "hero": "terminal",
+      "features": "list",
+      "spacing": "64px entre sections",
+      "grid": "colonne unique"
+    },
+    "motion": {
+      "load": "frappe automatique de la première commande",
+      "hover": "surlignage de la ligne",
+      "scroll": "nouvelles commandes qui s'exécutent"
+    },
+    "components": [
+      "Fenêtre de terminal avec boutons macOS",
+      "Commande whoami en guise de présentation",
+      "ls des projets",
+      "cat du parcours",
+      "Liens sociaux en sortie de commande",
+      "Pied de page en ligne de statut"
+    ],
+    "do": [
+      "Garder des sorties de commande réalistes",
+      "Permettre de sauter l'animation de frappe",
+      "Rendre le contenu accessible sans JavaScript"
+    ],
+    "dont": [
+      "Pas d'attente longue avant d'afficher le contenu",
+      "Pas de fausse commande incompréhensible",
+      "Ne pas cacher le contact dans une commande obscure"
+    ],
+    "responsive": "Mobile : terminal en pleine largeur, taille de police 14px."
+  },
+  {
+    "id": "illustrator-playful",
+    "name": "Illustrator Playful",
+    "tagline": "Traits dessinés à la main, pastel, formes irrégulières.",
+    "intent": "Illustrateur ou auteur jeunesse. Le site prolonge l'univers dessiné de l'artiste.",
+    "keywords": "dessiné, doux, personnel, chaleureux",
+    "style": [
+      "Bordures irrégulières comme tracées au feutre",
+      "Palette pastel chaude sur fond crème",
+      "Éléments dessinés dispersés (nuages, étoiles)",
+      "Typographie manuscrite pour les accents"
+    ],
+    "tags": ["light", "handdrawn", "pastel", "playful", "illustration"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#E8734A",
+      "secondary": "#8ECAE6",
+      "bg": "#FFF9F0",
+      "surface": "#FFFFFF",
+      "text": "#3B2F2A",
+      "muted": "#7B6C63",
+      "border": "#3B2F2A"
+    },
+    "bg": "dots",
+    "font": {
+      "heading": "Caveat",
+      "body": "Quicksand",
+      "google": "Caveat:wght@600;700|Quicksand:wght@400;600",
+      "hero": "64px/700/0",
+      "h2": "36px/700/0",
+      "body_size": "17px, line-height 1.7",
+      "case": "none",
+      "detail": "Titres manuscrits légèrement inclinés, soulignés d'un trait dessiné"
+    },
+    "shape": {
+      "radius": "255px 15px 225px 15px / 15px 225px 15px 255px (bordure irrégulière)",
+      "border": "2px solid #3B2F2A",
+      "shadow": "3px 3px 0 rgba(59,47,42,0.15)"
+    },
+    "layout": {
+      "container": "1080px",
+      "hero": "split",
+      "features": "gallery",
+      "spacing": "88px entre sections",
+      "grid": "galerie en mosaïque irrégulière"
+    },
+    "motion": {
+      "load": "les éléments dessinés apparaissent en se traçant",
+      "hover": "l'illustration bascule légèrement",
+      "scroll": "petits éléments qui flottent"
+    },
+    "components": [
+      "Navbar avec logo dessiné",
+      "Hero avec autoportrait illustré",
+      "Galerie d'illustrations",
+      "Section à propos manuscrite",
+      "Boutique de tirages",
+      "Contact avec formulaire dessiné"
+    ],
+    "do": [
+      "Utiliser des bordures irrégulières pour l'effet dessiné",
+      "Garder la lisibilité du corps de texte en sans-serif",
+      "Montrer beaucoup de travaux"
+    ],
+    "dont": [
+      "Pas de police manuscrite pour les paragraphes",
+      "Pas de grille trop régulière",
+      "Ne pas surcharger de décorations dessinées"
+    ],
+    "responsive": "Mobile : mosaïque en une colonne, décorations réduites."
+  },
+  {
+    "id": "architecture-grid",
+    "name": "Architecture Studio",
+    "tagline": "Blanc, grille technique, plans et photographies.",
+    "intent": "Agence d'architecture. Rigueur du plan et qualité des photographies de bâtiments.",
+    "keywords": "rigoureux, blanc, technique, spatial",
+    "style": [
+      "Grille visible avec repères comme sur un plan",
+      "Blanc dominant, une seule teinte de gris",
+      "Photographies de bâtiments en grand format",
+      "Légendes techniques (année, surface, lieu) systématiques"
+    ],
+    "tags": ["light", "minimal", "grid", "architecture", "technical"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#111111",
+      "secondary": "#EFEFEF",
+      "bg": "#FFFFFF",
+      "surface": "#FAFAFA",
+      "text": "#111111",
+      "muted": "#767676",
+      "border": "#E0E0E0"
+    },
+    "bg": "grid",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500",
+      "hero": "36px/500/-0.01em",
+      "h2": "22px/500/0",
+      "body_size": "14px, line-height 1.7",
+      "case": "none",
+      "detail": "Métadonnées de projet alignées en colonnes fixes"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #E0E0E0",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1360px",
+      "hero": "editorial",
+      "features": "gallery",
+      "spacing": "96px entre sections",
+      "grid": "grille 12 colonnes avec repères visibles"
+    },
+    "motion": {
+      "load": "fade 300ms",
+      "hover": "la légende technique apparaît sous l'image",
+      "scroll": "aucune"
+    },
+    "components": [
+      "En-tête avec nom du studio",
+      "Index des projets en liste avec métadonnées",
+      "Fiche projet avec photos et plans",
+      "Section approche",
+      "Équipe",
+      "Contact et adresse de l'agence"
+    ],
+    "do": [
+      "Donner les métadonnées complètes de chaque projet",
+      "Mélanger photos et plans techniques",
+      "Aligner rigoureusement sur la grille"
+    ],
+    "dont": [
+      "Pas de couleur d'accent",
+      "Pas d'effet de survol spectaculaire",
+      "Ne pas recadrer les plans"
+    ],
+    "responsive": "Mobile : index en liste simple, métadonnées sous le titre."
+  },
+  {
+    "id": "motion-reel",
+    "name": "Motion Designer Reel",
+    "tagline": "Grille de vidéos qui se lancent au survol.",
+    "intent": "Motion designer ou monteur. La page est une bobine de démonstration navigable.",
+    "keywords": "vidéo, dynamique, sombre, démonstratif",
+    "style": [
+      "Grille de vignettes vidéo qui se lancent au survol, sans son",
+      "Fond très sombre pour faire ressortir les images",
+      "Titre du projet en surimpression au survol",
+      "Bandeau de logos clients"
+    ],
+    "tags": ["dark", "video", "grid", "motion", "portfolio"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#22D3EE",
+      "secondary": "#18181B",
+      "bg": "#09090B",
+      "surface": "#121216",
+      "text": "#FAFAFA",
+      "muted": "#A1A1AA",
+      "border": "#232329"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;600;800",
+      "hero": "64px/800/-0.03em",
+      "h2": "28px/600/-0.01em",
+      "body_size": "15px, line-height 1.6",
+      "case": "none",
+      "detail": "Durée de la vidéo affichée en mono dans un coin"
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #232329",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1320px",
+      "hero": "fullbleed",
+      "features": "gallery",
+      "spacing": "72px entre sections",
+      "grid": "grille de vidéos 3 colonnes en 16:9"
+    },
+    "motion": {
+      "load": "les vignettes apparaissent en cascade",
+      "hover": "lecture de la vidéo en boucle, titre en surimpression",
+      "scroll": "lecture uniquement des vidéos visibles"
+    },
+    "components": [
+      "Navbar minimale",
+      "Showreel principal en pleine largeur",
+      "Grille de projets vidéo",
+      "Logos clients",
+      "Liste de compétences et outils",
+      "Contact"
+    ],
+    "do": [
+      "Charger les vidéos en différé (lazy loading)",
+      "Toujours prévoir une image poster",
+      "Couper le son par défaut"
+    ],
+    "dont": [
+      "Pas de lecture automatique de toutes les vidéos",
+      "Pas de fichiers vidéo non compressés",
+      "Ne pas masquer le showreel principal"
+    ],
+    "responsive": "Mobile : grille en une colonne, vidéos remplacées par des GIF ou images au survol désactivé."
+  },
+  {
+    "id": "musician-artist",
+    "name": "Musician / Artist Page",
+    "tagline": "Affiche de concert : photo granuleuse, dates, gros titre.",
+    "intent": "Page d'artiste musical : écouter, voir les dates, suivre sur les plateformes.",
+    "keywords": "brut, affiche, nocturne, énergique",
+    "style": [
+      "Photo d'artiste en duotone contrasté",
+      "Liste de dates comme sur une affiche de tournée",
+      "Typographie condensée en majuscules",
+      "Grain visible sur toute la page"
+    ],
+    "tags": ["dark", "music", "poster", "grain", "bold"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#FF2E63",
+      "secondary": "#252A34",
+      "bg": "#0B0C10",
+      "surface": "#15171E",
+      "text": "#F7F7F7",
+      "muted": "#9095A3",
+      "border": "#242833"
+    },
+    "bg": "noise",
+    "font": {
+      "heading": "Oswald",
+      "body": "Inter",
+      "google": "Oswald:wght@500;700|Inter:wght@400;500",
+      "hero": "88px/700/0",
+      "h2": "40px/600/0",
+      "body_size": "16px, line-height 1.6",
+      "case": "upper",
+      "detail": "Dates alignées à gauche, ville au centre, bouton billetterie à droite"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #242833",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1120px",
+      "hero": "poster",
+      "features": "list",
+      "spacing": "80px entre sections",
+      "grid": "liste pleine largeur avec filets"
+    },
+    "motion": {
+      "load": "le titre monte derrière un masque",
+      "hover": "la ligne de date s'inverse en couleur",
+      "scroll": "parallaxe sur la photo d'artiste"
+    },
+    "components": [
+      "Navbar avec liens plateformes",
+      "Hero affiche avec photo et nom",
+      "Lecteur du dernier titre",
+      "Liste des dates de tournée",
+      "Galerie live",
+      "Newsletter et réseaux",
+      "Pied de page label"
+    ],
+    "do": [
+      "Rendre les dates scannables en une seconde",
+      "Mettre un lien d'écoute au-dessus du pli",
+      "Assumer le grain et le contraste"
+    ],
+    "dont": [
+      "Pas de lecture audio automatique",
+      "Pas de date sans lien billetterie",
+      "Ne pas adoucir la palette"
+    ],
+    "responsive": "Mobile : dates en cartes empilées, titre à 44px."
+  },
+  {
+    "id": "freelance-personal",
+    "name": "Freelance Personal Card",
+    "tagline": "Une colonne, ton direct, chaleureux et court.",
+    "intent": "Page personnelle de freelance : qui je suis, ce que je fais, comment me contacter.",
+    "keywords": "personnel, direct, chaleureux, concis",
+    "style": [
+      "Colonne unique de 640px, tout aligné à gauche",
+      "Photo de profil ronde en haut",
+      "Ton conversationnel à la première personne",
+      "Palette chaude et sobre"
+    ],
+    "tags": ["light", "personal", "minimal", "warm", "one-column"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#B45309",
+      "secondary": "#FEF3C7",
+      "bg": "#FFFCF7",
+      "surface": "#FFFFFF",
+      "text": "#1C1917",
+      "muted": "#78716C",
+      "border": "#EAE2D6"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Newsreader",
+      "body": "Inter",
+      "google": "Newsreader:wght@400;500;600|Inter:wght@400;500",
+      "hero": "38px/500/-0.01em",
+      "h2": "22px/500/0",
+      "body_size": "17px, line-height 1.75",
+      "case": "none",
+      "detail": "Serif pour les titres, sans-serif pour le corps, contraste doux"
+    },
+    "shape": {
+      "radius": "10px",
+      "border": "1px solid #EAE2D6",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "640px",
+      "hero": "editorial",
+      "features": "list",
+      "spacing": "48px entre sections",
+      "grid": "colonne unique"
+    },
+    "motion": {
+      "load": "fade 300ms",
+      "hover": "le lien change de couleur",
+      "scroll": "aucune"
+    },
+    "components": [
+      "Photo de profil et nom",
+      "Deux paragraphes de présentation",
+      "Liste de services avec tarifs indicatifs",
+      "Sélection de trois projets",
+      "Disponibilité actuelle",
+      "Bouton de contact direct"
+    ],
+    "do": [
+      "Annoncer clairement la disponibilité",
+      "Donner une fourchette de tarifs",
+      "Écrire à la première personne"
+    ],
+    "dont": [
+      "Pas de navigation complexe",
+      "Pas de jargon d'agence",
+      "Ne pas dépasser une page de lecture"
+    ],
+    "responsive": "Mobile : padding 20px, structure inchangée."
+  },
+  {
+    "id": "studio-asymmetric",
+    "name": "Studio Asymmetric",
+    "tagline": "Grille cassée, éléments décalés, images qui débordent.",
+    "intent": "Studio de design qui montre sa maîtrise de la composition par une grille volontairement déséquilibrée.",
+    "keywords": "asymétrique, composé, graphique, décalé",
+    "style": [
+      "Éléments positionnés hors grille, chevauchements",
+      "Images qui sortent du container",
+      "Beaucoup de vide d'un côté, densité de l'autre",
+      "Palette réduite avec un accent inattendu"
+    ],
+    "tags": ["light", "asymmetric", "experimental", "design", "editorial"],
+    "difficulty": "advanced",
+    "mode": "light",
+    "colors": {
+      "primary": "#4F46E5",
+      "secondary": "#F1F0FF",
+      "bg": "#F7F7F5",
+      "surface": "#FFFFFF",
+      "text": "#141414",
+      "muted": "#6E6E6E",
+      "border": "#E2E2DE"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "General Sans",
+      "body": "Inter",
+      "google": "Space+Grotesk:wght@500;700|Inter:wght@400;500",
+      "hero": "84px/700/-0.04em",
+      "h2": "40px/600/-0.02em",
+      "body_size": "16px, line-height 1.7",
+      "case": "none",
+      "detail": "Certains blocs de texte décalés de plusieurs colonnes"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #E2E2DE",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1320px",
+      "hero": "editorial",
+      "features": "gallery",
+      "spacing": "128px entre sections",
+      "grid": "12 colonnes utilisées de façon irrégulière"
+    },
+    "motion": {
+      "load": "les blocs entrent depuis des directions différentes",
+      "hover": "l'image se déplace légèrement à contresens du curseur",
+      "scroll": "vitesses de défilement différentes selon les colonnes"
+    },
+    "components": [
+      "En-tête décalé",
+      "Hero avec titre hors grille",
+      "Projets en composition libre",
+      "Bloc manifeste étroit",
+      "Index de services",
+      "Contact en bas de page"
+    ],
+    "do": [
+      "Garder une grille sous-jacente même en la cassant",
+      "Créer un déséquilibre volontaire et cohérent",
+      "Limiter à un seul accent coloré"
+    ],
+    "dont": [
+      "Pas de chevauchement qui nuit à la lecture",
+      "Pas de décalage aléatoire sans intention",
+      "Ne pas centrer les blocs"
+    ],
+    "responsive": "Mobile : la grille se redresse en une colonne, les décalages sont abandonnés."
+  }
+]

@@ -1,0 +1,736 @@
+[
+  {
+    "id": "web3-crypto",
+    "name": "Web3 & Crypto",
+    "tagline": "Sombre, dégradés néon, cartes de verre, chiffres en direct.",
+    "intent": "Protocole ou application décentralisée : afficher les chiffres du réseau et connecter un portefeuille.",
+    "keywords": "technologique, nocturne, dynamique, chiffré",
+    "style": [
+      "Fond bleu nuit avec halos violets et cyan",
+      "Cartes de verre affichant des métriques en direct",
+      "Bouton « Connecter le portefeuille » toujours visible",
+      "Adresses tronquées en mono"
+    ],
+    "tags": ["dark", "web3", "gradients", "glass", "data"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#8B5CF6",
+      "secondary": "#22D3EE",
+      "bg": "#070B1A",
+      "surface": "#101830",
+      "text": "#EEF2FF",
+      "muted": "#94A3C8",
+      "border": "#1E2A4A"
+    },
+    "bg": "aurora",
+    "font": {
+      "heading": "Space Grotesk",
+      "body": "Inter",
+      "google": "Space+Grotesk:wght@500;700|Inter:wght@400;500|JetBrains+Mono:wght@400",
+      "hero": "60px/700/-0.03em",
+      "h2": "34px/600/-0.02em",
+      "body_size": "16px, line-height 1.65",
+      "case": "none",
+      "detail": "Montants et adresses en mono, variations en vert ou rouge"
+    },
+    "shape": {
+      "radius": "16px",
+      "border": "1px solid rgba(139,92,246,0.25)",
+      "shadow": "0 0 60px -30px #8B5CF6"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "centered",
+      "features": "bento",
+      "spacing": "104px entre sections",
+      "grid": "bento de métriques"
+    },
+    "motion": {
+      "load": "les chiffres s'incrémentent jusqu'à leur valeur",
+      "hover": "la carte s'illumine",
+      "scroll": "halos en parallaxe"
+    },
+    "components": [
+      "Navbar avec bouton de connexion de portefeuille",
+      "Hero avec métriques du protocole",
+      "Bento de fonctionnalités",
+      "Tableau des pools ou marchés",
+      "Feuille de route",
+      "Audits de sécurité",
+      "Pied de page avec liens communautaires"
+    ],
+    "do": [
+      "Afficher les audits de sécurité et les risques",
+      "Formater les montants avec précision",
+      "Garder l'adresse du contrat visible et copiable"
+    ],
+    "dont": [
+      "Pas de promesse de rendement garanti",
+      "Pas de métrique invérifiable",
+      "Ne pas masquer les frais de transaction"
+    ],
+    "responsive": "Mobile : bento en une colonne, tableau en scroll horizontal."
+  },
+  {
+    "id": "gaming-esports",
+    "name": "Gaming & Esports",
+    "tagline": "Angles coupés, rouge et noir, classements et équipes.",
+    "intent": "Équipe esport ou tournoi : afficher le calendrier, les résultats et l'effectif avec une énergie compétitive.",
+    "keywords": "compétitif, agressif, angulaire, sombre",
+    "style": [
+      "Formes en parallélogramme et angles coupés",
+      "Rouge vif sur noir, accents blancs",
+      "Photos de joueurs détourées sur fond graphique",
+      "Tableaux de résultats en grille serrée"
+    ],
+    "tags": ["dark", "gaming", "angular", "bold", "sport"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#EF2B2B",
+      "secondary": "#1A1A1F",
+      "bg": "#0A0A0D",
+      "surface": "#141419",
+      "text": "#FFFFFF",
+      "muted": "#9A9AA5",
+      "border": "#26262E"
+    },
+    "bg": "grid",
+    "font": {
+      "heading": "Rajdhani",
+      "body": "Inter",
+      "google": "Rajdhani:wght@600;700|Inter:wght@400;500",
+      "hero": "72px/700/0.01em",
+      "h2": "38px/700/0.01em",
+      "body_size": "15px, line-height 1.55",
+      "case": "upper",
+      "detail": "Pseudos en majuscules condensées, scores en 40px"
+    },
+    "shape": {
+      "radius": "0px avec angles coupés à 16px",
+      "border": "1px solid #26262E",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1280px",
+      "hero": "fullbleed",
+      "features": "gallery",
+      "spacing": "80px entre sections",
+      "grid": "cartes de joueurs en 4 colonnes"
+    },
+    "motion": {
+      "load": "les cartes glissent depuis le côté",
+      "hover": "le joueur se met en avant, fond rouge diagonal",
+      "scroll": "compteurs de victoires"
+    },
+    "components": [
+      "Navbar angulaire avec logo d'équipe",
+      "Hero avec prochain match et compte à rebours",
+      "Calendrier et résultats",
+      "Effectif de l'équipe",
+      "Classement",
+      "Boutique de maillots",
+      "Partenaires",
+      "Pied de page réseaux"
+    ],
+    "do": [
+      "Mettre le prochain match en évidence",
+      "Garder des angles coupés cohérents partout",
+      "Afficher les résultats récents"
+    ],
+    "dont": [
+      "Pas de coins arrondis classiques",
+      "Pas de fond clair",
+      "Ne pas surcharger de dégradés"
+    ],
+    "responsive": "Mobile : effectif en 2 colonnes, calendrier en liste."
+  },
+  {
+    "id": "dataviz-dashboard",
+    "name": "Data Dashboard",
+    "tagline": "Dense, graphiques, filtres, mono pour les chiffres.",
+    "intent": "Interface analytique : lire beaucoup de chiffres et de graphiques sans fatigue.",
+    "keywords": "analytique, dense, précis, sobre",
+    "style": [
+      "Grille de widgets de tailles variables",
+      "Palette de données limitée à cinq teintes distinctes",
+      "Chiffres en police tabulaire",
+      "Fond sombre neutre pour réduire la fatigue"
+    ],
+    "tags": ["dark", "data", "dense", "dashboard", "analytical"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#38BDF8",
+      "secondary": "#1E293B",
+      "bg": "#0B1120",
+      "surface": "#131C2E",
+      "text": "#E2E8F0",
+      "muted": "#8494AC",
+      "border": "#20293C"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700|IBM+Plex+Mono:wght@400;500",
+      "hero": "28px/600/-0.01em",
+      "h2": "18px/600/0",
+      "body_size": "14px, line-height 1.5",
+      "case": "none",
+      "detail": "Valeurs clés en 32px mono tabulaire, variations en vert ou rouge"
+    },
+    "shape": {
+      "radius": "10px",
+      "border": "1px solid #20293C",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1440px",
+      "hero": "sidebar",
+      "features": "bento",
+      "spacing": "16px entre widgets",
+      "grid": "sidebar 220px + grille de widgets 12 colonnes"
+    },
+    "motion": {
+      "load": "les graphiques se dessinent en 400ms",
+      "hover": "info-bulle de valeur précise",
+      "scroll": "en-têtes de tableaux collants"
+    },
+    "components": [
+      "Sidebar de navigation",
+      "Barre de filtres et de période",
+      "Rangée de KPI",
+      "Graphique principal",
+      "Tableau de données triable",
+      "Widgets secondaires",
+      "Export CSV"
+    ],
+    "do": [
+      "Utiliser des chiffres tabulaires pour aligner les colonnes",
+      "Limiter la palette de séries à cinq couleurs distinctes",
+      "Toujours indiquer la période et l'unité"
+    ],
+    "dont": [
+      "Pas de graphique en camembert à plus de cinq parts",
+      "Pas de couleur portant seule l'information",
+      "Ne pas animer les données à chaque rafraîchissement"
+    ],
+    "responsive": "Mobile : widgets empilés, tableaux en scroll horizontal, sidebar en menu."
+  },
+  {
+    "id": "nonprofit-cause",
+    "name": "Nonprofit & Cause",
+    "tagline": "Photos humaines, vert, impact chiffré, bouton de don.",
+    "intent": "Association ou ONG : montrer l'impact, expliquer l'action, obtenir un don.",
+    "keywords": "humain, engagé, transparent, chaleureux",
+    "style": [
+      "Photographies de personnes en situation réelle",
+      "Vert profond et sable, ton chaleureux",
+      "Chiffres d'impact en grand format",
+      "Bouton de don visible en permanence"
+    ],
+    "tags": ["light", "nonprofit", "human", "photography", "impact"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#15803D",
+      "secondary": "#FEF3C7",
+      "bg": "#FDFCF8",
+      "surface": "#FFFFFF",
+      "text": "#1A1F1B",
+      "muted": "#5F6B60",
+      "border": "#E3E7DE"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Merriweather",
+      "body": "Inter",
+      "google": "Merriweather:wght@700|Inter:wght@400;500;600",
+      "hero": "50px/700/-0.02em",
+      "h2": "30px/700/-0.01em",
+      "body_size": "18px, line-height 1.75",
+      "case": "none",
+      "detail": "Chiffres d'impact en 64px avec libellé en dessous"
+    },
+    "shape": {
+      "radius": "10px",
+      "border": "1px solid #E3E7DE",
+      "shadow": "0 8px 20px -16px rgba(21,128,61,0.35)"
+    },
+    "layout": {
+      "container": "1160px",
+      "hero": "fullbleed",
+      "features": "grid-3",
+      "spacing": "88px entre sections",
+      "grid": "12 colonnes"
+    },
+    "motion": {
+      "load": "fade-up",
+      "hover": "élévation légère",
+      "scroll": "compteurs d'impact"
+    },
+    "components": [
+      "Navbar avec bouton Faire un don",
+      "Hero photo avec mission en une phrase",
+      "Chiffres d'impact",
+      "Nos actions en trois axes",
+      "Témoignages de bénéficiaires",
+      "Transparence financière",
+      "Formulaire de don avec montants suggérés",
+      "Pied de page avec statut légal"
+    ],
+    "do": [
+      "Montrer l'utilisation concrète des dons",
+      "Publier le rapport financier",
+      "Proposer des montants de don suggérés"
+    ],
+    "dont": [
+      "Pas d'images misérabilistes sans consentement",
+      "Pas de chiffre d'impact non sourcé",
+      "Ne pas compliquer le parcours de don"
+    ],
+    "responsive": "Mobile : bouton de don fixe en bas, chiffres en une colonne."
+  },
+  {
+    "id": "ai-chat-interface",
+    "name": "AI Chat Interface",
+    "tagline": "Bulles de conversation, ton doux, mono pour le code.",
+    "intent": "Produit conversationnel : montrer l'interface de discussion comme démonstration principale.",
+    "keywords": "conversationnel, doux, clair, moderne",
+    "style": [
+      "Bulles asymétriques : utilisateur à droite, assistant à gauche",
+      "Palette neutre chaude avec un accent",
+      "Zone de saisie proéminente en bas",
+      "Réponses formatées avec listes et blocs de code"
+    ],
+    "tags": ["light", "ai", "chat", "soft", "product"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#C2542A",
+      "secondary": "#F5F0EA",
+      "bg": "#FAF9F7",
+      "surface": "#FFFFFF",
+      "text": "#1F1D1B",
+      "muted": "#6B6560",
+      "border": "#E8E3DC"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700|JetBrains+Mono:wght@400",
+      "hero": "48px/600/-0.03em",
+      "h2": "28px/600/-0.01em",
+      "body_size": "16px, line-height 1.7",
+      "case": "none",
+      "detail": "Bulles arrondies 18px, code en mono sur fond gris chaud"
+    },
+    "shape": {
+      "radius": "18px",
+      "border": "1px solid #E8E3DC",
+      "shadow": "0 6px 18px -14px rgba(0,0,0,0.2)"
+    },
+    "layout": {
+      "container": "1080px",
+      "hero": "split",
+      "features": "list",
+      "spacing": "88px entre sections",
+      "grid": "conversation en colonne de 720px"
+    },
+    "motion": {
+      "load": "la réponse s'écrit progressivement",
+      "hover": "actions de message (copier, régénérer) qui apparaissent",
+      "scroll": "défilement automatique vers le dernier message"
+    },
+    "components": [
+      "Navbar minimale",
+      "Hero avec conversation démonstrative",
+      "Zone de saisie avec suggestions",
+      "Capacités en liste",
+      "Section confidentialité des données",
+      "Tarification",
+      "Pied de page"
+    ],
+    "do": [
+      "Montrer une conversation réaliste et utile",
+      "Indiquer clairement les limites du modèle",
+      "Permettre de copier chaque réponse"
+    ],
+    "dont": [
+      "Pas de démonstration trompeuse des capacités",
+      "Pas de bulle sans indication d'auteur",
+      "Ne pas cacher la politique de traitement des données"
+    ],
+    "responsive": "Mobile : conversation pleine largeur, zone de saisie fixe en bas."
+  },
+  {
+    "id": "hardware-product",
+    "name": "Hardware Product Page",
+    "tagline": "Objet en grand, fond neutre, spécifications élégantes.",
+    "intent": "Produit physique haut de gamme : mettre l'objet en scène et détailler les caractéristiques.",
+    "keywords": "épuré, précis, désirable, technique",
+    "style": [
+      "Photographies studio de l'objet sur fond dégradé neutre",
+      "Sections plein écran, une caractéristique par écran",
+      "Typographie fine et très grande",
+      "Tableau de spécifications en fin de page"
+    ],
+    "tags": ["light", "product", "minimal", "premium", "photography"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#111111",
+      "secondary": "#F0F0F2",
+      "bg": "#FBFBFD",
+      "surface": "#FFFFFF",
+      "text": "#111114",
+      "muted": "#6E6E76",
+      "border": "#E4E4E9"
+    },
+    "bg": "soft-gradient",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@300;400;600;700",
+      "hero": "72px/600/-0.04em",
+      "h2": "44px/600/-0.03em",
+      "body_size": "18px, line-height 1.65",
+      "case": "none",
+      "detail": "Sections avec un seul chiffre clé mis en avant"
+    },
+    "shape": {
+      "radius": "18px",
+      "border": "1px solid #E4E4E9",
+      "shadow": "0 30px 60px -40px rgba(0,0,0,0.35)"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "centered",
+      "features": "split-alt",
+      "spacing": "sections de 100vh",
+      "grid": "une caractéristique par section"
+    },
+    "motion": {
+      "load": "le produit apparaît en fondu et léger zoom",
+      "hover": "rotation du produit au mouvement de souris",
+      "scroll": "l'objet tourne au fil du défilement"
+    },
+    "components": [
+      "Navbar fine avec bouton d'achat",
+      "Hero produit sur fond dégradé",
+      "Sections de caractéristiques plein écran",
+      "Comparatif des modèles",
+      "Tableau de spécifications",
+      "Options et accessoires",
+      "Pied de page avec garantie"
+    ],
+    "do": [
+      "Consacrer une section à une seule idée",
+      "Utiliser des photos studio haute définition",
+      "Donner les spécifications complètes en fin de page"
+    ],
+    "dont": [
+      "Pas de fond coloré qui concurrence le produit",
+      "Pas de texte long sur les visuels",
+      "Ne pas cacher le prix"
+    ],
+    "responsive": "Mobile : sections à 80vh, titre à 40px, produit centré."
+  },
+  {
+    "id": "movie-streaming",
+    "name": "Movie & Streaming",
+    "tagline": "Affiches en rangées, fond noir, bande-annonce en fond.",
+    "intent": "Catalogue de films ou de séries : parcourir, découvrir, lancer la lecture.",
+    "keywords": "cinématique, sombre, dense, immersif",
+    "style": [
+      "Bande-annonce en boucle assombrie derrière le hero",
+      "Rangées horizontales d'affiches défilantes",
+      "Rouge vif comme unique accent",
+      "Notes et genres en badges discrets"
+    ],
+    "tags": ["dark", "media", "carousel", "cinema", "dense"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#E50914",
+      "secondary": "#1F1F1F",
+      "bg": "#0A0A0A",
+      "surface": "#161616",
+      "text": "#FFFFFF",
+      "muted": "#A3A3A3",
+      "border": "#262626"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;600;800",
+      "hero": "60px/800/-0.03em",
+      "h2": "22px/600/-0.01em",
+      "body_size": "15px, line-height 1.55",
+      "case": "none",
+      "detail": "Titres de rangées en 20px semi-bold, affiches en ratio 2:3"
+    },
+    "shape": {
+      "radius": "6px",
+      "border": "aucune",
+      "shadow": "0 12px 30px -18px rgba(0,0,0,0.9)"
+    },
+    "layout": {
+      "container": "100% avec marge 48px",
+      "hero": "fullbleed",
+      "features": "gallery",
+      "spacing": "40px entre rangées",
+      "grid": "rangées horizontales défilantes"
+    },
+    "motion": {
+      "load": "fondu depuis le noir",
+      "hover": "l'affiche s'agrandit et affiche les actions",
+      "scroll": "défilement horizontal fluide des rangées"
+    },
+    "components": [
+      "Navbar transparente qui s'opacifie au défilement",
+      "Hero avec bande-annonce et bouton Lecture",
+      "Rangée « Continuer à regarder »",
+      "Rangées par genre",
+      "Page détail avec distribution",
+      "Pied de page discret"
+    ],
+    "do": [
+      "Rendre le bouton Lecture immédiatement visible",
+      "Charger les affiches en différé",
+      "Indiquer la durée et l'âge recommandé"
+    ],
+    "dont": [
+      "Pas de bande-annonce avec son par défaut",
+      "Pas d'affiche sans titre lisible",
+      "Ne pas masquer la disponibilité par région"
+    ],
+    "responsive": "Mobile : rangées en scroll tactile, hero à 70vh."
+  },
+  {
+    "id": "church-community",
+    "name": "Church & Community",
+    "tagline": "Chaleureux, serif, horaires, sermons et événements.",
+    "intent": "Communauté religieuse ou associative : informer sur les horaires, diffuser les enseignements, accueillir.",
+    "keywords": "accueillant, chaleureux, sobre, communautaire",
+    "style": [
+      "Palette bordeaux, crème et bois",
+      "Serif classique pour les titres",
+      "Photos de la communauté en situation",
+      "Horaires et lieu très visibles"
+    ],
+    "tags": ["light", "community", "serif", "warm", "local"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#7C2D3A",
+      "secondary": "#F1E7DC",
+      "bg": "#FCFAF6",
+      "surface": "#FFFFFF",
+      "text": "#241C1A",
+      "muted": "#6F625C",
+      "border": "#E7DCD0"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Lora",
+      "body": "Inter",
+      "google": "Lora:wght@500;600;700|Inter:wght@400;500",
+      "hero": "50px/600/-0.01em",
+      "h2": "30px/600/0",
+      "body_size": "17px, line-height 1.8",
+      "case": "none",
+      "detail": "Versets ou citations en italique centrées sur fond crème"
+    },
+    "shape": {
+      "radius": "6px",
+      "border": "1px solid #E7DCD0",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1120px",
+      "hero": "split",
+      "features": "list",
+      "spacing": "80px entre sections",
+      "grid": "12 colonnes"
+    },
+    "motion": {
+      "load": "fade doux",
+      "hover": "élévation discrète",
+      "scroll": "aucune"
+    },
+    "components": [
+      "Bandeau horaires des célébrations",
+      "Navbar simple",
+      "Hero avec message d'accueil",
+      "Prochains événements",
+      "Sermons audio ou vidéo",
+      "Groupes et activités",
+      "Adresse et plan d'accès",
+      "Pied de page avec contact"
+    ],
+    "do": [
+      "Afficher les horaires dès le premier écran",
+      "Proposer les enseignements en audio et en texte",
+      "Indiquer clairement comment venir et se garer"
+    ],
+    "dont": [
+      "Pas de langage excluant",
+      "Pas d'horaire obsolète",
+      "Ne pas cacher les coordonnées"
+    ],
+    "responsive": "Mobile : horaires en carte en haut, événements en liste."
+  },
+  {
+    "id": "automotive-configurator",
+    "name": "Automotive Configurator",
+    "tagline": "Noir, vue 360, options, fiche technique.",
+    "intent": "Constructeur automobile : présenter un modèle et permettre de le configurer.",
+    "keywords": "technique, sombre, précis, premium",
+    "style": [
+      "Véhicule sur fond sombre uni avec ombre au sol",
+      "Sélecteurs de couleur et de jantes en pastilles",
+      "Fiche technique en colonnes chiffrées",
+      "Typographie condensée pour les données"
+    ],
+    "tags": ["dark", "automotive", "configurator", "premium", "technical"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#DC2626",
+      "secondary": "#1C1C1F",
+      "bg": "#0D0D0F",
+      "surface": "#17171A",
+      "text": "#F5F5F7",
+      "muted": "#9C9CA5",
+      "border": "#262629"
+    },
+    "bg": "radial-glow",
+    "font": {
+      "heading": "Barlow Condensed",
+      "body": "Inter",
+      "google": "Barlow+Condensed:wght@600;700|Inter:wght@400;500",
+      "hero": "68px/700/0.01em",
+      "h2": "36px/700/0",
+      "body_size": "15px, line-height 1.6",
+      "case": "upper",
+      "detail": "Chiffres de performance en 48px avec unité en petit"
+    },
+    "shape": {
+      "radius": "6px",
+      "border": "1px solid #262629",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1320px",
+      "hero": "fullbleed",
+      "features": "table",
+      "spacing": "88px entre sections",
+      "grid": "visuel 65% + panneau d'options 35%"
+    },
+    "motion": {
+      "load": "le véhicule apparaît en rotation lente",
+      "hover": "la pastille de couleur s'agrandit",
+      "scroll": "changement d'angle de vue du véhicule"
+    },
+    "components": [
+      "Navbar avec sélection de modèle",
+      "Hero véhicule avec vue 360",
+      "Panneau de configuration (couleur, jantes, finition)",
+      "Prix mis à jour en direct",
+      "Fiche technique",
+      "Comparateur de finitions",
+      "Prise de rendez-vous essai",
+      "Pied de page concessions"
+    ],
+    "do": [
+      "Mettre à jour le prix à chaque option choisie",
+      "Donner les consommations et émissions réelles",
+      "Permettre de sauvegarder la configuration"
+    ],
+    "dont": [
+      "Pas de prix hors options affiché comme final",
+      "Pas de visuel non conforme à la configuration",
+      "Ne pas masquer les délais de livraison"
+    ],
+    "responsive": "Mobile : panneau d'options en tiroir bas, véhicule en pleine largeur."
+  },
+  {
+    "id": "space-scientific",
+    "name": "Space & Scientific",
+    "tagline": "Bleu nuit, champ d'étoiles, données et diagrammes.",
+    "intent": "Agence spatiale, laboratoire ou projet scientifique : combiner émerveillement visuel et rigueur des données.",
+    "keywords": "scientifique, contemplatif, précis, sombre",
+    "style": [
+      "Fond bleu nuit avec champ d'étoiles discret",
+      "Diagrammes techniques en traits fins",
+      "Chiffres et unités en mono",
+      "Images astronomiques en pleine largeur"
+    ],
+    "tags": ["dark", "science", "data", "mono", "space"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#60A5FA",
+      "secondary": "#1E3A5F",
+      "bg": "#050B18",
+      "surface": "#0C172B",
+      "text": "#E8F0FC",
+      "muted": "#8FA4C0",
+      "border": "#1A2B45"
+    },
+    "bg": "starfield",
+    "font": {
+      "heading": "Space Grotesk",
+      "body": "Inter",
+      "google": "Space+Grotesk:wght@500;700|Inter:wght@400;500|IBM+Plex+Mono:wght@400",
+      "hero": "58px/700/-0.02em",
+      "h2": "32px/600/-0.01em",
+      "body_size": "16px, line-height 1.7",
+      "case": "none",
+      "detail": "Coordonnées, distances et dates en mono avec unités explicites"
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #1A2B45",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "fullbleed",
+      "features": "bento",
+      "spacing": "104px entre sections",
+      "grid": "bento de données et d'images"
+    },
+    "motion": {
+      "load": "les étoiles apparaissent progressivement",
+      "hover": "info-bulle de donnée précise",
+      "scroll": "parallaxe très lente du champ d'étoiles"
+    },
+    "components": [
+      "Navbar sobre",
+      "Hero image astronomique avec titre de mission",
+      "Chiffres clés de la mission",
+      "Frise chronologique des étapes",
+      "Diagrammes techniques",
+      "Galerie d'images scientifiques",
+      "Publications et données ouvertes",
+      "Pied de page institutionnel"
+    ],
+    "do": [
+      "Donner les unités et les sources de chaque chiffre",
+      "Créditer les images scientifiques",
+      "Rendre les données téléchargeables"
+    ],
+    "dont": [
+      "Pas de donnée sans source",
+      "Pas d'illustration présentée comme une photographie réelle",
+      "Ne pas surcharger le champ d'étoiles"
+    ],
+    "responsive": "Mobile : bento en une colonne, diagrammes en scroll horizontal."
+  }
+]

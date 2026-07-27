@@ -1,0 +1,740 @@
+[
+  {
+    "id": "law-firm-classic",
+    "name": "Law Firm Classic",
+    "tagline": "Marine et or, serif, verticalité et autorité.",
+    "intent": "Cabinet d'avocats ou notaires. Inspirer la confiance par la sobriété et l'ancienneté.",
+    "keywords": "solennel, institutionnel, sobre, autoritaire",
+    "style": [
+      "Bleu marine profond en aplat, filets dorés fins",
+      "Titres en serif classique, corps en sans-serif lisible",
+      "Photographies en noir et blanc des associés",
+      "Aucune fantaisie, symétrie et alignements stricts"
+    ],
+    "tags": ["light", "serif", "corporate", "elegant", "trust"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#14284B",
+      "secondary": "#B99B5A",
+      "bg": "#FFFFFF",
+      "surface": "#F5F6F8",
+      "text": "#14181F",
+      "muted": "#5A6272",
+      "border": "#DDE1E7"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Playfair Display",
+      "body": "Source Sans 3",
+      "google": "Playfair+Display:wght@500;700|Source+Sans+3:wght@400;600",
+      "hero": "52px/700/-0.01em",
+      "h2": "32px/700/0",
+      "body_size": "17px, line-height 1.7",
+      "case": "none",
+      "detail": "Filet doré de 40px sous chaque titre de section"
+    },
+    "shape": {
+      "radius": "2px",
+      "border": "1px solid #DDE1E7",
+      "shadow": "0 2px 10px rgba(20,40,75,0.06)"
+    },
+    "layout": {
+      "container": "1180px",
+      "hero": "split",
+      "features": "grid-3",
+      "spacing": "88px entre sections",
+      "grid": "12 colonnes, alignement à gauche"
+    },
+    "motion": {
+      "load": "fade 300ms",
+      "hover": "le filet doré s'étend sous le lien",
+      "scroll": "aucune"
+    },
+    "components": [
+      "Barre de contact en haut (téléphone, prise de rendez-vous)",
+      "Navbar avec domaines d'expertise",
+      "Hero avec photo du cabinet",
+      "Domaines d'intervention en 3 colonnes",
+      "Présentation des associés",
+      "Chiffres et distinctions",
+      "Formulaire de contact",
+      "Pied de page avec mentions du barreau"
+    ],
+    "do": [
+      "Afficher clairement les coordonnées et l'adresse",
+      "Utiliser l'or uniquement pour des filets et détails",
+      "Nommer les associés avec leur spécialité"
+    ],
+    "dont": [
+      "Pas d'illustration ni d'emoji",
+      "Pas de promesse de résultat",
+      "Ne pas arrondir fortement les angles"
+    ],
+    "responsive": "Mobile : barre de contact réduite à un bouton d'appel, colonnes empilées."
+  },
+  {
+    "id": "medical-clean",
+    "name": "Medical & Health Clean",
+    "tagline": "Bleu-vert apaisant, formes arrondies, lisibilité maximale.",
+    "intent": "Clinique, cabinet ou plateforme de santé. Rassurer, orienter vers la prise de rendez-vous.",
+    "keywords": "apaisant, clair, accessible, humain",
+    "style": [
+      "Bleu ciel et vert d'eau sur fond blanc",
+      "Photographies de soignants souriants, lumière naturelle",
+      "Icônes arrondies simples pour les spécialités",
+      "Beaucoup d'air, texte de grande taille"
+    ],
+    "tags": ["light", "calm", "accessible", "rounded", "health"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#0891B2",
+      "secondary": "#CFFAFE",
+      "bg": "#FFFFFF",
+      "surface": "#F0FBFD",
+      "text": "#0F2C34",
+      "muted": "#5A7480",
+      "border": "#D6EBF0"
+    },
+    "bg": "soft-gradient",
+    "font": {
+      "heading": "Nunito Sans",
+      "body": "Nunito Sans",
+      "google": "Nunito+Sans:wght@400;600;800",
+      "hero": "54px/800/-0.02em",
+      "h2": "32px/700/-0.01em",
+      "body_size": "18px, line-height 1.75",
+      "case": "none",
+      "detail": "Taille de base élevée pour les publics âgés, contraste renforcé"
+    },
+    "shape": {
+      "radius": "18px",
+      "border": "1px solid #D6EBF0",
+      "shadow": "0 10px 26px -18px rgba(8,145,178,0.35)"
+    },
+    "layout": {
+      "container": "1160px",
+      "hero": "split",
+      "features": "grid-3",
+      "spacing": "96px entre sections",
+      "grid": "12 colonnes"
+    },
+    "motion": {
+      "load": "fade-up doux",
+      "hover": "légère élévation des cartes",
+      "scroll": "reveal simple"
+    },
+    "components": [
+      "Bandeau d'urgence avec numéro",
+      "Navbar avec bouton de rendez-vous",
+      "Hero avec photo et formulaire de prise de rendez-vous",
+      "Spécialités en cartes",
+      "Équipe soignante",
+      "Horaires et accès avec carte",
+      "FAQ patients",
+      "Pied de page avec informations pratiques"
+    ],
+    "do": [
+      "Rendre le bouton de rendez-vous visible en permanence",
+      "Respecter un contraste AA minimum partout",
+      "Indiquer clairement horaires, adresse et accessibilité"
+    ],
+    "dont": [
+      "Pas d'images médicales anxiogènes",
+      "Pas de jargon médical non expliqué",
+      "Ne pas descendre sous 16px pour le corps de texte"
+    ],
+    "responsive": "Mobile : bouton d'appel fixe en bas, formulaire simplifié à trois champs."
+  },
+  {
+    "id": "bank-trust",
+    "name": "Banking Trust",
+    "tagline": "Bleu profond, données, tableaux, sécurité affichée.",
+    "intent": "Banque ou assurance en ligne. Combiner densité d'information et sentiment de sécurité.",
+    "keywords": "solide, dense, chiffré, institutionnel",
+    "style": [
+      "Bleu nuit dominant avec accents dorés discrets",
+      "Tableaux de taux et de frais très lisibles",
+      "Icônes de sécurité (cadenas, bouclier) récurrentes",
+      "Peu d'espace perdu, information hiérarchisée"
+    ],
+    "tags": ["light", "corporate", "dense", "finance", "trust"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#0B2E59",
+      "secondary": "#D4B678",
+      "bg": "#FFFFFF",
+      "surface": "#F4F6F9",
+      "text": "#0B1524",
+      "muted": "#5B6879",
+      "border": "#D3DAE3"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700",
+      "hero": "48px/700/-0.02em",
+      "h2": "30px/600/-0.01em",
+      "body_size": "16px, line-height 1.65",
+      "case": "none",
+      "detail": "Chiffres en tabular-nums, taux affichés en 32px bold"
+    },
+    "shape": {
+      "radius": "6px",
+      "border": "1px solid #D3DAE3",
+      "shadow": "0 1px 4px rgba(11,46,89,0.08)"
+    },
+    "layout": {
+      "container": "1280px",
+      "hero": "split",
+      "features": "table",
+      "spacing": "80px entre sections",
+      "grid": "12 colonnes, gouttière 24px"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "ligne de tableau surlignée",
+      "scroll": "aucune"
+    },
+    "components": [
+      "Barre utilitaire avec accès à l'espace client",
+      "Navbar avec méga-menu produits",
+      "Hero avec offre chiffrée",
+      "Simulateur de crédit ou d'épargne",
+      "Tableau comparatif des offres",
+      "Bloc sécurité et garanties",
+      "Actualités financières",
+      "Pied de page réglementaire dense"
+    ],
+    "do": [
+      "Afficher les taux et frais sans ambiguïté",
+      "Mettre les mentions légales obligatoires en pied de page complet",
+      "Garder une hiérarchie stricte des informations chiffrées"
+    ],
+    "dont": [
+      "Pas de ton familier",
+      "Pas de couleur vive hors alerte",
+      "Ne pas masquer les conditions"
+    ],
+    "responsive": "Mobile : tableaux en scroll horizontal, simulateur en une colonne."
+  },
+  {
+    "id": "consulting-modern",
+    "name": "Consulting Modern",
+    "tagline": "Anthracite, photos grand format, chiffres d'impact.",
+    "intent": "Cabinet de conseil ou ESN. Démontrer l'expertise par des cas clients et des chiffres.",
+    "keywords": "affirmé, photographique, expert, sobre",
+    "style": [
+      "Photographies pleine largeur en noir et blanc légèrement teintées",
+      "Anthracite dominant avec un accent unique",
+      "Chiffres d'impact en très grande taille",
+      "Grille éditoriale avec beaucoup d'espace"
+    ],
+    "tags": ["light", "photography", "corporate", "bold", "expert"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#C2410C",
+      "secondary": "#1F2937",
+      "bg": "#FAFAF9",
+      "surface": "#FFFFFF",
+      "text": "#111827",
+      "muted": "#6B7280",
+      "border": "#E5E7EB"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "DM Sans",
+      "body": "DM Sans",
+      "google": "DM+Sans:wght@400;500;700",
+      "hero": "60px/700/-0.03em",
+      "h2": "36px/700/-0.02em",
+      "body_size": "18px, line-height 1.7",
+      "case": "none",
+      "detail": "Chiffres d'impact en 88px, unité en petit à côté"
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #E5E7EB",
+      "shadow": "0 8px 24px -16px rgba(0,0,0,0.2)"
+    },
+    "layout": {
+      "container": "1240px",
+      "hero": "fullbleed",
+      "features": "split-alt",
+      "spacing": "112px entre sections",
+      "grid": "sections alternées texte/image"
+    },
+    "motion": {
+      "load": "fade-up 24px",
+      "hover": "zoom lent 1.04 sur les images",
+      "scroll": "compteurs qui s'incrémentent"
+    },
+    "components": [
+      "Navbar sobre",
+      "Hero pleine largeur avec photo",
+      "Chiffres d'impact",
+      "Expertises alternées texte/image",
+      "Cas clients avec résultats",
+      "Équipe dirigeante",
+      "Offres d'emploi",
+      "Pied de page"
+    ],
+    "do": [
+      "Appuyer chaque affirmation par un chiffre",
+      "Utiliser des photos réelles de l'équipe",
+      "Garder un seul accent coloré"
+    ],
+    "dont": [
+      "Pas de banque d'images générique et évidente",
+      "Pas de jargon creux sans preuve",
+      "Ne pas multiplier les couleurs"
+    ],
+    "responsive": "Mobile : alternance abandonnée, chiffres à 56px."
+  },
+  {
+    "id": "insurance-friendly",
+    "name": "Insurance Friendly",
+    "tagline": "Vert rassurant, illustrations, parcours en trois étapes.",
+    "intent": "Assureur en ligne qui veut désamorcer la complexité par la pédagogie et l'illustration.",
+    "keywords": "pédagogique, rassurant, clair, chaleureux",
+    "style": [
+      "Illustrations vectorielles simples en deux tons",
+      "Vert profond avec accents jaunes",
+      "Parcours utilisateur explicité en trois étapes numérotées",
+      "Cartes de garanties très lisibles"
+    ],
+    "tags": ["light", "friendly", "illustration", "insurance", "clear"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#166534",
+      "secondary": "#FDE047",
+      "bg": "#FCFDF9",
+      "surface": "#FFFFFF",
+      "text": "#132018",
+      "muted": "#5A6B5F",
+      "border": "#DEE7DF"
+    },
+    "bg": "soft-gradient",
+    "font": {
+      "heading": "Work Sans",
+      "body": "Work Sans",
+      "google": "Work+Sans:wght@400;500;700",
+      "hero": "52px/700/-0.02em",
+      "h2": "32px/700/-0.01em",
+      "body_size": "18px, line-height 1.7",
+      "case": "none",
+      "detail": "Étapes numérotées dans des cercles verts de 48px"
+    },
+    "shape": {
+      "radius": "14px",
+      "border": "1px solid #DEE7DF",
+      "shadow": "0 10px 24px -18px rgba(22,101,52,0.3)"
+    },
+    "layout": {
+      "container": "1140px",
+      "hero": "split",
+      "features": "steps",
+      "spacing": "96px entre sections",
+      "grid": "12 colonnes"
+    },
+    "motion": {
+      "load": "fade-up",
+      "hover": "carte de garantie surélevée",
+      "scroll": "les étapes se remplissent au passage"
+    },
+    "components": [
+      "Navbar avec numéro de téléphone",
+      "Hero avec formulaire de devis rapide",
+      "Trois étapes du parcours",
+      "Garanties en cartes comparables",
+      "Témoignages clients",
+      "FAQ sur les exclusions",
+      "Pied de page avec mentions ACPR"
+    ],
+    "do": [
+      "Expliquer chaque garantie en une phrase simple",
+      "Afficher les exclusions clairement",
+      "Donner un prix indicatif dès le hero"
+    ],
+    "dont": [
+      "Pas de petits caractères illisibles",
+      "Pas de jargon assurantiel non traduit",
+      "Ne pas cacher les délais de carence"
+    ],
+    "responsive": "Mobile : formulaire de devis en accordéon, étapes verticales."
+  },
+  {
+    "id": "industrial-b2b",
+    "name": "Industrial B2B",
+    "tagline": "Acier, orange sécurité, fiches techniques.",
+    "intent": "Industriel ou fabricant qui vend à des professionnels : catalogue, fiches techniques, contact commercial.",
+    "keywords": "robuste, technique, factuel, industriel",
+    "style": [
+      "Gris acier dominant, orange de sécurité en accent",
+      "Photographies d'atelier et de machines",
+      "Tableaux de caractéristiques techniques",
+      "Angles droits, aucune fantaisie"
+    ],
+    "tags": ["light", "industrial", "technical", "b2b", "structured"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#EA580C",
+      "secondary": "#334155",
+      "bg": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "text": "#0F172A",
+      "muted": "#64748B",
+      "border": "#CBD5E1"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Barlow Condensed",
+      "body": "Barlow",
+      "google": "Barlow+Condensed:wght@600;700|Barlow:wght@400;500;600",
+      "hero": "58px/700/0",
+      "h2": "34px/700/0",
+      "body_size": "16px, line-height 1.6",
+      "case": "upper",
+      "detail": "Titres condensés en majuscules, références produit en mono"
+    },
+    "shape": {
+      "radius": "2px",
+      "border": "2px solid #CBD5E1",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1280px",
+      "hero": "split",
+      "features": "table",
+      "spacing": "72px entre sections",
+      "grid": "12 colonnes serrées"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "bordure orange sur les fiches produit",
+      "scroll": "aucune"
+    },
+    "components": [
+      "Barre avec certifications ISO",
+      "Navbar catalogue",
+      "Hero avec photo machine",
+      "Gammes de produits en grille",
+      "Tableau de caractéristiques",
+      "Références clients industriels",
+      "Formulaire de demande de devis",
+      "Pied de page avec coordonnées d'usine"
+    ],
+    "do": [
+      "Afficher les références et normes produits",
+      "Rendre le PDF de fiche technique téléchargeable",
+      "Utiliser l'orange uniquement pour les actions"
+    ],
+    "dont": [
+      "Pas d'esthétique startup",
+      "Pas d'arrondi marqué",
+      "Ne pas cacher les délais et conditions de livraison"
+    ],
+    "responsive": "Mobile : tableaux en scroll horizontal, grille produits en 2 colonnes."
+  },
+  {
+    "id": "real-estate-luxury",
+    "name": "Real Estate Luxury",
+    "tagline": "Beige, serif, immenses photographies de biens.",
+    "intent": "Agence immobilière haut de gamme. Le bien est mis en scène comme dans un magazine d'architecture.",
+    "keywords": "luxueux, photographique, calme, raffiné",
+    "style": [
+      "Photographies pleine largeur, jamais recadrées serré",
+      "Palette beige, blanc cassé et noir doux",
+      "Serif fin pour les titres, chiffres discrets",
+      "Prix affiché sobrement, sans emphase"
+    ],
+    "tags": ["light", "luxury", "serif", "photography", "elegant"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#8A7A63",
+      "secondary": "#E8E1D5",
+      "bg": "#FBFAF7",
+      "surface": "#FFFFFF",
+      "text": "#211E19",
+      "muted": "#7A736A",
+      "border": "#E4DED2"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Cormorant Garamond",
+      "body": "Jost",
+      "google": "Cormorant+Garamond:wght@300;400;600|Jost:wght@300;400;500",
+      "hero": "68px/300/0.01em",
+      "h2": "36px/400/0.01em",
+      "body_size": "16px, line-height 1.8",
+      "case": "none",
+      "detail": "Caractéristiques du bien en petites capitales espacées"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #E4DED2",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1320px",
+      "hero": "fullbleed",
+      "features": "gallery",
+      "spacing": "120px entre sections",
+      "grid": "galerie 2 colonnes avec décalage vertical"
+    },
+    "motion": {
+      "load": "fondu lent 700ms",
+      "hover": "zoom très lent sur la photo",
+      "scroll": "parallaxe légère sur les images"
+    },
+    "components": [
+      "Navbar transparente sur la photo",
+      "Hero photo plein écran avec titre du bien",
+      "Caractéristiques essentielles",
+      "Galerie de photos",
+      "Plan et localisation",
+      "Contact du conseiller avec portrait",
+      "Autres biens de la sélection"
+    ],
+    "do": [
+      "Donner la priorité absolue à la photographie",
+      "Rester sobre sur les prix et les surfaces",
+      "Utiliser des graisses fines"
+    ],
+    "dont": [
+      "Pas de badge « bonne affaire » ni d'urgence commerciale",
+      "Pas de photo basse résolution",
+      "Ne pas surcharger de texte les visuels"
+    ],
+    "responsive": "Mobile : galerie en une colonne, hero à 90vh, titre à 36px."
+  },
+  {
+    "id": "government-public",
+    "name": "Government & Public Service",
+    "tagline": "Accessibilité d'abord : contraste élevé, structure claire.",
+    "intent": "Site public ou administratif. L'accessibilité et la clarté priment sur toute considération esthétique.",
+    "keywords": "accessible, officiel, structuré, neutre",
+    "style": [
+      "Contraste élevé, respect strict du niveau AA voire AAA",
+      "Bleu institutionnel, rouge pour les alertes uniquement",
+      "Structure de page prévisible avec fil d'Ariane",
+      "Aucun effet décoratif"
+    ],
+    "tags": ["light", "accessible", "official", "structured", "high-contrast"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#000091",
+      "secondary": "#E1000F",
+      "bg": "#FFFFFF",
+      "surface": "#F6F6F6",
+      "text": "#161616",
+      "muted": "#666666",
+      "border": "#DDDDDD"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Marianne",
+      "body": "Marianne",
+      "google": "Inter:wght@400;500;700",
+      "hero": "40px/700/0",
+      "h2": "28px/700/0",
+      "body_size": "16px, line-height 1.65",
+      "case": "none",
+      "detail": "Focus visible obligatoire (contour 2px), liens toujours soulignés"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #DDDDDD",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "editorial",
+      "features": "list",
+      "spacing": "56px entre sections",
+      "grid": "12 colonnes, sidebar de navigation"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "changement de fond sur les liens",
+      "scroll": "aucune"
+    },
+    "components": [
+      "Bandeau officiel avec logo de l'institution",
+      "Barre de recherche proéminente",
+      "Fil d'Ariane",
+      "Titre de page et chapô",
+      "Sommaire latéral",
+      "Blocs de démarches",
+      "Encadré d'information importante",
+      "Pied de page avec accessibilité et mentions légales"
+    ],
+    "do": [
+      "Souligner tous les liens dans le corps de texte",
+      "Fournir un fil d'Ariane sur chaque page",
+      "Rendre chaque élément atteignable au clavier"
+    ],
+    "dont": [
+      "Pas d'information portée uniquement par la couleur",
+      "Pas d'animation automatique",
+      "Ne pas descendre sous 16px"
+    ],
+    "responsive": "Mobile : sommaire en accordéon, recherche en premier."
+  },
+  {
+    "id": "recruitment-hr",
+    "name": "HR & Recruitment",
+    "tagline": "Violet chaleureux, portraits, offres filtrables.",
+    "intent": "Plateforme de recrutement ou page carrières. Donner envie de postuler et faciliter la recherche d'offre.",
+    "keywords": "humain, moderne, accueillant, organisé",
+    "style": [
+      "Portraits d'équipe en situation, pas de photos de stock",
+      "Violet doux avec fond crème",
+      "Cartes d'offres avec filtres immédiats",
+      "Valeurs de l'entreprise en trois blocs"
+    ],
+    "tags": ["light", "friendly", "people", "modern", "cards"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#6D28D9",
+      "secondary": "#EDE9FE",
+      "bg": "#FCFBFF",
+      "surface": "#FFFFFF",
+      "text": "#1B1626",
+      "muted": "#665E7A",
+      "border": "#E7E2F2"
+    },
+    "bg": "soft-gradient",
+    "font": {
+      "heading": "Outfit",
+      "body": "Inter",
+      "google": "Outfit:wght@500;700|Inter:wght@400;500",
+      "hero": "56px/700/-0.02em",
+      "h2": "32px/600/-0.01em",
+      "body_size": "17px, line-height 1.65",
+      "case": "none",
+      "detail": "Badges de contrat (CDI, stage) en pastilles colorées"
+    },
+    "shape": {
+      "radius": "16px",
+      "border": "1px solid #E7E2F2",
+      "shadow": "0 10px 26px -20px rgba(109,40,217,0.35)"
+    },
+    "layout": {
+      "container": "1160px",
+      "hero": "split",
+      "features": "list",
+      "spacing": "88px entre sections",
+      "grid": "filtres à gauche, liste d'offres à droite"
+    },
+    "motion": {
+      "load": "fade-up",
+      "hover": "carte d'offre soulevée avec bordure violette",
+      "scroll": "reveal des portraits"
+    },
+    "components": [
+      "Navbar avec bouton « Voir les offres »",
+      "Hero avec photo d'équipe",
+      "Valeurs en trois blocs",
+      "Filtres (métier, lieu, contrat)",
+      "Liste des offres",
+      "Témoignages de collaborateurs",
+      "Processus de recrutement en étapes",
+      "Pied de page"
+    ],
+    "do": [
+      "Indiquer la fourchette de salaire",
+      "Décrire le processus de recrutement étape par étape",
+      "Montrer de vraies photos d'équipe"
+    ],
+    "dont": [
+      "Pas d'offre sans lieu ni type de contrat",
+      "Pas de photo de stock générique",
+      "Ne pas masquer le nombre d'étapes d'entretien"
+    ],
+    "responsive": "Mobile : filtres dans un panneau coulissant, offres en une colonne."
+  },
+  {
+    "id": "logistics-transport",
+    "name": "Logistics & Transport",
+    "tagline": "Bleu et orange, lignes de mouvement, suivi de colis.",
+    "intent": "Transporteur ou logisticien. Mettre en avant le suivi, la couverture géographique et la fiabilité.",
+    "keywords": "dynamique, fiable, géographique, opérationnel",
+    "style": [
+      "Lignes diagonales suggérant le mouvement",
+      "Carte du réseau comme visuel central",
+      "Bleu profond et orange d'action",
+      "Champ de suivi de colis dès le hero"
+    ],
+    "tags": ["light", "dynamic", "b2b", "map", "structured"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#1D4ED8",
+      "secondary": "#F97316",
+      "bg": "#F8FAFF",
+      "surface": "#FFFFFF",
+      "text": "#0C1424",
+      "muted": "#5B6B85",
+      "border": "#D8E0F0"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Titillium Web",
+      "body": "Inter",
+      "google": "Titillium+Web:wght@600;700|Inter:wght@400;500",
+      "hero": "52px/700/-0.02em",
+      "h2": "32px/600/-0.01em",
+      "body_size": "17px, line-height 1.65",
+      "case": "none",
+      "detail": "Numéros de suivi en mono, délais en gros chiffres"
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #D8E0F0",
+      "shadow": "0 6px 18px -12px rgba(29,78,216,0.3)"
+    },
+    "layout": {
+      "container": "1240px",
+      "hero": "split",
+      "features": "grid-4",
+      "spacing": "88px entre sections",
+      "grid": "12 colonnes avec bandes diagonales"
+    },
+    "motion": {
+      "load": "les lignes de trajet se tracent",
+      "hover": "point de la carte agrandi avec info-bulle",
+      "scroll": "compteurs de volumes traités"
+    },
+    "components": [
+      "Barre avec suivi de colis",
+      "Navbar services",
+      "Hero avec champ de suivi",
+      "Carte du réseau",
+      "Services en 4 colonnes",
+      "Chiffres opérationnels",
+      "Demande de devis",
+      "Pied de page avec agences"
+    ],
+    "do": [
+      "Placer le suivi de colis au-dessus de la ligne de flottaison",
+      "Afficher les délais moyens réels",
+      "Rendre la carte du réseau lisible"
+    ],
+    "dont": [
+      "Pas de carte purement décorative sans données",
+      "Pas de promesse de délai non tenable",
+      "Ne pas surcharger la page de diagonales"
+    ],
+    "responsive": "Mobile : carte remplacée par une liste de zones, suivi en pleine largeur."
+  }
+]

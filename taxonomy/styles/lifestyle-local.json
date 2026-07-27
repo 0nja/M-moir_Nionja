@@ -1,0 +1,737 @@
+[
+  {
+    "id": "restaurant-warm",
+    "name": "Restaurant Warm",
+    "tagline": "Bois sombre, crème, serif, photos de plats en lumière chaude.",
+    "intent": "Restaurant de quartier ou table gastronomique : donner envie et faire réserver.",
+    "keywords": "chaleureux, gourmand, intime, soigné",
+    "style": [
+      "Fond brun profond avec textes crème",
+      "Photographies en lumière tungstène chaude",
+      "Menu présenté en deux colonnes avec pointillés de liaison",
+      "Serif classique pour les titres"
+    ],
+    "tags": ["dark", "warm", "food", "serif", "local"],
+    "difficulty": "beginner",
+    "mode": "dark",
+    "colors": {
+      "primary": "#C9803B",
+      "secondary": "#2A1D14",
+      "bg": "#1A120C",
+      "surface": "#241810",
+      "text": "#F5EADC",
+      "muted": "#B9A28C",
+      "border": "#3A2A1E"
+    },
+    "bg": "noise",
+    "font": {
+      "heading": "Playfair Display",
+      "body": "Karla",
+      "google": "Playfair+Display:wght@400;600|Karla:wght@400;500",
+      "hero": "62px/600/-0.01em",
+      "h2": "34px/600/0",
+      "body_size": "16px, line-height 1.75",
+      "case": "none",
+      "detail": "Prix du menu alignés à droite, reliés au plat par des pointillés"
+    },
+    "shape": {
+      "radius": "2px",
+      "border": "1px solid #3A2A1E",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1120px",
+      "hero": "fullbleed",
+      "features": "list",
+      "spacing": "96px entre sections",
+      "grid": "menu en deux colonnes"
+    },
+    "motion": {
+      "load": "fondu chaud 600ms",
+      "hover": "le plat s'éclaircit",
+      "scroll": "parallaxe sur la photo du hero"
+    },
+    "components": [
+      "Navbar avec bouton de réservation",
+      "Hero photo du restaurant",
+      "Mot du chef",
+      "Menu par service",
+      "Galerie de plats",
+      "Horaires et accès",
+      "Formulaire de réservation",
+      "Pied de page avec réseaux"
+    ],
+    "do": [
+      "Rendre le bouton de réservation visible en permanence",
+      "Afficher les horaires et l'adresse sans clic supplémentaire",
+      "Utiliser des photos réelles des plats servis"
+    ],
+    "dont": [
+      "Pas de menu en PDF uniquement",
+      "Pas de musique automatique",
+      "Ne pas masquer les prix"
+    ],
+    "responsive": "Mobile : menu en une colonne, bouton de réservation fixe en bas."
+  },
+  {
+    "id": "cafe-artisan",
+    "name": "Artisan Café",
+    "tagline": "Papier kraft, lettrage manuscrit, tampons et étiquettes.",
+    "intent": "Torréfacteur ou café de quartier : mettre en avant l'artisanat et l'origine des produits.",
+    "keywords": "artisanal, authentique, chaleureux, manuel",
+    "style": [
+      "Fond kraft texturé",
+      "Éléments en forme de tampon ou d'étiquette",
+      "Lettrage manuscrit pour les accents",
+      "Illustrations au trait (grains, tasses)"
+    ],
+    "tags": ["light", "artisanal", "texture", "handwritten", "warm"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#6F4E37",
+      "secondary": "#D9C4A9",
+      "bg": "#EFE3D2",
+      "surface": "#F8F0E3",
+      "text": "#33251A",
+      "muted": "#7A6551",
+      "border": "#CDB99C"
+    },
+    "bg": "paper",
+    "font": {
+      "heading": "Amatic SC",
+      "body": "Lato",
+      "google": "Amatic+SC:wght@700|Lato:wght@400;700",
+      "hero": "72px/700/0.01em",
+      "h2": "40px/700/0",
+      "body_size": "17px, line-height 1.7",
+      "case": "none",
+      "detail": "Prix et origines dans des étiquettes rectangulaires bordées"
+    },
+    "shape": {
+      "radius": "4px",
+      "border": "2px dashed #CDB99C",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1080px",
+      "hero": "centered",
+      "features": "grid-3",
+      "spacing": "80px entre sections",
+      "grid": "3 colonnes de produits"
+    },
+    "motion": {
+      "load": "fade doux",
+      "hover": "l'étiquette pivote légèrement",
+      "scroll": "aucune"
+    },
+    "components": [
+      "En-tête avec logo tampon",
+      "Hero avec photo du comptoir",
+      "Nos cafés par origine",
+      "Notre torréfaction en trois étapes",
+      "Horaires et adresse",
+      "Boutique en ligne",
+      "Pied de page"
+    ],
+    "do": [
+      "Raconter l'origine des produits",
+      "Utiliser des textures papier authentiques",
+      "Garder le corps de texte dans une sans-serif lisible"
+    ],
+    "dont": [
+      "Pas de police manuscrite pour les paragraphes",
+      "Pas de photo de stock de café générique",
+      "Ne pas surcharger de tampons"
+    ],
+    "responsive": "Mobile : produits en une colonne, textures allégées."
+  },
+  {
+    "id": "hotel-boutique",
+    "name": "Boutique Hotel",
+    "tagline": "Beige, serif fine, grandes photos de chambres, barre de réservation.",
+    "intent": "Hôtel de charme : séduire par les lieux et convertir vers la réservation directe.",
+    "keywords": "raffiné, calme, chaleureux, hospitalier",
+    "style": [
+      "Photographies pleine largeur des espaces",
+      "Barre de réservation (dates, personnes) toujours accessible",
+      "Palette beige, terracotta et blanc cassé",
+      "Serif fine pour les titres"
+    ],
+    "tags": ["light", "hospitality", "serif", "photography", "elegant"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#A8603F",
+      "secondary": "#EFE5D9",
+      "bg": "#FBF8F4",
+      "surface": "#FFFFFF",
+      "text": "#241E19",
+      "muted": "#7E7167",
+      "border": "#E5DACB"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Cormorant Garamond",
+      "body": "Jost",
+      "google": "Cormorant+Garamond:wght@300;400;600|Jost:wght@300;400;500",
+      "hero": "66px/300/0.02em",
+      "h2": "34px/400/0.01em",
+      "body_size": "16px, line-height 1.8",
+      "case": "none",
+      "detail": "Sur-titres en petites capitales espacées couleur terracotta"
+    },
+    "shape": {
+      "radius": "2px",
+      "border": "1px solid #E5DACB",
+      "shadow": "0 14px 34px -26px rgba(36,30,25,0.4)"
+    },
+    "layout": {
+      "container": "1280px",
+      "hero": "fullbleed",
+      "features": "split-alt",
+      "spacing": "112px entre sections",
+      "grid": "sections alternées image/texte"
+    },
+    "motion": {
+      "load": "fondu 700ms",
+      "hover": "zoom lent sur les photos de chambres",
+      "scroll": "parallaxe légère"
+    },
+    "components": [
+      "Navbar transparente avec bouton Réserver",
+      "Hero photo plein écran",
+      "Barre de recherche de disponibilité",
+      "Chambres et suites en alternance",
+      "Services (spa, restaurant)",
+      "Localisation et alentours",
+      "Avis voyageurs",
+      "Pied de page avec contact"
+    ],
+    "do": [
+      "Rendre la recherche de disponibilité accessible dès le hero",
+      "Montrer chaque type de chambre avec ses équipements",
+      "Indiquer clairement les conditions d'annulation"
+    ],
+    "dont": [
+      "Pas de photo trompeuse des chambres",
+      "Pas de prix affiché sans les taxes",
+      "Ne pas cacher la politique d'annulation"
+    ],
+    "responsive": "Mobile : barre de réservation compactée en un bouton, alternance abandonnée."
+  },
+  {
+    "id": "travel-blog",
+    "name": "Travel Blog",
+    "tagline": "Photos lumineuses, cartes, carnets de voyage.",
+    "intent": "Blog ou guide de voyage : donner envie de partir et rendre les informations pratiques faciles à trouver.",
+    "keywords": "lumineux, aventureux, informatif, personnel",
+    "style": [
+      "Photos très colorées en grand format",
+      "Cartes et repères géographiques intégrés",
+      "Encadrés pratiques (budget, saison, durée)",
+      "Palette bleu ciel et sable"
+    ],
+    "tags": ["light", "travel", "photography", "blog", "colorful"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#0EA5E9",
+      "secondary": "#FEF3C7",
+      "bg": "#FCFDFE",
+      "surface": "#FFFFFF",
+      "text": "#0F1B24",
+      "muted": "#5D6E7A",
+      "border": "#DCE7EE"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Merriweather",
+      "body": "Inter",
+      "google": "Merriweather:wght@400;700|Inter:wght@400;500",
+      "hero": "52px/700/-0.01em",
+      "h2": "30px/700/0",
+      "body_size": "18px, line-height 1.8",
+      "case": "none",
+      "detail": "Encadrés pratiques sur fond sable avec icônes"
+    },
+    "shape": {
+      "radius": "12px",
+      "border": "1px solid #DCE7EE",
+      "shadow": "0 8px 22px -16px rgba(14,165,233,0.35)"
+    },
+    "layout": {
+      "container": "1180px",
+      "hero": "editorial",
+      "features": "gallery",
+      "spacing": "80px entre sections",
+      "grid": "article 720px + colonne latérale"
+    },
+    "motion": {
+      "load": "fade-up",
+      "hover": "la vignette d'article se soulève",
+      "scroll": "barre de progression de lecture"
+    },
+    "components": [
+      "Navbar avec destinations",
+      "Hero article vedette",
+      "Grille de destinations",
+      "Article avec encadrés pratiques",
+      "Carte interactive",
+      "Newsletter voyage",
+      "Pied de page"
+    ],
+    "do": [
+      "Donner budget, saison et durée dans un encadré",
+      "Utiliser des photos personnelles et non de stock",
+      "Localiser chaque article sur une carte"
+    ],
+    "dont": [
+      "Pas de photos retouchées à l'excès",
+      "Pas d'article sans informations pratiques",
+      "Ne pas noyer le contenu sous les publicités"
+    ],
+    "responsive": "Mobile : colonne latérale sous l'article, carte en pleine largeur."
+  },
+  {
+    "id": "fitness-gym",
+    "name": "Fitness & Gym",
+    "tagline": "Noir et vert citron, majuscules, énergie et performance.",
+    "intent": "Salle de sport ou coach : motiver, montrer les résultats, convertir vers un essai.",
+    "keywords": "énergique, intense, motivant, contrasté",
+    "style": [
+      "Fond noir avec photos d'entraînement contrastées",
+      "Vert citron ou orange fluo en accent",
+      "Typographie condensée en majuscules",
+      "Chiffres de performance en gros"
+    ],
+    "tags": ["dark", "sport", "bold", "high-contrast", "energetic"],
+    "difficulty": "beginner",
+    "mode": "dark",
+    "colors": {
+      "primary": "#BEF264",
+      "secondary": "#1C1C1C",
+      "bg": "#0C0C0C",
+      "surface": "#161616",
+      "text": "#FFFFFF",
+      "muted": "#9B9B9B",
+      "border": "#262626"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Oswald",
+      "body": "Inter",
+      "google": "Oswald:wght@600;700|Inter:wght@400;600",
+      "hero": "78px/700/0.01em",
+      "h2": "40px/700/0",
+      "body_size": "16px, line-height 1.6",
+      "case": "upper",
+      "detail": "Chiffres de séances et de résultats en 64px"
+    },
+    "shape": {
+      "radius": "4px",
+      "border": "1px solid #262626",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "fullbleed",
+      "features": "grid-3",
+      "spacing": "88px entre sections",
+      "grid": "cartes de cours en 3 colonnes"
+    },
+    "motion": {
+      "load": "les titres arrivent par la gauche",
+      "hover": "la carte de cours passe en vert",
+      "scroll": "compteurs de résultats"
+    },
+    "components": [
+      "Navbar avec CTA séance d'essai",
+      "Hero photo d'entraînement",
+      "Planning des cours",
+      "Coachs",
+      "Formules d'abonnement",
+      "Transformations avant/après",
+      "Pied de page avec adresse et horaires"
+    ],
+    "do": [
+      "Afficher le planning réel des cours",
+      "Mettre en avant l'essai gratuit",
+      "Utiliser des photos de la vraie salle"
+    ],
+    "dont": [
+      "Pas de promesse de résultat irréaliste",
+      "Pas de palette claire et douce",
+      "Ne pas cacher les conditions d'engagement"
+    ],
+    "responsive": "Mobile : planning en accordéon par jour, titre à 44px."
+  },
+  {
+    "id": "yoga-wellness",
+    "name": "Yoga & Wellness",
+    "tagline": "Vert sauge, beaucoup d'air, typographie douce.",
+    "intent": "Studio de yoga ou praticien bien-être : apaiser dès la première seconde et faciliter la réservation.",
+    "keywords": "apaisant, aérien, naturel, doux",
+    "style": [
+      "Palette sauge, sable et blanc cassé",
+      "Grands espaces vides, rythme lent",
+      "Photos en lumière naturelle douce",
+      "Formes arrondies, aucune arête"
+    ],
+    "tags": ["light", "calm", "wellness", "natural", "spacious"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#7A8B6F",
+      "secondary": "#E8EDE3",
+      "bg": "#FBFAF6",
+      "surface": "#FFFFFF",
+      "text": "#2A2E27",
+      "muted": "#77806F",
+      "border": "#E2E6DC"
+    },
+    "bg": "soft-gradient",
+    "font": {
+      "heading": "Cormorant Garamond",
+      "body": "Karla",
+      "google": "Cormorant+Garamond:wght@300;400;500|Karla:wght@400;500",
+      "hero": "58px/300/0.02em",
+      "h2": "32px/400/0.01em",
+      "body_size": "17px, line-height 1.9",
+      "case": "none",
+      "detail": "Interlignes très généreuses, graisses légères"
+    },
+    "shape": {
+      "radius": "999px sur les boutons, 24px sur les cartes",
+      "border": "1px solid #E2E6DC",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1080px",
+      "hero": "split",
+      "features": "grid-3",
+      "spacing": "120px entre sections",
+      "grid": "colonnes larges, marges généreuses"
+    },
+    "motion": {
+      "load": "fondu très lent 900ms",
+      "hover": "opacité qui varie doucement",
+      "scroll": "reveal progressif"
+    },
+    "components": [
+      "Navbar minimale",
+      "Hero apaisant avec photo",
+      "Types de cours",
+      "Présentation de l'enseignant",
+      "Planning hebdomadaire",
+      "Tarifs et cartes",
+      "Réservation",
+      "Pied de page"
+    ],
+    "do": [
+      "Laisser beaucoup d'espace vide",
+      "Garder des transitions lentes",
+      "Écrire des phrases courtes et calmes"
+    ],
+    "dont": [
+      "Pas de couleur vive",
+      "Pas d'urgence commerciale",
+      "Ne pas densifier la page"
+    ],
+    "responsive": "Mobile : espacement réduit à 72px, planning en liste."
+  },
+  {
+    "id": "barber-shop",
+    "name": "Barber Shop",
+    "tagline": "Noir, or vieilli, badges circulaires, ambiance vintage.",
+    "intent": "Barbier ou salon : afficher le style de la maison, les prestations et la prise de rendez-vous.",
+    "keywords": "vintage, masculin, artisanal, affirmé",
+    "style": [
+      "Badges et logos circulaires façon enseigne",
+      "Noir profond avec or vieilli et crème",
+      "Photos en noir et blanc granuleux",
+      "Typographie display à empattements marqués"
+    ],
+    "tags": ["dark", "vintage", "badge", "local", "bold"],
+    "difficulty": "beginner",
+    "mode": "dark",
+    "colors": {
+      "primary": "#C08B3E",
+      "secondary": "#1E1B17",
+      "bg": "#121010",
+      "surface": "#1B1817",
+      "text": "#F2EBDF",
+      "muted": "#A79B89",
+      "border": "#2C2723"
+    },
+    "bg": "noise",
+    "font": {
+      "heading": "Bebas Neue",
+      "body": "Inter",
+      "google": "Bebas+Neue|Inter:wght@400;500",
+      "hero": "84px/400/0.02em",
+      "h2": "40px/400/0.02em",
+      "body_size": "16px, line-height 1.7",
+      "case": "upper",
+      "detail": "Prix des prestations alignés à droite dans une liste bordée"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #C08B3E",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1080px",
+      "hero": "centered",
+      "features": "list",
+      "spacing": "80px entre sections",
+      "grid": "liste de prestations pleine largeur"
+    },
+    "motion": {
+      "load": "fondu",
+      "hover": "la ligne de prestation s'éclaire en or",
+      "scroll": "aucune"
+    },
+    "components": [
+      "En-tête avec badge circulaire",
+      "Hero avec photo du salon",
+      "Liste des prestations et tarifs",
+      "Présentation des barbiers",
+      "Galerie de coupes",
+      "Horaires et adresse",
+      "Bouton de prise de rendez-vous"
+    ],
+    "do": [
+      "Afficher tous les tarifs",
+      "Mettre en avant la prise de rendez-vous en ligne",
+      "Utiliser des photos du vrai salon"
+    ],
+    "dont": [
+      "Pas de couleur vive",
+      "Pas de tarif masqué",
+      "Ne pas multiplier les polices display"
+    ],
+    "responsive": "Mobile : prestations en cartes, bouton de rendez-vous fixe en bas."
+  },
+  {
+    "id": "wedding-elegant",
+    "name": "Wedding Elegant",
+    "tagline": "Blush, script, fleurs aquarelle, compte à rebours.",
+    "intent": "Site de mariage : informations pratiques pour les invités et RSVP en ligne.",
+    "keywords": "romantique, délicat, personnel, doux",
+    "style": [
+      "Palette blush, ivoire et vert eucalyptus",
+      "Police script pour les prénoms, serif pour le reste",
+      "Illustrations florales aquarelle en bordure",
+      "Compte à rebours discret vers la date"
+    ],
+    "tags": ["light", "romantic", "script", "floral", "event"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#C8949A",
+      "secondary": "#E7EDE4",
+      "bg": "#FDFAF7",
+      "surface": "#FFFFFF",
+      "text": "#3A312C",
+      "muted": "#8A7D75",
+      "border": "#EDE3DA"
+    },
+    "bg": "soft-gradient",
+    "font": {
+      "heading": "Great Vibes",
+      "body": "Cormorant Garamond",
+      "google": "Great+Vibes|Cormorant+Garamond:wght@300;400;600",
+      "hero": "80px/400/0",
+      "h2": "34px/400/0.03em",
+      "body_size": "17px, line-height 1.85",
+      "case": "none",
+      "detail": "Prénoms en script, tout le reste en serif espacée"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #EDE3DA",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "960px",
+      "hero": "centered",
+      "features": "steps",
+      "spacing": "96px entre sections",
+      "grid": "colonne centrale symétrique"
+    },
+    "motion": {
+      "load": "fondu lent",
+      "hover": "changement de couleur douce",
+      "scroll": "apparition des sections en fondu"
+    },
+    "components": [
+      "Hero avec prénoms et date",
+      "Compte à rebours",
+      "Notre histoire",
+      "Programme de la journée",
+      "Lieu et accès",
+      "Hébergements suggérés",
+      "Formulaire RSVP",
+      "Liste de mariage"
+    ],
+    "do": [
+      "Rendre le RSVP très simple (trois champs maximum)",
+      "Donner l'adresse exacte et les accès",
+      "Garder la symétrie centrale"
+    ],
+    "dont": [
+      "Pas de script pour les paragraphes",
+      "Pas de musique automatique",
+      "Ne pas oublier le code vestimentaire s'il y en a un"
+    ],
+    "responsive": "Mobile : programme en frise verticale, RSVP pleine largeur."
+  },
+  {
+    "id": "local-agency-simple",
+    "name": "Local Agency Simple",
+    "tagline": "Cartes de biens, carte interactive, contact facile.",
+    "intent": "Agence locale (immobilier, services) : afficher les offres et faciliter le contact de proximité.",
+    "keywords": "pratique, local, clair, accessible",
+    "style": [
+      "Cartes d'annonces avec photo, prix et surface",
+      "Carte interactive à côté de la liste",
+      "Palette bleu simple et blanche",
+      "Coordonnées visibles en permanence"
+    ],
+    "tags": ["light", "local", "cards", "map", "practical"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#1D4ED8",
+      "secondary": "#DBEAFE",
+      "bg": "#FFFFFF",
+      "surface": "#F6F8FB",
+      "text": "#121A2A",
+      "muted": "#5C6B84",
+      "border": "#DEE5EF"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700",
+      "hero": "42px/700/-0.02em",
+      "h2": "26px/600/-0.01em",
+      "body_size": "16px, line-height 1.6",
+      "case": "none",
+      "detail": "Prix en 22px bold, surface et pièces en badges gris"
+    },
+    "shape": {
+      "radius": "10px",
+      "border": "1px solid #DEE5EF",
+      "shadow": "0 4px 14px -10px rgba(18,26,42,0.25)"
+    },
+    "layout": {
+      "container": "1320px",
+      "hero": "sidebar",
+      "features": "gallery",
+      "spacing": "56px entre sections",
+      "grid": "liste 60% + carte fixe 40%"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "le repère correspondant s'agrandit sur la carte",
+      "scroll": "la carte reste fixe"
+    },
+    "components": [
+      "Navbar avec téléphone",
+      "Barre de recherche avec filtres",
+      "Liste d'annonces et carte",
+      "Fiche détaillée d'un bien",
+      "Présentation de l'équipe locale",
+      "Formulaire d'estimation",
+      "Pied de page avec adresse de l'agence"
+    ],
+    "do": [
+      "Synchroniser la liste et la carte",
+      "Afficher prix, surface et localisation sur chaque carte",
+      "Rendre le téléphone cliquable"
+    ],
+    "dont": [
+      "Pas d'annonce sans photo",
+      "Pas de carte sans données réelles",
+      "Ne pas cacher les honoraires"
+    ],
+    "responsive": "Mobile : bascule liste / carte par un bouton, filtres en panneau."
+  },
+  {
+    "id": "event-festival",
+    "name": "Festival & Event",
+    "tagline": "Affiche colorée, programmation, billetterie.",
+    "intent": "Festival ou événement : annoncer la programmation, vendre les billets, informer sur le lieu.",
+    "keywords": "festif, coloré, dense, rythmé",
+    "style": [
+      "Dégradé vif en fond, typographie display géante",
+      "Affiche de programmation par jour",
+      "Noms d'artistes hiérarchisés par taille",
+      "Badges de billets avec prix"
+    ],
+    "tags": ["dark", "event", "gradients", "display", "colorful"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#FF6B35",
+      "secondary": "#7B2FF7",
+      "bg": "#140B26",
+      "surface": "#1F1235",
+      "text": "#FFF7F0",
+      "muted": "#B7A6CC",
+      "border": "#33204F"
+    },
+    "bg": "aurora",
+    "font": {
+      "heading": "Bebas Neue",
+      "body": "Inter",
+      "google": "Bebas+Neue|Inter:wght@400;600",
+      "hero": "96px/400/0.01em",
+      "h2": "44px/400/0.01em",
+      "body_size": "16px, line-height 1.6",
+      "case": "upper",
+      "detail": "Têtes d'affiche en 56px, seconde ligne en 32px, reste en 20px"
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #33204F",
+      "shadow": "0 0 40px -20px #FF6B35"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "poster",
+      "features": "list",
+      "spacing": "80px entre sections",
+      "grid": "programmation en colonnes par jour"
+    },
+    "motion": {
+      "load": "le dégradé s'anime lentement",
+      "hover": "le nom d'artiste change de couleur",
+      "scroll": "marquee des dates"
+    },
+    "components": [
+      "Bandeau billetterie",
+      "Hero affiche avec dates et lieu",
+      "Programmation par jour",
+      "Fiches artistes",
+      "Plan du site du festival",
+      "Infos pratiques (accès, camping)",
+      "Billetterie",
+      "Pied de page partenaires"
+    ],
+    "do": [
+      "Hiérarchiser les artistes par taille de police",
+      "Rendre la billetterie accessible depuis chaque section",
+      "Afficher clairement dates et lieu"
+    ],
+    "dont": [
+      "Pas de programmation illisible",
+      "Pas de dégradé qui masque le texte",
+      "Ne pas oublier les infos d'accessibilité du site"
+    ],
+    "responsive": "Mobile : programmation en onglets par jour, titre à 52px."
+  }
+]

@@ -6,47 +6,47 @@
   },
   {
     "id": "minimal-editorial",
-    "name": "Minimal & Editorial",
-    "description": "Grilles strictes, typographie soignée, inspiré de la presse."
+    "name": "Minimal & Éditorial",
+    "description": "Grilles strictes, typographie soignée, inspiré de la presse et de l'affiche."
   },
   {
     "id": "retro-nostalgia",
     "name": "Rétro & Nostalgie",
-    "description": "Styles vintage, Y2K, Memphis, brutalistes et expérimentaux."
+    "description": "Y2K, vaporwave, Memphis, terminal CRT, art déco, skeuomorphisme."
   },
   {
     "id": "ui-trends",
-    "name": "Tendances UI modernes",
-    "description": "Glassmorphism, bento grids, 3D, aurora gradients."
+    "name": "Tendances UI",
+    "description": "Glassmorphism, bento grids, aurora, neumorphisme, 3D, grain."
   },
   {
     "id": "corporate-pro",
     "name": "Corporate & Pro",
-    "description": "Sérieux, rassurant, idéal pour finance, droit, santé."
+    "description": "Sérieux, rassurant : finance, droit, santé, industrie, public."
   },
   {
     "id": "creative-portfolio",
     "name": "Créatif & Portfolio",
-    "description": "Animations, layouts asymétriques, focus sur le visuel."
+    "description": "Animations, layouts asymétriques, focus total sur le visuel."
   },
   {
     "id": "ecommerce-d2c",
     "name": "E-commerce & D2C",
-    "description": "Boutiques en ligne, lookbooks, grilles de produits."
+    "description": "Boutiques, lookbooks, drops, grilles produits, panier."
   },
   {
     "id": "lifestyle-local",
     "name": "Lifestyle & Local",
-    "description": "Chaleureux, immersif (restaurants, hôtels, voyage)."
+    "description": "Chaleureux et immersif : restaurants, hôtels, sport, événements."
   },
   {
     "id": "content-education",
     "name": "Contenu & Éducation",
-    "description": "Lisibilité maximale (blogs, documentations, e-learning)."
+    "description": "Lisibilité maximale : blogs, docs, cours, presse, podcasts."
   },
   {
     "id": "niche-special",
     "name": "Niche & Spécial",
-    "description": "Web3, gaming, data viz, expérimentations hors normes."
+    "description": "Web3, gaming, data viz, automobile, spatial, associatif."
   }
 ]

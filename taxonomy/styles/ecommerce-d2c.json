@@ -1,0 +1,733 @@
+[
+  {
+    "id": "fashion-lookbook",
+    "name": "Fashion Lookbook",
+    "tagline": "Éditorial mode : noir et blanc, mannequins, serif fin.",
+    "intent": "Marque de mode qui présente une collection comme un éditorial de magazine avant de vendre.",
+    "keywords": "éditorial, épuré, désirable, froid",
+    "style": [
+      "Photographies verticales en pleine hauteur",
+      "Palette noir, blanc et un beige",
+      "Serif fin pour les titres, sans-serif minuscule pour les prix",
+      "Aucune promotion visible, pas de badge"
+    ],
+    "tags": ["light", "fashion", "editorial", "serif", "luxury"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#111111",
+      "secondary": "#E8E4DE",
+      "bg": "#FCFCFB",
+      "surface": "#FFFFFF",
+      "text": "#111111",
+      "muted": "#7C7770",
+      "border": "#E6E2DB"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Cormorant Garamond",
+      "body": "Jost",
+      "google": "Cormorant+Garamond:wght@300;400;500|Jost:wght@300;400",
+      "hero": "72px/300/0.02em",
+      "h2": "32px/400/0.02em",
+      "body_size": "14px, line-height 1.8",
+      "case": "upper",
+      "detail": "Noms de produits et prix en 12px très espacés"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #E6E2DB",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1440px",
+      "hero": "fullbleed",
+      "features": "gallery",
+      "spacing": "104px entre sections",
+      "grid": "2 ou 3 colonnes de produits, images 3:4"
+    },
+    "motion": {
+      "load": "fondu lent",
+      "hover": "la seconde photo du produit remplace la première",
+      "scroll": "parallaxe très légère sur les images de collection"
+    },
+    "components": [
+      "Navbar transparente avec panier",
+      "Hero campagne pleine page",
+      "Grille de looks",
+      "Grille produits",
+      "Bloc histoire de la collection",
+      "Newsletter discrète",
+      "Pied de page avec livraison et retours"
+    ],
+    "do": [
+      "Montrer deux photos par produit (portée et détail)",
+      "Garder les prix discrets",
+      "Laisser les images occuper la majorité de la page"
+    ],
+    "dont": [
+      "Pas de badge promo criard",
+      "Pas de compte à rebours",
+      "Ne pas saturer les couleurs des photos"
+    ],
+    "responsive": "Mobile : 2 colonnes de produits, hero à 100vh."
+  },
+  {
+    "id": "clean-product-store",
+    "name": "Clean Product Store",
+    "tagline": "Boutique classique et efficace : blanc, grille, filtres.",
+    "intent": "Boutique en ligne généraliste où la conversion passe par la clarté du catalogue et la confiance.",
+    "keywords": "clair, efficace, rassurant, standard",
+    "style": [
+      "Fond blanc, cartes produit sans bordure lourde",
+      "Filtres à gauche, tri en haut à droite",
+      "Badges de stock et de livraison",
+      "Bouton d'achat toujours de la même couleur"
+    ],
+    "tags": ["light", "ecommerce", "clean", "grid", "standard"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#2563EB",
+      "secondary": "#EFF6FF",
+      "bg": "#FFFFFF",
+      "surface": "#F8FAFC",
+      "text": "#0F172A",
+      "muted": "#64748B",
+      "border": "#E2E8F0"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700",
+      "hero": "44px/700/-0.02em",
+      "h2": "28px/600/-0.01em",
+      "body_size": "16px, line-height 1.6",
+      "case": "none",
+      "detail": "Prix en 20px bold, prix barré en gris à côté si promo"
+    },
+    "shape": {
+      "radius": "10px",
+      "border": "1px solid #E2E8F0",
+      "shadow": "0 4px 14px -10px rgba(15,23,42,0.2)"
+    },
+    "layout": {
+      "container": "1320px",
+      "hero": "split",
+      "features": "gallery",
+      "spacing": "72px entre sections",
+      "grid": "sidebar filtres 240px + grille 4 colonnes"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "la carte produit se soulève et montre « Ajout rapide »",
+      "scroll": "chargement progressif des produits"
+    },
+    "components": [
+      "Barre de réassurance (livraison, retours, paiement)",
+      "Navbar avec recherche et panier",
+      "Hero promotionnel",
+      "Catégories en vignettes",
+      "Filtres et grille de produits",
+      "Avis clients notés",
+      "Pied de page avec paiement sécurisé"
+    ],
+    "do": [
+      "Afficher le prix, la disponibilité et le délai sur la carte",
+      "Garder un seul bouton d'achat visuellement identifiable",
+      "Placer les avis près des produits"
+    ],
+    "dont": [
+      "Pas de frais cachés révélés au dernier moment",
+      "Pas de carte produit sans prix",
+      "Ne pas multiplier les couleurs de boutons"
+    ],
+    "responsive": "Mobile : filtres en panneau coulissant, grille en 2 colonnes."
+  },
+  {
+    "id": "beauty-cosmetics",
+    "name": "Beauty & Cosmetics",
+    "tagline": "Nude et rose poudré, serif douce, macro produit.",
+    "intent": "Marque de cosmétiques : sensorialité, ingrédients, routine.",
+    "keywords": "doux, sensoriel, féminin, soigné",
+    "style": [
+      "Palette nude, rose poudré et crème",
+      "Photos macro de textures",
+      "Serif douce pour les titres, sans-serif fine pour le corps",
+      "Listes d'ingrédients mises en valeur"
+    ],
+    "tags": ["light", "beauty", "soft", "serif", "elegant"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#B76E79",
+      "secondary": "#F7E7E4",
+      "bg": "#FDF9F7",
+      "surface": "#FFFFFF",
+      "text": "#2E2320",
+      "muted": "#8A7A74",
+      "border": "#EFE2DE"
+    },
+    "bg": "soft-gradient",
+    "font": {
+      "heading": "Marcellus",
+      "body": "Karla",
+      "google": "Marcellus|Karla:wght@400;500;600",
+      "hero": "58px/400/0.01em",
+      "h2": "32px/400/0.01em",
+      "body_size": "16px, line-height 1.8",
+      "case": "none",
+      "detail": "Sur-titres en petites capitales espacées, couleur rose poudré"
+    },
+    "shape": {
+      "radius": "999px sur les boutons, 8px sur les cartes",
+      "border": "1px solid #EFE2DE",
+      "shadow": "0 12px 30px -22px rgba(183,110,121,0.4)"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "split",
+      "features": "steps",
+      "spacing": "96px entre sections",
+      "grid": "produits en 3 colonnes"
+    },
+    "motion": {
+      "load": "fade-up doux",
+      "hover": "le produit pivote légèrement",
+      "scroll": "reveal des étapes de routine"
+    },
+    "components": [
+      "Barre d'annonce livraison offerte",
+      "Navbar avec panier",
+      "Hero produit avec bénéfice clé",
+      "Ingrédients actifs",
+      "Routine en trois étapes",
+      "Avant / après",
+      "Avis vérifiés",
+      "Pied de page avec composition complète"
+    ],
+    "do": [
+      "Détailler la composition et les actifs",
+      "Utiliser des photos macro de texture",
+      "Montrer des résultats réalistes"
+    ],
+    "dont": [
+      "Pas de promesse médicale",
+      "Pas de retouche excessive sur les avant/après",
+      "Ne pas cacher la liste INCI"
+    ],
+    "responsive": "Mobile : routine en accordéon, produits en 2 colonnes."
+  },
+  {
+    "id": "sneaker-hype",
+    "name": "Sneaker Hype Drop",
+    "tagline": "Noir, néon, compte à rebours, énergie de drop.",
+    "intent": "Lancement limité d'un produit streetwear. Créer la tension autour d'une date et d'un stock.",
+    "keywords": "urbain, tendu, énergique, exclusif",
+    "style": [
+      "Fond noir, accent vert citron ou orange fluo",
+      "Compte à rebours géant",
+      "Photos produit détourées sur fond coloré",
+      "Typographie condensée en majuscules"
+    ],
+    "tags": ["dark", "streetwear", "neon", "bold", "drop"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#CCFF00",
+      "secondary": "#1A1A1A",
+      "bg": "#0A0A0A",
+      "surface": "#141414",
+      "text": "#FFFFFF",
+      "muted": "#9A9A9A",
+      "border": "#242424"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Archivo",
+      "body": "Inter",
+      "google": "Archivo:wght@700;900|Inter:wght@400;600",
+      "hero": "76px/900/-0.03em",
+      "h2": "38px/800/-0.02em",
+      "body_size": "15px, line-height 1.55",
+      "case": "upper",
+      "detail": "Compte à rebours en chiffres tabulaires de 64px"
+    },
+    "shape": {
+      "radius": "4px",
+      "border": "1px solid #242424",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "fullbleed",
+      "features": "gallery",
+      "spacing": "80px entre sections",
+      "grid": "produit central + vignettes"
+    },
+    "motion": {
+      "load": "le produit arrive en zoom rapide",
+      "hover": "l'image change d'angle",
+      "scroll": "marquee de la date du drop"
+    },
+    "components": [
+      "Bandeau avec date du drop",
+      "Navbar avec panier et compte",
+      "Hero produit avec compte à rebours",
+      "Détails et tailles disponibles",
+      "Galerie lifestyle",
+      "Conditions du drop",
+      "Pied de page"
+    ],
+    "do": [
+      "Afficher clairement la date, l'heure et le stock",
+      "Garder un accent fluo unique",
+      "Rendre le choix de taille immédiat"
+    ],
+    "dont": [
+      "Pas de faux stock ni de faux compte à rebours",
+      "Pas de palette claire",
+      "Ne pas cacher les conditions de revente ou de retour"
+    ],
+    "responsive": "Mobile : compte à rebours à 40px, sélection de taille en bas fixe."
+  },
+  {
+    "id": "furniture-scandi",
+    "name": "Furniture Scandinavian",
+    "tagline": "Bois clair, beige, photos d'intérieur, typographie fine.",
+    "intent": "Marque de mobilier : montrer les pièces en situation dans des intérieurs lumineux.",
+    "keywords": "calme, naturel, lumineux, épuré",
+    "style": [
+      "Photos d'intérieurs en lumière naturelle",
+      "Palette beige, bois clair et blanc",
+      "Typographie fine et très espacée",
+      "Grille aérée avec beaucoup de blanc"
+    ],
+    "tags": ["light", "scandinavian", "natural", "minimal", "furniture"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#8B7355",
+      "secondary": "#EDE7DD",
+      "bg": "#FBFAF8",
+      "surface": "#FFFFFF",
+      "text": "#292522",
+      "muted": "#7E766C",
+      "border": "#E7E1D7"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Jost",
+      "body": "Jost",
+      "google": "Jost:wght@300;400;500",
+      "hero": "56px/300/0.02em",
+      "h2": "30px/400/0.01em",
+      "body_size": "16px, line-height 1.8",
+      "case": "none",
+      "detail": "Graisse 300 dominante, letter-spacing léger sur les titres"
+    },
+    "shape": {
+      "radius": "4px",
+      "border": "1px solid #E7E1D7",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1320px",
+      "hero": "fullbleed",
+      "features": "gallery",
+      "spacing": "112px entre sections",
+      "grid": "3 colonnes de produits, images 4:5"
+    },
+    "motion": {
+      "load": "fade lent",
+      "hover": "zoom très léger sur la photo",
+      "scroll": "reveal doux"
+    },
+    "components": [
+      "Navbar sobre avec catégories",
+      "Hero photo d'intérieur",
+      "Sélection de pièces",
+      "Bloc matériaux et fabrication",
+      "Inspiration par pièce de la maison",
+      "Livraison et montage",
+      "Pied de page"
+    ],
+    "do": [
+      "Montrer les meubles en situation avant le détouré",
+      "Préciser les dimensions et matériaux",
+      "Garder beaucoup d'espace blanc"
+    ],
+    "dont": [
+      "Pas de couleur saturée",
+      "Pas de graisse lourde",
+      "Ne pas surcharger la page de produits"
+    ],
+    "responsive": "Mobile : 2 colonnes, hero à 70vh."
+  },
+  {
+    "id": "food-delivery",
+    "name": "Food Delivery",
+    "tagline": "Rouge appétissant, photos de plats, commande en trois clics.",
+    "intent": "Service de livraison ou restaurant en ligne : donner faim et rendre la commande immédiate.",
+    "keywords": "appétissant, rapide, chaleureux, direct",
+    "style": [
+      "Photos de plats en gros plan, très colorées",
+      "Rouge et jaune chauds, fond crème",
+      "Cartes de plats avec prix et bouton d'ajout",
+      "Catégories en pastilles horizontales défilantes"
+    ],
+    "tags": ["light", "food", "warm", "cards", "appetite"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#DC2626",
+      "secondary": "#FEF3C7",
+      "bg": "#FFFBF5",
+      "surface": "#FFFFFF",
+      "text": "#231A16",
+      "muted": "#7A6A62",
+      "border": "#EFE3D8"
+    },
+    "bg": "soft-gradient",
+    "font": {
+      "heading": "Poppins",
+      "body": "Inter",
+      "google": "Poppins:wght@600;700|Inter:wght@400;500",
+      "hero": "52px/700/-0.02em",
+      "h2": "30px/600/-0.01em",
+      "body_size": "16px, line-height 1.6",
+      "case": "none",
+      "detail": "Prix en pastille, temps de livraison en badge vert"
+    },
+    "shape": {
+      "radius": "16px",
+      "border": "1px solid #EFE3D8",
+      "shadow": "0 10px 24px -18px rgba(220,38,38,0.35)"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "split",
+      "features": "gallery",
+      "spacing": "72px entre sections",
+      "grid": "cartes de plats en 3 colonnes"
+    },
+    "motion": {
+      "load": "fade-up rapide",
+      "hover": "la carte se soulève, le bouton d'ajout apparaît",
+      "scroll": "barre de catégories collante"
+    },
+    "components": [
+      "Barre d'adresse de livraison",
+      "Navbar avec panier",
+      "Hero avec photo de plat et recherche",
+      "Catégories défilantes",
+      "Cartes de plats",
+      "Promotions du jour",
+      "Avis et note moyenne",
+      "Pied de page avec horaires"
+    ],
+    "do": [
+      "Afficher le temps de livraison estimé",
+      "Utiliser des photos réelles des plats servis",
+      "Rendre l'ajout au panier accessible en un clic"
+    ],
+    "dont": [
+      "Pas de photo non représentative du plat",
+      "Pas de frais de service cachés",
+      "Ne pas noyer le menu sous les promotions"
+    ],
+    "responsive": "Mobile : catégories en scroll horizontal, panier en barre fixe basse."
+  },
+  {
+    "id": "jewelry-luxury",
+    "name": "Jewelry Luxury",
+    "tagline": "Noir profond, or, macro sur les pièces, lenteur.",
+    "intent": "Joaillier haut de gamme : mettre en scène des pièces uniques avec lenteur et précision.",
+    "keywords": "précieux, sombre, lent, précis",
+    "style": [
+      "Fond noir profond, éclairage dramatique sur les pièces",
+      "Or comme unique accent, en filets fins",
+      "Macro-photographies très détaillées",
+      "Transitions lentes, rien de brusque"
+    ],
+    "tags": ["dark", "luxury", "gold", "macro", "serif"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#C6A15B",
+      "secondary": "#1A1712",
+      "bg": "#0A0908",
+      "surface": "#121110",
+      "text": "#F3EFE7",
+      "muted": "#9A9187",
+      "border": "#26221C"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Cormorant Garamond",
+      "body": "Jost",
+      "google": "Cormorant+Garamond:wght@300;400;500|Jost:wght@300;400",
+      "hero": "64px/300/0.03em",
+      "h2": "32px/400/0.03em",
+      "body_size": "15px, line-height 1.85",
+      "case": "none",
+      "detail": "Noms de collections en petites capitales très espacées"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "1px solid #26221C",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1240px",
+      "hero": "fullbleed",
+      "features": "gallery",
+      "spacing": "128px entre sections",
+      "grid": "2 colonnes larges, images centrées"
+    },
+    "motion": {
+      "load": "fondu de 900ms",
+      "hover": "rotation très lente de la pièce",
+      "scroll": "apparition progressive, jamais de rebond"
+    },
+    "components": [
+      "Navbar discrète sur fond noir",
+      "Hero macro d'une pièce",
+      "Collections en deux colonnes",
+      "Bloc savoir-faire et matériaux",
+      "Prise de rendez-vous en boutique",
+      "Pied de page avec certificats"
+    ],
+    "do": [
+      "Éclairer les pièces avec un contraste marqué",
+      "Garder des animations lentes",
+      "Réserver l'or aux filets et aux titres courts"
+    ],
+    "dont": [
+      "Pas de promotion ni de solde affichés",
+      "Pas d'animation rapide",
+      "Ne pas surcharger d'informations le visuel"
+    ],
+    "responsive": "Mobile : une colonne, hero à 90vh, texte à 14px."
+  },
+  {
+    "id": "marketplace-dense",
+    "name": "Marketplace Dense Grid",
+    "tagline": "Beaucoup de produits, peu d'espace, tout est cliquable.",
+    "intent": "Place de marché à large catalogue où la densité et la vitesse de navigation priment sur l'esthétique.",
+    "keywords": "dense, fonctionnel, rapide, catalogue",
+    "style": [
+      "Grille de 5 à 6 produits par ligne",
+      "Cartes compactes avec image, prix, note",
+      "Barre de recherche dominante",
+      "Peu de blanc, information partout"
+    ],
+    "tags": ["light", "dense", "marketplace", "functional", "grid"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#F97316",
+      "secondary": "#FFF7ED",
+      "bg": "#F5F5F5",
+      "surface": "#FFFFFF",
+      "text": "#1F2937",
+      "muted": "#6B7280",
+      "border": "#E5E7EB"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700",
+      "hero": "28px/700/-0.01em",
+      "h2": "20px/600/0",
+      "body_size": "14px, line-height 1.45",
+      "case": "none",
+      "detail": "Prix en 18px bold orange, note en étoiles jaunes 12px"
+    },
+    "shape": {
+      "radius": "6px",
+      "border": "1px solid #E5E7EB",
+      "shadow": "0 1px 3px rgba(0,0,0,0.06)"
+    },
+    "layout": {
+      "container": "1440px",
+      "hero": "sidebar",
+      "features": "gallery",
+      "spacing": "32px entre sections",
+      "grid": "sidebar catégories + grille 5 colonnes"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "bordure orange et affichage rapide du bouton",
+      "scroll": "pagination ou chargement infini"
+    },
+    "components": [
+      "Barre de recherche géante avec catégories",
+      "Menu latéral de catégories",
+      "Carrousel de promotions",
+      "Grille dense de produits",
+      "Blocs par catégorie",
+      "Pied de page très dense avec tous les liens"
+    ],
+    "do": [
+      "Optimiser la vitesse de chargement avant tout",
+      "Afficher note, prix et livraison sur chaque carte",
+      "Garder la recherche accessible en permanence"
+    ],
+    "dont": [
+      "Pas d'animation coûteuse",
+      "Pas de grands espaces vides",
+      "Ne pas masquer les frais de livraison"
+    ],
+    "responsive": "Mobile : grille en 2 colonnes, catégories en scroll horizontal."
+  },
+  {
+    "id": "subscription-box",
+    "name": "Subscription Box",
+    "tagline": "Illustré, joyeux, abonnement expliqué en trois étapes.",
+    "intent": "Box par abonnement : expliquer le principe, montrer le contenu, lever les freins à l'engagement.",
+    "keywords": "joyeux, pédagogique, coloré, rassurant",
+    "style": [
+      "Illustrations et photos de la box ouverte",
+      "Palette vive à trois couleurs",
+      "Étapes numérotées avec grandes icônes",
+      "Formule d'abonnement en cartes comparables"
+    ],
+    "tags": ["light", "playful", "subscription", "illustration", "steps"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#7C3AED",
+      "secondary": "#FBBF24",
+      "bg": "#FDFCFF",
+      "surface": "#FFFFFF",
+      "text": "#1F1A2E",
+      "muted": "#6B6480",
+      "border": "#E9E4F5"
+    },
+    "bg": "mesh",
+    "font": {
+      "heading": "Baloo 2",
+      "body": "Inter",
+      "google": "Baloo+2:wght@600;700|Inter:wght@400;500",
+      "hero": "56px/700/-0.02em",
+      "h2": "32px/600/-0.01em",
+      "body_size": "17px, line-height 1.7",
+      "case": "none",
+      "detail": "Numéros d'étapes dans des cercles colorés de 56px"
+    },
+    "shape": {
+      "radius": "20px",
+      "border": "1px solid #E9E4F5",
+      "shadow": "0 14px 32px -22px rgba(124,58,237,0.4)"
+    },
+    "layout": {
+      "container": "1140px",
+      "hero": "split",
+      "features": "steps",
+      "spacing": "88px entre sections",
+      "grid": "3 formules côte à côte"
+    },
+    "motion": {
+      "load": "rebond léger sur la box",
+      "hover": "la carte de formule se soulève",
+      "scroll": "les étapes se remplissent"
+    },
+    "components": [
+      "Bandeau première box offerte",
+      "Navbar avec CTA d'abonnement",
+      "Hero avec photo de box ouverte",
+      "Trois étapes du fonctionnement",
+      "Contenu de la box du mois",
+      "Formules d'abonnement",
+      "FAQ résiliation",
+      "Pied de page"
+    ],
+    "do": [
+      "Dire clairement que l'abonnement est résiliable à tout moment",
+      "Montrer le contenu réel d'une box",
+      "Afficher le prix par mois sans ambiguïté"
+    ],
+    "dont": [
+      "Pas d'engagement caché",
+      "Pas de contenu de box non représentatif",
+      "Ne pas complexifier les formules"
+    ],
+    "responsive": "Mobile : formules empilées, étapes verticales."
+  },
+  {
+    "id": "digital-product-flat",
+    "name": "Digital Product (Gumroad-like)",
+    "tagline": "Plat, bordures noires, une couleur vive, achat direct.",
+    "intent": "Vendre un produit numérique (ebook, template, cours) sur une seule page avec un bouton d'achat.",
+    "keywords": "direct, plat, franc, efficace",
+    "style": [
+      "Bordures noires 2px, aucun dégradé",
+      "Une couleur de fond vive par section",
+      "Bouton d'achat très large et répété",
+      "Aperçu du produit en grandes images"
+    ],
+    "tags": ["light", "flat", "bold", "digital", "one-page"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#FF90E8",
+      "secondary": "#000000",
+      "bg": "#FFFFFF",
+      "surface": "#F4F4F0",
+      "text": "#000000",
+      "muted": "#4A4A4A",
+      "border": "#000000"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;600;800",
+      "hero": "56px/800/-0.03em",
+      "h2": "32px/700/-0.02em",
+      "body_size": "17px, line-height 1.65",
+      "case": "none",
+      "detail": "Prix affiché dans un encadré noir 2px, très visible"
+    },
+    "shape": {
+      "radius": "0px",
+      "border": "2px solid #000000",
+      "shadow": "4px 4px 0 #000000"
+    },
+    "layout": {
+      "container": "960px",
+      "hero": "centered",
+      "features": "list",
+      "spacing": "64px entre sections",
+      "grid": "colonne unique"
+    },
+    "motion": {
+      "load": "aucune",
+      "hover": "le bouton se décale de 2px",
+      "scroll": "bouton d'achat collant en bas"
+    },
+    "components": [
+      "En-tête avec nom du créateur",
+      "Hero avec titre du produit et prix",
+      "Aperçu du contenu",
+      "Ce que vous obtenez, en liste",
+      "Témoignages d'acheteurs",
+      "Garantie de remboursement",
+      "Bouton d'achat final"
+    ],
+    "do": [
+      "Répéter le bouton d'achat au moins trois fois",
+      "Lister précisément ce qui est inclus",
+      "Afficher le format et le poids des fichiers"
+    ],
+    "dont": [
+      "Pas d'ombre floue ni de dégradé",
+      "Pas de prix ambigu",
+      "Ne pas cacher la politique de remboursement"
+    ],
+    "responsive": "Mobile : bouton d'achat fixe en bas, images pleine largeur."
+  }
+]
