@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignHub pour IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- View: Home -->
+    <div id="home-view" class="view active">
+        <header class="app-header">
+            <div class="container header-content">
+                <div class="logo">Design<span>Hub</span> AI</div>
+                <p class="subtitle">Bibliothèque d'inspirations de design (`design.md`) pour développeurs IA.</p>
+            </div>
+        </header>
+
+        <main class="container">
+            <!-- Filters -->
+            <div class="filters">
+                <select id="category-filter">
+                    <option value="all">Toutes les catégories</option>
+                    <!-- Filled by JS -->
+                </select>
+                <input type="text" id="search-input" placeholder="Rechercher (ex: minimal, dark...)">
+            </div>
+
+            <!-- Grid -->
+            <div id="designs-grid" class="grid">
+                <!-- Cards filled by JS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- View: Demo Viewer -->
+    <div id="demo-view" class="view">
+        <div class="viewer-layout">
+            <!-- Sidebar with Markdown -->
+            <aside class="viewer-sidebar">
+                <div class="sidebar-header">
+                    <button id="btn-back" class="btn-icon">← Retour</button>
+                    <button id="btn-copy" class="btn-primary">Copier design.md</button>
+                </div>
+                <div class="markdown-preview" id="markdown-content">
+                    <!-- Raw Markdown content displayed here -->
+                </div>
+            </aside>
+            
+            <!-- Iframe Demo -->
+            <main class="viewer-main">
+                <div class="browser-mockup">
+                    <div class="browser-header">
+                        <div class="dots">
+                            <span class="dot close"></span>
+                            <span class="dot min"></span>
+                            <span class="dot max"></span>
+                        </div>
+                        <div class="url-bar" id="demo-url">localhost:3000/demo</div>
+                    </div>
+                    <iframe id="demo-iframe" src="" frameborder="0"></iframe>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Copié dans le presse-papiers !</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

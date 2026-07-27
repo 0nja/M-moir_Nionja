@@ -1,0 +1,8 @@
+{
+  "modes": ["light", "dark", "auto"],
+  "densities": ["minimal", "dense", "spacious"],
+  "moods": ["professional", "playful", "luxury", "bold", "calm", "aggressive"],
+  "effects": ["glassmorphism", "gradients", "3d", "parallax", "none"],
+  "typography": ["sans-serif", "serif", "mono", "display", "handwritten"],
+  "industries": ["saas", "ecommerce", "portfolio", "blog", "landing-only"]
+}

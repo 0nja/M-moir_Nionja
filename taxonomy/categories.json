@@ -1,0 +1,52 @@
+[
+  {
+    "id": "saas-tech",
+    "name": "SaaS & Tech",
+    "description": "Minimaliste, propre, focalisé sur le produit et la conversion."
+  },
+  {
+    "id": "minimal-editorial",
+    "name": "Minimal & Editorial",
+    "description": "Grilles strictes, typographie soignée, inspiré de la presse."
+  },
+  {
+    "id": "retro-nostalgia",
+    "name": "Rétro & Nostalgie",
+    "description": "Styles vintage, Y2K, Memphis, brutalistes et expérimentaux."
+  },
+  {
+    "id": "ui-trends",
+    "name": "Tendances UI modernes",
+    "description": "Glassmorphism, bento grids, 3D, aurora gradients."
+  },
+  {
+    "id": "corporate-pro",
+    "name": "Corporate & Pro",
+    "description": "Sérieux, rassurant, idéal pour finance, droit, santé."
+  },
+  {
+    "id": "creative-portfolio",
+    "name": "Créatif & Portfolio",
+    "description": "Animations, layouts asymétriques, focus sur le visuel."
+  },
+  {
+    "id": "ecommerce-d2c",
+    "name": "E-commerce & D2C",
+    "description": "Boutiques en ligne, lookbooks, grilles de produits."
+  },
+  {
+    "id": "lifestyle-local",
+    "name": "Lifestyle & Local",
+    "description": "Chaleureux, immersif (restaurants, hôtels, voyage)."
+  },
+  {
+    "id": "content-education",
+    "name": "Contenu & Éducation",
+    "description": "Lisibilité maximale (blogs, documentations, e-learning)."
+  },
+  {
+    "id": "niche-special",
+    "name": "Niche & Spécial",
+    "description": "Web3, gaming, data viz, expérimentations hors normes."
+  }
+]
