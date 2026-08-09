@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page d'accueil · Double Arc-en-ciel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #f5f0e8 0%, #e8ddd0 30%, #d4dcc8 60%, #c5d5b5 100%);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ===== ARCS-EN-CIEL ===== */
+        .rainbow-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .rainbow-wrapper svg {
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+        }
+
+        /* ===== BURGER MENU ===== */
+        .burger-btn {
+            position: fixed;
+            top: 25px;
+            left: 25px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .burger-btn:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: scale(1.05);
+        }
+
+        .burger-btn span {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background: #2d3a2a;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .burger-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .burger-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -320px;
+            width: 300px;
+            height: 100%;
+            background: rgba(45, 58, 42, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 99;
+            padding: 80px 30px 30px;
+            transition: left 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            box-shadow: 4px 0 30px rgba(0, 0, 0, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #d4dcc8;
+            margin-bottom: 2.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .sidebar .logo span {
+            color: #d64545;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar nav ul li a {
+            display: block;
+            padding: 0.9rem 1.2rem;
+            color: #c5d5b5;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.25s ease;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .sidebar nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .sidebar nav ul li a.active {
+            background: rgba(214, 69, 69, 0.2);
+            color: #d64545;
+        }
+
+        .sidebar .sidebar-footer {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            color: #7a8a74;
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 20px;
+        }
+
+        /* ===== OVERLAY ===== */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 98;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .overlay.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* ===== CONTENU PRINCIPAL - DESCENDU ===== */
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 700px;
+            padding: 3.5rem 2.5rem;
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+            /* DÉCALAGE VERS LE BAS */
+            margin-top: 80px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2d3a2a;
+            letter-spacing: -1.5px;
+            margin-bottom: 0.3rem;
+            text-shadow: 0 2px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #4a5a44;
+            font-weight: 400;
+            margin-bottom: 1.8rem;
+            text-shadow: 0 1px 12px rgba(255, 255, 255, 0.25);
+        }
+
+        .content p.description {
+            color: #2d3a2a;
+            font-size: 1rem;
+            line-height: 1.8;
+            font-weight: 400;
+            max-width: 550px;
+            margin: 0 auto 1.2rem auto;
+            text-align: left;
+            padding: 0 0.5rem;
+            text-shadow: 0 1px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .content p.description .highlight {
+            color: #d62828;
+            font-weight: 600;
+        }
+
+        .content p.description .highlight-green {
+            color: #3a7a78;
+            font-weight: 600;
+        }
+
+        .btn-red {
+            display: inline-block;
+            padding: 1rem 3.5rem;
+            background: #d62828;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 28px rgba(214, 40, 40, 0.35);
+            letter-spacing: 0.5px;
+            margin-top: 0.5rem;
+        }
+
+        .btn-red:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(214, 40, 40, 0.45);
+            background: #c1121f;
+        }
+
+        .btn-red:active {
+            transform: scale(0.95);
+        }
+
+        .footer-text {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #5a6a54;
+            letter-spacing: 0.3px;
+            font-weight: 400;
+            text-shadow: 0 1px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            h1 { font-size: 2.4rem; }
+            .subtitle { font-size: 1rem; }
+            .btn-red { padding: 0.8rem 2.5rem; font-size: 1rem; }
+            .content { padding: 2rem 1.5rem; margin: 1rem; margin-top: 60px; }
+            .sidebar { width: 280px; left: -300px; }
+            .content p.description { font-size: 0.9rem; padding: 0; }
+            .burger-btn { top: 15px; left: 15px; width: 44px; height: 44px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== BURGER MENU ===== -->
+    <div class="burger-btn" id="burgerBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- ===== OVERLAY ===== -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">✦ <span>Arc</span>adia</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <p>© 2026 Arcadia · Tous droits réservés</p>
+        </div>
+    </aside>
+
+    <!-- ===== DOUBLE ARC-EN-CIEL ===== -->
+    <div class="rainbow-wrapper">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+
+            <!-- ===== ARC N°1 : BAS-GAUCHE → HAUT-DROITE ===== -->
+            <g>
+                <path d="M 0 100 A 140 140 0 0 1 100 0 L 85 0 A 115 115 0 0 0 0 85 Z" fill="#a83232" />
+                <path d="M 0 85 A 115 115 0 0 1 85 0 L 72 0 A 95 95 0 0 0 0 72 Z" fill="#d64545" />
+                <path d="M 0 72 A 95 95 0 0 1 72 0 L 60 0 A 78 78 0 0 0 0 60 Z" fill="#4a7c7a" />
+                <path d="M 0 60 A 78 78 0 0 1 60 0 L 50 0 A 64 64 0 0 0 0 50 Z" fill="#5e9c99" />
+                <path d="M 0 50 A 64 64 0 0 1 50 0 L 40 0 A 52 52 0 0 0 0 40 Z" fill="#3a6b8f" />
+                <path d="M 0 40 A 52 52 0 0 1 40 0 L 32 0 A 42 42 0 0 0 0 32 Z" fill="#5a8aaa" />
+            </g>
+
+            <!-- ===== ARC N°2 : BAS-DROITE → HAUT-GAUCHE ===== -->
+            <g>
+                <path d="M 100 100 A 140 140 0 0 0 0 0 L 15 0 A 115 115 0 0 1 100 85 Z" fill="#a83232" />
+                <path d="M 100 85 A 115 115 0 0 0 15 0 L 28 0 A 95 95 0 0 1 100 72 Z" fill="#d64545" />
+                <path d="M 100 72 A 95 95 0 0 0 28 0 L 40 0 A 78 78 0 0 1 100 60 Z" fill="#4a7c7a" />
+                <path d="M 100 60 A 78 78 0 0 0 40 0 L 50 0 A 64 64 0 0 1 100 50 Z" fill="#5e9c99" />
+                <path d="M 100 50 A 64 64 0 0 0 50 0 L 60 0 A 52 52 0 0 1 100 40 Z" fill="#3a6b8f" />
+                <path d="M 100 40 A 52 52 0 0 0 60 0 L 68 0 A 42 42 0 0 1 100 32 Z" fill="#5a8aaa" />
+            </g>
+
+        </svg>
+    </div>
+
+    <!-- ===== CONTENU ===== -->
+    <div class="content">
+        <h1>Bienvenue</h1>
+        <p class="subtitle">Un univers de couleurs pétrole</p>
+
+        <p class="description">
+            <span class="highlight-green">Arcadia</span> est un espace dédié à la 
+            <span class="highlight">créativité</span> et à l'<span class="highlight">harmonie</span>.
+            Notre palette s'inspire des profondeurs océaniques et des forêts ancestrales.
+        </p>
+        <p class="description">
+            Découvrez nos projets alliant <span class="highlight">design</span> et 
+            <span class="highlight-green">nature</span>, dans un univers où le 
+            <span class="highlight">rouge</span> rencontre le vert pétrole et le bleu profond.
+        </p>
+
+        <a href="#" class="btn-red">Explorer</a>
+
+        <p class="footer-text">↓ double arc-en-ciel en diagonale ↓</p>
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        const burgerBtn = document.getElementById('burgerBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            burgerBtn.classList.toggle('active');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+            document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
+        }
+
+        burgerBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && sidebar.classList.contains('open')) {
+                toggleMenu();
+            }
+        });
+    </script>
+
+</body>
+</html>

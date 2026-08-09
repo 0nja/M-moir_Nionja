@@ -1,6 +1,6 @@
-# Catalogue des 115 styles
+# Catalogue des 116 styles
 
-Base de connaissances de DesignHub AI : 115 styles répartis en 12 catégories.
+Base de connaissances de DesignHub AI : 116 styles répartis en 12 catégories.
 Chaque style dispose d'un `design.md` complet dans `designs/<categorie>/<id>.md`.
 
 > Fichier généré par `node tools/build.mjs` — ne pas modifier à la main.
@@ -203,3 +203,4 @@ _Designs utilisant la forme de l'arc-en-ciel : demi-cercles concentriques empil�
 | 113 | **Arc Dashboard** | dashboard, arc, donut, graphique, données | Inter / Inter | #0A84FF · #1a1a1a | none + grid-4 |
 | 114 | **Arc Brand Identity** | marque, identité, arc, demi-cercle, logo | Outfit / Inter | #E63946 · #FFFFFF | split + grid-3 |
 | 115 | **Arc Portfolio** | portfolio, arc, créatif, sections, transitions | Outfit / Inter | #FF5500 · #0A0A0A | centered + gallery |
+| 116 | **Double Arc-en-ciel** | arc-en-ciel, double, diagonal, sidebar, burger, svg | Segoe UI / Segoe UI | #d62828 · #f5f0e8 | centered + none |

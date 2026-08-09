@@ -353,5 +353,75 @@
       "Ne pas remplir les arcs entièrement"
     ],
     "responsive": "Mobile : arcs réduits, projets en une colonne."
+  },
+  {
+    "id": "rainbow-double",
+    "name": "Double Arc-en-ciel",
+    "tagline": "Page d'accueil avec un double arc-en-ciel diagonal et sidebar burger.",
+    "intent": "Un univers créatif et harmonieux basé sur des arcs-en-ciel SVG croisés en arrière-plan et un menu de navigation masqué.",
+    "keywords": "arc-en-ciel, double, diagonal, sidebar, burger, svg",
+    "style": [
+      "Fond dégradé dans des tons terre/pétrole clairs",
+      "Deux ensembles d'arcs-en-ciel en SVG placés dans les coins opposés",
+      "Sidebar sombre qui apparaît sur le clic d'un bouton burger",
+      "Bouton d'action rouge vif stylisé"
+    ],
+    "tags": ["light", "rainbow", "sidebar", "creative", "svg"],
+    "difficulty": "advanced",
+    "mode": "light",
+    "colors": {
+      "primary": "#d62828",
+      "secondary": "#2d3a2a",
+      "bg": "#f5f0e8",
+      "surface": "rgba(45, 58, 42, 0.95)",
+      "text": "#2d3a2a",
+      "muted": "#7a8a74",
+      "border": "rgba(255, 255, 255, 0.3)"
+    },
+    "bg": "gradient",
+    "font": {
+      "heading": "Segoe UI",
+      "body": "Segoe UI",
+      "google": "system-ui",
+      "hero": "56px/700/-1.5px",
+      "h2": "19px/400/0",
+      "body_size": "16px, line-height 1.8",
+      "case": "none",
+      "detail": "Typographie système lisible et moderne."
+    },
+    "shape": {
+      "radius": "12px",
+      "border": "1px solid rgba(255, 255, 255, 0.3)",
+      "shadow": "0 4px 20px rgba(0, 0, 0, 0.06)"
+    },
+    "layout": {
+      "container": "700px",
+      "hero": "centered",
+      "features": "none",
+      "spacing": "0",
+      "grid": "centré avec décalage"
+    },
+    "motion": {
+      "load": "statique au chargement",
+      "hover": "transformation scale et box-shadow sur le bouton",
+      "scroll": "sidebar slide gauche-droite"
+    },
+    "components": [
+      "Bouton burger avec animation CSS des barres",
+      "Sidebar de navigation avec effet de flou",
+      "2 groupes de tracés SVG formant des arcs diagonaux",
+      "Contenu central textuel avec CTA"
+    ],
+    "do": [
+      "Utiliser du SVG pur pour dessiner les arcs en diagonale",
+      "Préserver l'opacité (0.7) et les z-index pour le background",
+      "Lier le burger menu à l'ouverture de la sidebar via CSS ou JS"
+    ],
+    "dont": [
+      "Ne pas utiliser d'images PNG pour les arcs",
+      "Pas de framework externe (JS natif seulement)"
+    ],
+    "responsive": "Mobile : ajustement de la taille des textes, marges réduites.",
+    "demo": "/demos/rainbow-double"
   }
 ]

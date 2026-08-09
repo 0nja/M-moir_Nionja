@@ -1723,5 +1723,20 @@
     ],
     "path": "designs/rainbow-gradient/arc-portfolio.md",
     "preview": "preview/index.html?id=arc-portfolio"
+  },
+  {
+    "id": "rainbow-double",
+    "name": "Double Arc-en-ciel",
+    "category": "rainbow-gradient",
+    "mode": "light",
+    "tags": [
+      "light",
+      "rainbow",
+      "sidebar",
+      "creative",
+      "svg"
+    ],
+    "path": "designs/rainbow-gradient/rainbow-double.md",
+    "preview": "./demos/rainbow-double/index.html"
   }
 ]
