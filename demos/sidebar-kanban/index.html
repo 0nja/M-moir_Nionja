@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kanban Sidebar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif; background:#1C1C1E; color:#fff; display:flex; height:100vh; overflow:hidden; }
+
+        .sidebar { width:220px; min-width:220px; background:#111; border-right:1px solid #2a2a2a; display:flex; flex-direction:column; padding:16px 0; }
+        .tls { display:flex; gap:6px; padding:0 14px 14px; }
+        .tl { width:12px; height:12px; border-radius:50%; }
+        .tl.r { background:#FF5F57; } .tl.y { background:#FFBD2E; } .tl.g { background:#28C840; }
+        .brand { padding:0 14px 16px; font-size:14px; font-weight:700; color:#fff; }
+        .brand span { color:#5E5CE6; }
+        .ws-label { font-size:10px; color:#555; text-transform:uppercase; letter-spacing:.8px; padding:0 14px 8px; }
+        .ws-item { display:flex; align-items:center; gap:9px; padding:7px 10px; margin:0 4px; border-radius:7px; color:#888; font-size:13px; cursor:pointer; text-decoration:none; }
+        .ws-item:hover { background:#1c1c1c; color:#bbb; }
+        .ws-item.active { background:#1e1b33; color:#5E5CE6; }
+        .ws-item i { width:16px; text-align:center; font-size:12px; }
+        .sb-footer { margin-top:auto; padding:12px; border-top:1px solid #222; }
+        .user { display:flex; align-items:center; gap:9px; padding:8px; border-radius:8px; cursor:pointer; }
+        .user:hover { background:#1c1c1c; }
+        .av { width:30px; height:30px; border-radius:50%; background:linear-gradient(135deg,#5E5CE6,#0A84FF); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; }
+        .un { font-size:12px; font-weight:600; } .ur { font-size:11px; color:#666; }
+
+        .main { flex:1; display:flex; flex-direction:column; overflow:hidden; }
+        .topbar { height:52px; padding:0 20px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #2a2a2a; background:#161616; }
+        .board-title { font-size:15px; font-weight:700; }
+        .top-actions { display:flex; gap:8px; }
+        .tbtn { display:flex; align-items:center; gap:6px; padding:7px 12px; border-radius:7px; font-size:12.5px; font-weight:500; border:none; cursor:pointer; }
+        .tbtn-ghost { background:#222; color:#aaa; }
+        .tbtn-primary { background:#5E5CE6; color:#fff; }
+
+        .board { flex:1; display:flex; gap:14px; padding:20px; overflow-x:auto; align-items:flex-start; }
+
+        .column { min-width:240px; width:240px; display:flex; flex-direction:column; gap:10px; }
+        .col-header { display:flex; align-items:center; justify-content:space-between; padding:0 4px 10px; }
+        .col-title { font-size:12px; font-weight:600; letter-spacing:.3px; }
+        .col-count { width:20px; height:20px; border-radius:50%; background:#2a2a2a; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; color:#888; }
+
+        .card { background:#232323; border:1px solid #2e2e2e; border-radius:10px; padding:14px; cursor:pointer; transition:transform .15s; }
+        .card:hover { transform:translateY(-2px); border-color:#3a3a3a; }
+        .card-tag { font-size:10px; font-weight:600; padding:3px 8px; border-radius:20px; display:inline-block; margin-bottom:10px; }
+        .card h4 { font-size:13px; font-weight:600; margin-bottom:8px; line-height:1.4; }
+        .card p { font-size:11.5px; color:#666; line-height:1.5; margin-bottom:12px; }
+        .card-footer { display:flex; align-items:center; justify-content:space-between; }
+        .card-avatars { display:flex; }
+        .card-av { width:22px; height:22px; border-radius:50%; margin-right:-6px; border:2px solid #232323; font-size:9px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+        .card-meta { font-size:11px; color:#666; display:flex; align-items:center; gap:4px; }
+
+        .add-card { display:flex; align-items:center; gap:8px; padding:10px; border-radius:10px; border:1px dashed #333; color:#555; font-size:12.5px; cursor:pointer; }
+        .add-card:hover { border-color:#444; color:#888; }
+    </style>
+</head>
+<body>
+<aside class="sidebar">
+    <div class="tls"><div class="tl r"></div><div class="tl y"></div><div class="tl g"></div></div>
+    <div class="brand">Kan<span>ban</span></div>
+    <div class="ws-label">Espaces</div>
+    <a class="ws-item active" href="#"><i class="fa-solid fa-diagram-project"></i> Dev Sprint</a>
+    <a class="ws-item" href="#"><i class="fa-solid fa-palette"></i> Design UI</a>
+    <a class="ws-item" href="#"><i class="fa-solid fa-rocket"></i> Lancement</a>
+    <div class="ws-label" style="margin-top:16px">Navigation</div>
+    <a class="ws-item" href="#"><i class="fa-solid fa-house"></i> Accueil</a>
+    <a class="ws-item" href="#"><i class="fa-solid fa-calendar-days"></i> Planning</a>
+    <a class="ws-item" href="#"><i class="fa-solid fa-users"></i> Équipe</a>
+    <a class="ws-item" href="#"><i class="fa-solid fa-gear"></i> Paramètres</a>
+    <div class="sb-footer">
+        <div class="user">
+            <div class="av">NJ</div>
+            <div><div class="un">Nionja</div><div class="ur">Admin</div></div>
+        </div>
+    </div>
+</aside>
+<div class="main">
+    <div class="topbar">
+        <div class="board-title"><i class="fa-solid fa-diagram-project" style="color:#5E5CE6;margin-right:8px;"></i>Dev Sprint</div>
+        <div class="top-actions">
+            <button class="tbtn tbtn-ghost"><i class="fa-solid fa-filter"></i> Filtrer</button>
+            <button class="tbtn tbtn-primary"><i class="fa-solid fa-plus"></i> Tâche</button>
+        </div>
+    </div>
+    <div class="board">
+        <div class="column">
+            <div class="col-header"><span class="col-title" style="color:#FF9F0A">A faire</span><span class="col-count">3</span></div>
+            <div class="card">
+                <div class="card-tag" style="background:rgba(255,159,10,.15);color:#FF9F0A">Design</div>
+                <h4>Révision des maquettes</h4>
+                <p>Mettre à jour les wireframes selon les retours client.</p>
+                <div class="card-footer">
+                    <div class="card-avatars"><div class="card-av" style="background:#5E5CE6">A</div><div class="card-av" style="background:#FF9F0A">B</div></div>
+                    <div class="card-meta"><i class="fa-regular fa-clock"></i> Demain</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-tag" style="background:rgba(10,132,255,.15);color:#0A84FF">Dev</div>
+                <h4>API endpoint — auth</h4>
+                <p>Implémenter JWT refresh token.</p>
+                <div class="card-footer">
+                    <div class="card-avatars"><div class="card-av" style="background:#30D158">C</div></div>
+                    <div class="card-meta"><i class="fa-solid fa-triangle-exclamation" style="color:#FF3B30"></i> Urgent</div>
+                </div>
+            </div>
+            <div class="add-card"><i class="fa-solid fa-plus"></i> Ajouter une tâche</div>
+        </div>
+
+        <div class="column">
+            <div class="col-header"><span class="col-title" style="color:#0A84FF">En cours</span><span class="col-count">2</span></div>
+            <div class="card">
+                <div class="card-tag" style="background:rgba(48,209,88,.15);color:#30D158">Test</div>
+                <h4>Tests unitaires composants</h4>
+                <p>Couverture des composants React à 80%.</p>
+                <div class="card-footer">
+                    <div class="card-avatars"><div class="card-av" style="background:#FF2D55">D</div></div>
+                    <div class="card-meta"><i class="fa-solid fa-code-branch" style="color:#5E5CE6"></i> feature/tests</div>
+                </div>
+            </div>
+            <div class="add-card"><i class="fa-solid fa-plus"></i> Ajouter une tâche</div>
+        </div>
+
+        <div class="column">
+            <div class="col-header"><span class="col-title" style="color:#30D158">Terminé</span><span class="col-count">2</span></div>
+            <div class="card" style="opacity:.6">
+                <div class="card-tag" style="background:rgba(48,209,88,.15);color:#30D158">Done</div>
+                <h4>Setup projet Next.js</h4>
+                <p>Configuration ESLint, Prettier, TypeScript.</p>
+                <div class="card-footer">
+                    <div class="card-avatars"><div class="card-av" style="background:#5E5CE6">A</div></div>
+                    <div class="card-meta"><i class="fa-solid fa-check" style="color:#30D158"></i> Validé</div>
+                </div>
+            </div>
+            <div class="add-card"><i class="fa-solid fa-plus"></i> Ajouter une tâche</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

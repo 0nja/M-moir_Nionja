@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'JetBrains Mono',monospace; background:#1E1E1E; color:#D4D4D4; display:flex; height:100vh; overflow:hidden; font-size:13px; }
+
+        /* ACTIVITY BAR */
+        .activity-bar { width:48px; min-width:48px; background:#333; border-right:1px solid #252525; display:flex; flex-direction:column; align-items:center; padding:8px 0; }
+        .tls { display:flex; flex-direction:column; gap:5px; margin-bottom:12px; }
+        .tl { width:11px; height:11px; border-radius:50%; }
+        .tl.r { background:#FF5F57; } .tl.y { background:#FFBD2E; } .tl.g { background:#28C840; }
+        .ab-icon { width:36px; height:36px; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#888; font-size:16px; cursor:pointer; margin-bottom:2px; }
+        .ab-icon:hover { color:#ccc; background:rgba(255,255,255,0.06); }
+        .ab-icon.active { color:#fff; border-left:2px solid #0A84FF; border-radius:0; }
+        .ab-bottom { margin-top:auto; display:flex; flex-direction:column; align-items:center; gap:4px; }
+
+        /* EXPLORER SIDEBAR */
+        .explorer { width:210px; min-width:210px; background:#252526; border-right:1px solid #1e1e1e; display:flex; flex-direction:column; }
+        .exp-title { padding:10px 16px; font-size:10.5px; font-weight:600; color:#bbb; text-transform:uppercase; letter-spacing:.8px; border-bottom:1px solid #333; }
+        .tree { padding:4px 0; flex:1; overflow-y:auto; }
+        .tree-folder { padding:4px 12px; cursor:pointer; color:#ccc; font-size:12.5px; display:flex; align-items:center; gap:6px; }
+        .tree-folder:hover { background:rgba(255,255,255,0.04); }
+        .tree-folder.open { color:#fff; }
+        .tree-file { padding:3px 12px 3px 28px; cursor:pointer; color:#9a9a9a; font-size:12.5px; display:flex; align-items:center; gap:6px; }
+        .tree-file:hover { background:rgba(255,255,255,0.04); }
+        .tree-file.active { background:#37373D; color:#fff; }
+        .i-js { color:#DBBC7F; } .i-html { color:#E06C75; } .i-css { color:#56B6C2; } .i-json { color:#C3E88D; }
+
+        /* MAIN EDITOR */
+        .editor { flex:1; display:flex; flex-direction:column; overflow:hidden; }
+
+        /* TABS */
+        .tabs { height:36px; background:#252526; border-bottom:1px solid #1e1e1e; display:flex; align-items:flex-end; overflow:hidden; }
+        .tab { padding:0 14px; height:34px; display:flex; align-items:center; gap:8px; font-size:12.5px; cursor:pointer; color:#888; border-right:1px solid #1e1e1e; white-space:nowrap; }
+        .tab.active { background:#1E1E1E; color:#fff; border-top:1px solid #0A84FF; }
+        .tab i { font-size:11px; }
+        .tab-close { font-size:9px; color:#666; margin-left:4px; }
+        .tab-close:hover { color:#ccc; }
+
+        /* CODE AREA */
+        .code-area { flex:1; display:flex; overflow:hidden; }
+        .line-nums { width:44px; min-width:44px; background:#1E1E1E; color:#555; padding:12px 0; text-align:right; font-size:12.5px; line-height:1.6; user-select:none; border-right:1px solid #252526; }
+        .line-num { padding:0 12px 0 0; }
+        .code-content { flex:1; padding:12px 20px; overflow:auto; font-size:12.5px; line-height:1.6; white-space:pre; }
+        .kw { color:#569CD6; } .fn { color:#DCDCAA; } .str { color:#CE9178; } .cmt { color:#6A9955; }
+        .num { color:#B5CEA8; } .cls { color:#4EC9B0; } .punct { color:#D4D4D4; }
+
+        /* STATUS BAR */
+        .status-bar { height:24px; background:#007ACC; display:flex; align-items:center; padding:0 14px; gap:16px; flex-shrink:0; }
+        .sb-item { font-size:11px; color:rgba(255,255,255,0.9); display:flex; align-items:center; gap:5px; cursor:pointer; }
+        .sb-item:hover { background:rgba(255,255,255,0.1); padding:0 4px; border-radius:3px; }
+        .sb-right { margin-left:auto; display:flex; gap:16px; }
+    </style>
+</head>
+<body>
+    <div class="activity-bar">
+        <div class="tls"><div class="tl r"></div><div class="tl y"></div><div class="tl g"></div></div>
+        <div class="ab-icon active"><i class="fa-solid fa-copy"></i></div>
+        <div class="ab-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="ab-icon"><i class="fa-solid fa-code-branch"></i></div>
+        <div class="ab-icon"><i class="fa-solid fa-bug"></i></div>
+        <div class="ab-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+        <div class="ab-bottom">
+            <div class="ab-icon"><i class="fa-solid fa-gear"></i></div>
+        </div>
+    </div>
+
+    <div class="explorer">
+        <div class="exp-title"><i class="fa-solid fa-folder-open" style="margin-right:6px;color:#FFBD2E;"></i>Explorateur</div>
+        <div class="tree">
+            <div class="tree-folder open"><i class="fa-solid fa-chevron-down" style="font-size:10px;color:#888;"></i><i class="fa-solid fa-folder-open" style="color:#FFBD2E;"></i>dts</div>
+            <div class="tree-folder"><i class="fa-solid fa-chevron-right" style="font-size:10px;color:#888;"></i><i class="fa-solid fa-folder" style="color:#FFBD2E;"></i>demos</div>
+            <div class="tree-folder"><i class="fa-solid fa-chevron-right" style="font-size:10px;color:#888;"></i><i class="fa-solid fa-folder" style="color:#FFBD2E;"></i>lib</div>
+            <div class="tree-folder"><i class="fa-solid fa-chevron-right" style="font-size:10px;color:#888;"></i><i class="fa-solid fa-folder" style="color:#FFBD2E;"></i>taxonomy</div>
+            <div class="tree-file active"><i class="fa-solid fa-file-code i-js"></i>app.js</div>
+            <div class="tree-file"><i class="fa-solid fa-file-code i-html"></i>index.html</div>
+            <div class="tree-file"><i class="fa-solid fa-file-code i-css"></i>style.css</div>
+        </div>
+    </div>
+
+    <div class="editor">
+        <div class="tabs">
+            <div class="tab active"><i class="fa-solid fa-file-code i-js"></i>app.js<span class="tab-close"><i class="fa-solid fa-xmark"></i></span></div>
+            <div class="tab"><i class="fa-solid fa-file-code i-html"></i>index.html<span class="tab-close"><i class="fa-solid fa-xmark"></i></span></div>
+            <div class="tab"><i class="fa-solid fa-file-code i-css"></i>style.css<span class="tab-close"><i class="fa-solid fa-xmark"></i></span></div>
+        </div>
+
+        <div class="code-area">
+            <div class="line-nums">
+                <div class="line-num">1</div><div class="line-num">2</div><div class="line-num">3</div>
+                <div class="line-num">4</div><div class="line-num">5</div><div class="line-num">6</div>
+                <div class="line-num">7</div><div class="line-num">8</div><div class="line-num">9</div>
+                <div class="line-num">10</div><div class="line-num">11</div><div class="line-num">12</div>
+                <div class="line-num">13</div><div class="line-num">14</div><div class="line-num">15</div>
+                <div class="line-num">16</div><div class="line-num">17</div><div class="line-num">18</div>
+                <div class="line-num">19</div><div class="line-num">20</div>
+            </div>
+            <div class="code-content"><span class="cmt">// DesignHub AI — app.js</span>
+<span class="kw">import</span> <span class="punct">{</span> loadManifest <span class="punct">}</span> <span class="kw">from</span> <span class="str">'./lib/manifest.js'</span><span class="punct">;</span>
+
+<span class="kw">const</span> <span class="fn">state</span> <span class="punct">=</span> <span class="punct">{</span>
+  styles<span class="punct">:</span> <span class="punct">[]</span><span class="punct">,</span>
+  filtered<span class="punct">:</span> <span class="punct">[]</span><span class="punct">,</span>
+  query<span class="punct">:</span> <span class="str">''</span><span class="punct">,</span>
+<span class="punct">};</span>
+
+<span class="kw">async function</span> <span class="fn">boot</span><span class="punct">() {</span>
+  <span class="kw">const</span> manifest <span class="punct">=</span> <span class="kw">await</span> <span class="fn">loadManifest</span><span class="punct">();</span>
+  state<span class="punct">.</span>styles <span class="punct">=</span> manifest<span class="punct">;</span>
+  state<span class="punct">.</span>filtered <span class="punct">=</span> manifest<span class="punct">;</span>
+  <span class="fn">render</span><span class="punct">();</span>
+<span class="punct">}</span>
+
+<span class="fn">boot</span><span class="punct">().</span><span class="fn">catch</span><span class="punct">((</span>err<span class="punct">) =></span> <span class="punct">{</span>
+  console<span class="punct">.</span><span class="fn">error</span><span class="punct">(</span><span class="str">'Erreur de chargement'</span><span class="punct">,</span> err<span class="punct">);</span>
+<span class="punct">});</span>
+</div>
+        </div>
+
+        <div class="status-bar">
+            <div class="sb-item"><i class="fa-solid fa-code-branch"></i> main</div>
+            <div class="sb-item"><i class="fa-solid fa-circle-check"></i> 0 erreurs</div>
+            <div class="sb-right">
+                <div class="sb-item">JavaScript</div>
+                <div class="sb-item">UTF-8</div>
+                <div class="sb-item">Ln 1, Col 1</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

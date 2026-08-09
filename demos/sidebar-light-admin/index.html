@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Admin Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f5f5f5; color: #111; display: flex; height: 100vh; overflow: hidden; }
+
+        .sidebar {
+            width: 230px; min-width: 230px;
+            background: #fff;
+            border-right: 1px solid #e8e8e8;
+            display: flex; flex-direction: column;
+            padding: 0;
+        }
+
+        .sidebar-header {
+            padding: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .traffic-lights { display: flex; gap: 7px; margin-bottom: 16px; }
+        .tl { width: 13px; height: 13px; border-radius: 50%; }
+        .tl.red { background: #FF5F57; }
+        .tl.yellow { background: #FFBD2E; }
+        .tl.green { background: #28C840; }
+
+        .brand { font-size: 15px; font-weight: 700; color: #111; }
+        .brand span { color: #007AFF; }
+
+        .search-box {
+            margin: 12px 12px 0;
+            display: flex; align-items: center; gap: 8px;
+            background: #f5f5f5; border: 1px solid #eee;
+            border-radius: 8px; padding: 8px 12px;
+        }
+        .search-box i { color: #aaa; font-size: 12px; }
+        .search-box input {
+            border: none; background: transparent;
+            font-size: 13px; color: #333; outline: none; width: 100%;
+        }
+
+        .nav-section { padding: 16px 12px 8px; }
+        .nav-label { font-size: 10.5px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.7px; margin-bottom: 6px; padding-left: 4px; }
+        .nav-item {
+            display: flex; align-items: center; gap: 10px;
+            padding: 8px 10px; border-radius: 8px;
+            color: #666; font-size: 13.5px; cursor: pointer;
+            transition: all 0.15s; text-decoration: none; margin-bottom: 2px;
+        }
+        .nav-item:hover { background: #f5f7ff; color: #333; }
+        .nav-item.active { background: #EFF6FF; color: #007AFF; font-weight: 500; }
+        .nav-item i { width: 18px; text-align: center; font-size: 13px; }
+        .badge {
+            margin-left: auto; background: #007AFF;
+            color: #fff; font-size: 10px; font-weight: 600;
+            padding: 2px 7px; border-radius: 20px;
+        }
+
+        .sidebar-footer {
+            margin-top: auto; padding: 12px;
+            border-top: 1px solid #f0f0f0;
+        }
+        .user-row { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 8px; cursor: pointer; }
+        .user-row:hover { background: #f5f5f5; }
+        .avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #007AFF, #5856D6); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #fff; }
+        .user-info { flex: 1; }
+        .user-name { font-size: 12.5px; font-weight: 600; color: #222; }
+        .user-role { font-size: 11px; color: #999; }
+
+        /* MAIN */
+        .main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+        .topbar {
+            height: 54px; padding: 0 24px;
+            display: flex; align-items: center; justify-content: space-between;
+            border-bottom: 1px solid #eee; background: #fff;
+        }
+        .breadcrumb { font-size: 13px; color: #999; }
+        .breadcrumb span { color: #333; font-weight: 500; }
+        .topbar-actions { display: flex; gap: 8px; }
+        .action-btn {
+            display: flex; align-items: center; gap: 6px;
+            padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 500;
+            cursor: pointer; border: none;
+        }
+        .btn-primary { background: #007AFF; color: #fff; }
+        .btn-ghost { background: #f5f5f5; color: #333; }
+
+        .content { flex: 1; padding: 24px; overflow-y: auto; background: #f5f5f5; }
+
+        .welcome { margin-bottom: 24px; }
+        .welcome h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+        .welcome p { font-size: 13px; color: #888; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
+        .stat-card {
+            background: #fff; border: 1px solid #ebebeb;
+            border-radius: 12px; padding: 18px;
+        }
+        .stat-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .stat-icon { width: 36px; height: 36px; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+        .stat-value { font-size: 22px; font-weight: 700; color: #111; }
+        .stat-label { font-size: 12px; color: #999; margin-top: 2px; }
+
+        .content-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 16px; }
+        .card { background: #fff; border: 1px solid #ebebeb; border-radius: 12px; padding: 20px; }
+        .card-title { font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+        .table-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f5f5f5; }
+        .table-row:last-child { border-bottom: none; }
+        .row-avatar { width: 28px; height: 28px; border-radius: 50%; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; color: #fff; }
+        .row-name { font-size: 13px; font-weight: 500; flex: 1; }
+        .row-val { font-size: 13px; font-weight: 600; }
+        .tag { font-size: 10.5px; padding: 3px 8px; border-radius: 20px; font-weight: 500; }
+        .tag-green { background: #d1fae5; color: #065f46; }
+        .tag-blue { background: #dbeafe; color: #1d4ed8; }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="traffic-lights">
+                <div class="tl red"></div>
+                <div class="tl yellow"></div>
+                <div class="tl green"></div>
+            </div>
+            <div class="brand">Admin<span>Pro</span></div>
+        </div>
+
+        <div class="search-box" style="margin:12px;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Rechercher...">
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-label">Menu</div>
+            <a class="nav-item active" href="#"><i class="fa-solid fa-house"></i> Tableau de bord</a>
+            <a class="nav-item" href="#"><i class="fa-solid fa-chart-bar"></i> Statistiques</a>
+            <a class="nav-item" href="#"><i class="fa-solid fa-users"></i> Clients <div class="badge">5</div></a>
+            <a class="nav-item" href="#"><i class="fa-solid fa-box"></i> Produits</a>
+            <a class="nav-item" href="#"><i class="fa-solid fa-file-lines"></i> Commandes</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-label">Compte</div>
+            <a class="nav-item" href="#"><i class="fa-solid fa-shield-halved"></i> Sécurité</a>
+            <a class="nav-item" href="#"><i class="fa-solid fa-gear"></i> Paramètres</a>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="user-row">
+                <div class="avatar">A</div>
+                <div class="user-info">
+                    <div class="user-name">Administrateur</div>
+                    <div class="user-role">Admin panel</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="main">
+        <div class="topbar">
+            <div class="breadcrumb">Tableau de bord / <span>Vue générale</span></div>
+            <div class="topbar-actions">
+                <button class="action-btn btn-ghost"><i class="fa-solid fa-filter"></i> Filtrer</button>
+                <button class="action-btn btn-primary"><i class="fa-solid fa-plus"></i> Nouveau</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="welcome">
+                <h1>Bonjour, Administrateur</h1>
+                <p>Voici un résumé de votre activité.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <div>
+                            <div class="stat-value">12,450</div>
+                            <div class="stat-label">Visites</div>
+                        </div>
+                        <div class="stat-icon" style="background:#EFF6FF;color:#007AFF"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <div>
+                            <div class="stat-value">$8,320</div>
+                            <div class="stat-label">Revenus</div>
+                        </div>
+                        <div class="stat-icon" style="background:#F0FDF4;color:#16A34A"><i class="fa-solid fa-dollar-sign"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <div>
+                            <div class="stat-value">284</div>
+                            <div class="stat-label">Commandes</div>
+                        </div>
+                        <div class="stat-icon" style="background:#FFF7ED;color:#EA580C"><i class="fa-solid fa-bag-shopping"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <div>
+                            <div class="stat-value">94%</div>
+                            <div class="stat-label">Satisfaction</div>
+                        </div>
+                        <div class="stat-icon" style="background:#F5F3FF;color:#7C3AED"><i class="fa-solid fa-face-smile"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-title">Derniers clients</div>
+                    <div class="table-row">
+                        <div class="row-avatar" style="background:#007AFF">JD</div>
+                        <div class="row-name">Jean Dupont</div>
+                        <div class="tag tag-green">Actif</div>
+                        <div class="row-val">$240</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="row-avatar" style="background:#7C3AED">ML</div>
+                        <div class="row-name">Marie Laurent</div>
+                        <div class="tag tag-blue">Nouveau</div>
+                        <div class="row-val">$180</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="row-avatar" style="background:#16A34A">PC</div>
+                        <div class="row-name">Pierre Chen</div>
+                        <div class="tag tag-green">Actif</div>
+                        <div class="row-val">$520</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Activité récente</div>
+                    <div class="table-row">
+                        <div class="row-avatar" style="background:#f0f0f0;color:#999"><i class="fa-solid fa-user-plus" style="font-size:11px;"></i></div>
+                        <div class="row-name" style="font-size:12px;">Nouvel utilisateur inscrit</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="row-avatar" style="background:#f0f0f0;color:#999"><i class="fa-solid fa-cart-shopping" style="font-size:11px;"></i></div>
+                        <div class="row-name" style="font-size:12px;">Commande #1204 reçue</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="row-avatar" style="background:#f0f0f0;color:#999"><i class="fa-solid fa-check" style="font-size:11px;"></i></div>
+                        <div class="row-name" style="font-size:12px;">Paiement validé</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

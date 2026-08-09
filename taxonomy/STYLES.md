@@ -1,6 +1,6 @@
-# Catalogue des 100 styles
+# Catalogue des 115 styles
 
-Base de connaissances de DesignHub AI : 100 styles répartis en 10 catégories.
+Base de connaissances de DesignHub AI : 115 styles répartis en 12 catégories.
 Chaque style dispose d'un `design.md` complet dans `designs/<categorie>/<id>.md`.
 
 > Fichier généré par `node tools/build.mjs` — ne pas modifier à la main.
@@ -174,3 +174,32 @@ _Web3, gaming, data viz, automobile, spatial, associatif._
 | 98 | **Church & Community** | accueillant, chaleureux, sobre, communautaire | Lora / Inter | #7C2D3A · #FCFAF6 | split + list |
 | 99 | **Automotive Configurator** | technique, sombre, précis, premium | Barlow Condensed / Inter | #DC2626 · #0D0D0F | fullbleed + table |
 | 100 | **Space & Scientific** | scientifique, contemplatif, précis, sombre | Space Grotesk / Inter | #60A5FA · #050B18 | fullbleed + bento |
+
+## Mac Sidebar & Dashboards
+
+_Interfaces avec barre latérale style macOS, points rouge/jaune/vert, icônes FontAwesome._
+
+| # | Style | Ambiance | Titre / Corps | Palette | Layout |
+| - | ----- | -------- | ------------- | ------- | ------ |
+| 101 | **Dark Dashboard Sidebar** | sidebar, dark, dashboard, macos, fontawesome | Inter / Inter | #0A84FF · #1a1a1a | none + grid-4 |
+| 102 | **Light Admin Sidebar** | sidebar, light, admin, macos, fontawesome | Inter / Inter | #007AFF · #f5f5f5 | none + grid-4 |
+| 103 | **Code Editor Sidebar** | code, editor, sidebar, dark, fontawesome | JetBrains Mono / JetBrains Mono | #569CD6 · #1E1E1E | none + none |
+| 104 | **Kanban Board Sidebar** | kanban, sidebar, task, dark, fontawesome | Inter / Inter | #5E5CE6 · #1C1C1E | none + kanban |
+| 105 | **Mail Client Sidebar** | mail, sidebar, 3-colonnes, light, fontawesome | Inter / Inter | #007AFF · #FFFFFF | none + none |
+| 106 | **Music Player Sidebar** | music, player, sidebar, dark, fontawesome | Inter / Inter | #FF2D55 · #1C1C1E | none + grid-4 |
+| 107 | **Settings Panel Sidebar** | settings, sidebar, light, macos, fontawesome | Inter / Inter | #007AFF · #F2F2F7 | none + list |
+| 108 | **Chat App Sidebar** | chat, sidebar, messages, light, fontawesome | Inter / Inter | #007AFF · #FFFFFF | none + none |
+| 109 | **File Manager Sidebar** | finder, files, sidebar, light, fontawesome | Inter / Inter | #007AFF · #FFFFFF | none + grid-5 |
+| 110 | **Calendar App Sidebar** | calendar, sidebar, planning, light, fontawesome | Inter / Inter | #FF2D55 · #FFFFFF | none + grid |
+
+## Arcs & Demi-cercles
+
+_Designs utilisant la forme de l'arc-en-ciel : demi-cercles concentriques empilés comme motif graphique principal._
+
+| # | Style | Ambiance | Titre / Corps | Palette | Layout |
+| - | ----- | -------- | ------------- | ------- | ------ |
+| 111 | **Arc Hero Dark** | arc, demi-cercle, concentrique, sombre, forme | Outfit / Inter | #FF0055 · #0C0C14 | centered + grid-3 |
+| 112 | **Arc Hero Light** | arc, demi-cercle, clair, naturel, concentrique | Outfit / Inter | #E63946 · #FAFAFA | centered + grid-3 |
+| 113 | **Arc Dashboard** | dashboard, arc, donut, graphique, données | Inter / Inter | #0A84FF · #1a1a1a | none + grid-4 |
+| 114 | **Arc Brand Identity** | marque, identité, arc, demi-cercle, logo | Outfit / Inter | #E63946 · #FFFFFF | split + grid-3 |
+| 115 | **Arc Portfolio** | portfolio, arc, créatif, sections, transitions | Outfit / Inter | #FF5500 · #0A0A0A | centered + gallery |

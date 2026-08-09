@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mail Client</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif; background:#fff; color:#000; display:flex; height:100vh; overflow:hidden; }
+
+        /* SIDEBAR dossiers */
+        .sidebar { width:200px; min-width:200px; background:#F2F2F7; border-right:1px solid #D1D1D6; display:flex; flex-direction:column; }
+        .sb-head { padding:14px; }
+        .tls { display:flex; gap:6px; margin-bottom:16px; }
+        .tl { width:12px; height:12px; border-radius:50%; }
+        .tl.r { background:#FF5F57; } .tl.y { background:#FFBD2E; } .tl.g { background:#28C840; }
+        .new-btn { display:flex; align-items:center; gap:8px; padding:9px 14px; border-radius:10px; background:#007AFF; color:#fff; font-size:13px; font-weight:600; cursor:pointer; border:none; width:100%; }
+        .sb-nav { flex:1; padding:8px 8px; }
+        .sb-item { display:flex; align-items:center; gap:9px; padding:7px 10px; border-radius:8px; cursor:pointer; font-size:13px; color:#333; text-decoration:none; }
+        .sb-item:hover { background:rgba(0,0,0,0.06); }
+        .sb-item.active { background:#007AFF; color:#fff; }
+        .sb-item.active i { color:#fff; }
+        .sb-item i { width:16px; text-align:center; font-size:13px; color:#007AFF; }
+        .badge { margin-left:auto; background:#007AFF; color:#fff; font-size:10px; font-weight:700; min-width:18px; height:18px; border-radius:9px; display:flex; align-items:center; justify-content:center; padding:0 5px; }
+        .sb-item.active .badge { background:#fff; color:#007AFF; }
+
+        /* MAIL LIST */
+        .mail-list { width:300px; min-width:300px; border-right:1px solid #E5E5EA; display:flex; flex-direction:column; }
+        .ml-head { padding:14px 16px; border-bottom:1px solid #E5E5EA; display:flex; justify-content:space-between; align-items:center; }
+        .ml-title { font-size:18px; font-weight:700; }
+        .ml-btn { width:30px; height:30px; border-radius:50%; background:#F2F2F7; border:none; cursor:pointer; color:#555; font-size:12px; display:flex; align-items:center; justify-content:center; }
+        .mail-item { padding:14px 16px; border-bottom:1px solid #F0F0F0; cursor:pointer; }
+        .mail-item:hover { background:#F8F8F8; }
+        .mail-item.active { background:#EAF1FF; }
+        .mail-item.unread .m-from { font-weight:700; }
+        .m-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; }
+        .m-from { font-size:13.5px; color:#000; }
+        .m-time { font-size:11px; color:#8E8E93; }
+        .m-subject { font-size:13px; font-weight:600; color:#111; margin-bottom:3px; }
+        .m-preview { font-size:12px; color:#8E8E93; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        .unread-dot { width:8px; height:8px; border-radius:50%; background:#007AFF; flex-shrink:0; }
+
+        /* MAIL VIEW */
+        .mail-view { flex:1; display:flex; flex-direction:column; overflow:hidden; }
+        .mv-toolbar { height:52px; padding:0 20px; display:flex; align-items:center; gap:10px; border-bottom:1px solid #E5E5EA; }
+        .mv-btn { width:32px; height:32px; border-radius:8px; background:#F2F2F7; border:none; cursor:pointer; color:#555; font-size:13px; display:flex; align-items:center; justify-content:center; }
+        .mv-sep { flex:1; }
+        .mv-body { flex:1; padding:28px; overflow-y:auto; }
+        .mv-from { display:flex; align-items:center; gap:12px; margin-bottom:20px; }
+        .mv-av { width:40px; height:40px; border-radius:50%; background:#007AFF; color:#fff; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+        .mv-meta { flex:1; }
+        .mv-name { font-size:15px; font-weight:700; }
+        .mv-addr { font-size:12px; color:#8E8E93; }
+        .mv-date { font-size:12px; color:#8E8E93; }
+        .mv-subject { font-size:20px; font-weight:700; margin-bottom:20px; }
+        .mv-content { font-size:14px; line-height:1.7; color:#333; }
+    </style>
+</head>
+<body>
+<aside class="sidebar">
+    <div class="sb-head">
+        <div class="tls"><div class="tl r"></div><div class="tl y"></div><div class="tl g"></div></div>
+        <button class="new-btn"><i class="fa-solid fa-pen"></i> Nouveau message</button>
+    </div>
+    <div class="sb-nav">
+        <div class="sb-item active"><i class="fa-solid fa-inbox"></i> Boite de réception <div class="badge">4</div></div>
+        <div class="sb-item"><i class="fa-solid fa-star"></i> Favoris</div>
+        <div class="sb-item"><i class="fa-solid fa-paper-plane"></i> Envoyés</div>
+        <div class="sb-item"><i class="fa-solid fa-file"></i> Brouillons</div>
+        <div class="sb-item"><i class="fa-solid fa-trash"></i> Corbeille</div>
+        <div class="sb-item" style="margin-top:12px"><i class="fa-solid fa-tag" style="color:#FF3B30"></i> Urgent</div>
+        <div class="sb-item"><i class="fa-solid fa-tag" style="color:#30D158"></i> Projets</div>
+    </div>
+</aside>
+
+<div class="mail-list">
+    <div class="ml-head">
+        <span class="ml-title">Boite de réception</span>
+        <button class="ml-btn"><i class="fa-solid fa-arrow-down-short-wide"></i></button>
+    </div>
+    <div class="mail-item unread active">
+        <div class="m-row">
+            <span class="m-from">Marie Laurent</span>
+            <span class="m-time">14:30</span>
+        </div>
+        <div class="m-subject">Re: Maquettes design system</div>
+        <div class="m-preview">Super, je regarde ca tout de suite et je te reviens...</div>
+    </div>
+    <div class="mail-item unread">
+        <div class="m-row">
+            <span class="m-from">GitHub Notifications</span>
+            <span class="m-time">12:10</span>
+        </div>
+        <div class="m-subject">PR #42 — feat/sidebar approved</div>
+        <div class="m-preview">Pierre Chen approved your pull request...</div>
+    </div>
+    <div class="mail-item">
+        <div class="m-row">
+            <span class="m-from">Jean Dupont</span>
+            <span class="m-time">10:02</span>
+        </div>
+        <div class="m-subject">Réunion demain 10h</div>
+        <div class="m-preview">Bonjour, je confirme notre réunion de demain...</div>
+    </div>
+    <div class="mail-item">
+        <div class="m-row">
+            <span class="m-from">Vercel</span>
+            <span class="m-time">Hier</span>
+        </div>
+        <div class="m-subject">Deployment successful</div>
+        <div class="m-preview">Your project was deployed successfully...</div>
+    </div>
+</div>
+
+<div class="mail-view">
+    <div class="mv-toolbar">
+        <button class="mv-btn"><i class="fa-solid fa-reply"></i></button>
+        <button class="mv-btn"><i class="fa-solid fa-reply-all"></i></button>
+        <button class="mv-btn"><i class="fa-solid fa-share"></i></button>
+        <div class="mv-sep"></div>
+        <button class="mv-btn"><i class="fa-solid fa-trash"></i></button>
+        <button class="mv-btn"><i class="fa-solid fa-tag"></i></button>
+        <button class="mv-btn"><i class="fa-solid fa-ellipsis"></i></button>
+    </div>
+    <div class="mv-body">
+        <div class="mv-subject">Re: Maquettes design system</div>
+        <div class="mv-from">
+            <div class="mv-av">ML</div>
+            <div class="mv-meta">
+                <div class="mv-name">Marie Laurent <span style="font-size:12px;font-weight:400;color:#8E8E93">&lt;m.laurent@design.io&gt;</span></div>
+                <div class="mv-addr">à moi</div>
+            </div>
+            <div class="mv-date">Aujourd'hui, 14:30</div>
+        </div>
+        <div class="mv-content">
+            <p>Bonjour,</p><br>
+            <p>Super, je regarde ca tout de suite et je te reviens avec mes commentaires. J'ai quelques questions sur le composant de navigation et les breakpoints mobiles.</p><br>
+            <p>Est-ce qu'on peut faire un call rapide demain matin pour en discuter ?</p><br>
+            <p>Bonne journée,<br>Marie</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

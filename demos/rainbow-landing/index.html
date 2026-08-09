@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Gradient UI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #fff;
+            color: #111;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Rainbow gradient text utility */
+        .rainbow-text {
+            background: linear-gradient(90deg, #FF0080, #FF8C00, #FFD700, #00C853, #0090FF, #7B2FFF);
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow-shift 4s linear infinite;
+        }
+
+        @keyframes rainbow-shift {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        /* Rainbow border utility */
+        .rainbow-border {
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+        .rainbow-border::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: inherit;
+            background: linear-gradient(90deg, #FF0080, #FF8C00, #FFD700, #00C853, #0090FF, #7B2FFF, #FF0080);
+            background-size: 300%;
+            animation: rainbow-shift 3s linear infinite;
+            z-index: -1;
+        }
+
+        /* NAV */
+        nav {
+            padding: 20px 60px;
+            display: flex; align-items: center; justify-content: space-between;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .logo { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 800; }
+        .nav-links { display: flex; gap: 32px; }
+        .nav-links a { font-size: 15px; color: #555; text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: #111; }
+        .nav-cta {
+            padding: 10px 24px; border-radius: 50px;
+            font-size: 14px; font-weight: 600; cursor: pointer;
+            border: none; color: #fff;
+            background: linear-gradient(90deg, #FF0080, #7B2FFF);
+            transition: opacity 0.2s;
+        }
+        .nav-cta:hover { opacity: 0.9; }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 100px 40px 80px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(ellipse at 10% 50%, rgba(255,0,128,0.07) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 30%, rgba(123,47,255,0.07) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(0,144,255,0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #f5f5f5; border-radius: 50px;
+            padding: 6px 16px; font-size: 13px; font-weight: 500;
+            margin-bottom: 28px; color: #555;
+        }
+        .hero-badge i { font-size: 11px; color: #FF8C00; }
+
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(40px, 7vw, 80px);
+            font-weight: 800; line-height: 1.05;
+            margin-bottom: 24px; letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 18px; color: #666; max-width: 560px;
+            margin: 0 auto 36px; line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-actions { display: flex; gap: 14px; justify-content: center; }
+        .btn-rainbow {
+            padding: 14px 32px; border-radius: 50px;
+            font-size: 15px; font-weight: 700; cursor: pointer;
+            border: none; color: #fff;
+            background: linear-gradient(90deg, #FF0080, #FF8C00, #FFD700, #00C853, #0090FF, #7B2FFF);
+            background-size: 200%;
+            animation: rainbow-shift 3s linear infinite;
+            transition: transform 0.2s;
+        }
+        .btn-rainbow:hover { transform: scale(1.03); }
+        .btn-outline {
+            padding: 14px 32px; border-radius: 50px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            background: transparent; border: 2px solid #ddd; color: #333;
+        }
+
+        /* Features */
+        .features { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+        .features h2 { text-align: center; font-size: 36px; font-weight: 800; margin-bottom: 48px; }
+
+        .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .feature-card {
+            border-radius: 20px;
+            padding: 28px;
+            background: #fff;
+            border: 1px solid #ececec;
+            transition: transform 0.2s;
+        }
+        .feature-card:hover { transform: translateY(-5px); }
+
+        .feature-icon {
+            width: 52px; height: 52px; border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; margin-bottom: 16px;
+        }
+        .feature-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+        .feature-card p { font-size: 14px; color: #777; line-height: 1.6; font-family: 'Inter', sans-serif; }
+
+        /* Rainbow strip */
+        .rainbow-strip {
+            height: 6px;
+            background: linear-gradient(90deg, #FF0080, #FF8C00, #FFD700, #00C853, #0090FF, #7B2FFF);
+            background-size: 200%;
+            animation: rainbow-shift 4s linear infinite;
+        }
+
+        /* Palette showcase */
+        .palette { display: flex; gap: 0; height: 8px; border-radius: 4px; overflow: hidden; margin: 0 60px 60px; }
+        .palette div { flex: 1; }
+    </style>
+</head>
+<body>
+
+    <div class="rainbow-strip"></div>
+
+    <nav>
+        <div class="logo"><span class="rainbow-text">Rainbow</span>UI</div>
+        <div class="nav-links">
+            <a href="#">Accueil</a>
+            <a href="#">Produits</a>
+            <a href="#">Tarifs</a>
+            <a href="#">Contact</a>
+        </div>
+        <button class="nav-cta">Commencer</button>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-badge">
+            <i class="fa-solid fa-bolt"></i> Nouveau · Version 2.0
+        </div>
+        <h1>Créez avec toutes<br>les <span class="rainbow-text">couleurs</span> du spectre.</h1>
+        <p>Une interface qui exprime la créativité sans limite. Dégradés vivants, typographie forte, design joyeux et mémorable.</p>
+        <div class="hero-actions">
+            <button class="btn-rainbow"><i class="fa-solid fa-arrow-right"></i> Explorer maintenant</button>
+            <button class="btn-outline"><i class="fa-solid fa-play"></i> Démo</button>
+        </div>
+    </section>
+
+    <div class="palette">
+        <div style="background:#FF0080"></div>
+        <div style="background:#FF3366"></div>
+        <div style="background:#FF6B35"></div>
+        <div style="background:#FF8C00"></div>
+        <div style="background:#FFB700"></div>
+        <div style="background:#FFD700"></div>
+        <div style="background:#A8E063"></div>
+        <div style="background:#00C853"></div>
+        <div style="background:#00BCD4"></div>
+        <div style="background:#0090FF"></div>
+        <div style="background:#4B5BFF"></div>
+        <div style="background:#7B2FFF"></div>
+    </div>
+
+    <section class="features">
+        <h2>Fonctionnalités <span class="rainbow-text">colorées</span></h2>
+        <div class="feature-grid">
+            <div class="feature-card rainbow-border" style="border-radius:16px;">
+                <div class="feature-icon" style="background:linear-gradient(135deg,#FF0080,#FF8C00);color:#fff;">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <h3>Dégradés dynamiques</h3>
+                <p>Chaque couleur du spectre animée en temps réel pour un rendu toujours vivant.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:linear-gradient(135deg,#00C853,#0090FF);color:#fff;">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h3>Animations fluides</h3>
+                <p>Les transitions et effets arc-en-ciel renforcent la perception de qualité.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:linear-gradient(135deg,#7B2FFF,#FF0080);color:#fff;">
+                    <i class="fa-solid fa-infinity"></i>
+                </div>
+                <h3>Combinaisons infinies</h3>
+                <p>Mixez les dégradés de la bibliothèque pour créer votre identité unique.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="rainbow-strip" style="margin-top:60px;"></div>
+
+</body>
+</html>

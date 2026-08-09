@@ -1498,5 +1498,230 @@
     ],
     "path": "designs/niche-special/space-scientific.md",
     "preview": "preview/index.html?id=space-scientific"
+  },
+  {
+    "id": "sidebar-dark-dashboard",
+    "name": "Dark Dashboard Sidebar",
+    "category": "mac-sidebar",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "sidebar",
+      "dashboard",
+      "macos",
+      "fontawesome"
+    ],
+    "path": "designs/mac-sidebar/sidebar-dark-dashboard.md",
+    "preview": "./demos/sidebar-dark-dashboard/index.html"
+  },
+  {
+    "id": "sidebar-light-admin",
+    "name": "Light Admin Sidebar",
+    "category": "mac-sidebar",
+    "mode": "light",
+    "tags": [
+      "light",
+      "sidebar",
+      "admin",
+      "macos",
+      "fontawesome"
+    ],
+    "path": "designs/mac-sidebar/sidebar-light-admin.md",
+    "preview": "./demos/sidebar-light-admin/index.html"
+  },
+  {
+    "id": "sidebar-dark-code-editor",
+    "name": "Code Editor Sidebar",
+    "category": "mac-sidebar",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "sidebar",
+      "code",
+      "editor",
+      "fontawesome"
+    ],
+    "path": "designs/mac-sidebar/sidebar-dark-code-editor.md",
+    "preview": "./demos/sidebar-dark-code-editor/index.html"
+  },
+  {
+    "id": "sidebar-kanban",
+    "name": "Kanban Board Sidebar",
+    "category": "mac-sidebar",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "sidebar",
+      "kanban",
+      "productivity",
+      "fontawesome"
+    ],
+    "path": "designs/mac-sidebar/sidebar-kanban.md",
+    "preview": "./demos/sidebar-kanban/index.html"
+  },
+  {
+    "id": "sidebar-mail-client",
+    "name": "Mail Client Sidebar",
+    "category": "mac-sidebar",
+    "mode": "light",
+    "tags": [
+      "light",
+      "sidebar",
+      "mail",
+      "macos",
+      "fontawesome"
+    ],
+    "path": "designs/mac-sidebar/sidebar-mail-client.md",
+    "preview": "./demos/sidebar-mail-client/index.html"
+  },
+  {
+    "id": "sidebar-music-player",
+    "name": "Music Player Sidebar",
+    "category": "mac-sidebar",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "sidebar",
+      "music",
+      "media",
+      "fontawesome"
+    ],
+    "path": "designs/mac-sidebar/sidebar-music-player.md",
+    "preview": "./demos/sidebar-music-player/index.html"
+  },
+  {
+    "id": "sidebar-settings",
+    "name": "Settings Panel Sidebar",
+    "category": "mac-sidebar",
+    "mode": "light",
+    "tags": [
+      "light",
+      "sidebar",
+      "settings",
+      "macos",
+      "fontawesome"
+    ],
+    "path": "designs/mac-sidebar/sidebar-settings.md",
+    "preview": "./demos/sidebar-settings/index.html"
+  },
+  {
+    "id": "sidebar-chat-app",
+    "name": "Chat App Sidebar",
+    "category": "mac-sidebar",
+    "mode": "light",
+    "tags": [
+      "light",
+      "sidebar",
+      "chat",
+      "macos",
+      "fontawesome"
+    ],
+    "path": "designs/mac-sidebar/sidebar-chat-app.md",
+    "preview": "./demos/sidebar-chat-app/index.html"
+  },
+  {
+    "id": "sidebar-file-manager",
+    "name": "File Manager Sidebar",
+    "category": "mac-sidebar",
+    "mode": "light",
+    "tags": [
+      "light",
+      "sidebar",
+      "finder",
+      "files",
+      "fontawesome"
+    ],
+    "path": "designs/mac-sidebar/sidebar-file-manager.md",
+    "preview": "./demos/sidebar-file-manager/index.html"
+  },
+  {
+    "id": "sidebar-calendar",
+    "name": "Calendar App Sidebar",
+    "category": "mac-sidebar",
+    "mode": "light",
+    "tags": [
+      "light",
+      "sidebar",
+      "calendar",
+      "productivity",
+      "fontawesome"
+    ],
+    "path": "designs/mac-sidebar/sidebar-calendar.md",
+    "preview": "./demos/sidebar-calendar/index.html"
+  },
+  {
+    "id": "arc-hero",
+    "name": "Arc Hero Dark",
+    "category": "rainbow-gradient",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "arc",
+      "semicircle",
+      "geometric",
+      "hero"
+    ],
+    "path": "designs/rainbow-gradient/arc-hero.md",
+    "preview": "./demos/arc-hero/index.html"
+  },
+  {
+    "id": "arc-light",
+    "name": "Arc Hero Light",
+    "category": "rainbow-gradient",
+    "mode": "light",
+    "tags": [
+      "light",
+      "arc",
+      "semicircle",
+      "natural",
+      "geometric"
+    ],
+    "path": "designs/rainbow-gradient/arc-light.md",
+    "preview": "./demos/arc-light/index.html"
+  },
+  {
+    "id": "arc-dashboard",
+    "name": "Arc Dashboard",
+    "category": "rainbow-gradient",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "arc",
+      "dashboard",
+      "data",
+      "charts"
+    ],
+    "path": "designs/rainbow-gradient/arc-dashboard.md",
+    "preview": "preview/index.html?id=arc-dashboard"
+  },
+  {
+    "id": "arc-brand",
+    "name": "Arc Brand Identity",
+    "category": "rainbow-gradient",
+    "mode": "light",
+    "tags": [
+      "light",
+      "brand",
+      "arc",
+      "identity",
+      "geometric"
+    ],
+    "path": "designs/rainbow-gradient/arc-brand.md",
+    "preview": "preview/index.html?id=arc-brand"
+  },
+  {
+    "id": "arc-portfolio",
+    "name": "Arc Portfolio",
+    "category": "rainbow-gradient",
+    "mode": "dark",
+    "tags": [
+      "dark",
+      "portfolio",
+      "arc",
+      "creative",
+      "geometric"
+    ],
+    "path": "designs/rainbow-gradient/arc-portfolio.md",
+    "preview": "preview/index.html?id=arc-portfolio"
   }
 ]

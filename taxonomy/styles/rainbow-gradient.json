@@ -1,0 +1,357 @@
+[
+  {
+    "id": "arc-hero",
+    "name": "Arc Hero Dark",
+    "tagline": "Hero sombre avec demi-cercles concentriques en arc-en-ciel.",
+    "intent": "Créer une page d'accueil mémorable où la forme même de l'arc-en-ciel — des demi-cercles imbriqués — est l'élément visuel central.",
+    "keywords": "arc, demi-cercle, concentrique, sombre, forme",
+    "style": [
+      "Demi-cercles concentriques du rouge au violet empilés du plus grand au plus petit",
+      "Fond très sombre (#0C0C14) pour maximiser l'impact des arcs",
+      "Les arcs sont positionnés en bas du hero, coupés à mi-hauteur",
+      "Texte en blanc, badge et CTA au-dessus des arcs"
+    ],
+    "tags": ["dark", "arc", "semicircle", "geometric", "hero"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#FF0055",
+      "secondary": "#6600FF",
+      "bg": "#0C0C14",
+      "surface": "#14141F",
+      "text": "#FFFFFF",
+      "muted": "rgba(255,255,255,0.55)",
+      "border": "rgba(255,255,255,0.1)"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Outfit",
+      "body": "Inter",
+      "google": "Outfit:wght@400;600;800|Inter:wght@400;500",
+      "hero": "64px/800/-1.5px",
+      "h2": "28px/700/0",
+      "body_size": "17px, line-height 1.6",
+      "case": "none",
+      "detail": "Outfit bold pour l'impact, Inter pour le corps."
+    },
+    "shape": {
+      "radius": "50px",
+      "border": "aucune sur les cartes",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1100px",
+      "hero": "centered",
+      "features": "grid-3",
+      "spacing": "100px entre sections",
+      "grid": "centré"
+    },
+    "motion": {
+      "load": "les arcs montent de bas en haut en décalé",
+      "hover": "les arcs pulsent légèrement en opacité",
+      "scroll": "parallaxe léger sur les arcs"
+    },
+    "components": [
+      "Navbar minimaliste (logo + liens + CTA blanc)",
+      "Hero avec texte centré au-dessus des arcs",
+      "7 demi-cercles concentriques (rouge → orange → jaune → vert → bleu → violet → rose)",
+      "Grille de 3 features cards en bas"
+    ],
+    "do": [
+      "Les arcs doivent être des demi-cercles parfaits (border-radius: 50%, coupés en bas)",
+      "Espace régulier entre chaque arc (environ 30-36px de largeur par bande)",
+      "Fond très sombre pour que les couleurs ressortent"
+    ],
+    "dont": [
+      "Pas de dégradé animé sur les arcs (couleurs solides seulement)",
+      "Pas de fond clair",
+      "Ne pas ajouter d'ombres sur les arcs"
+    ],
+    "responsive": "Mobile : arcs réduits à 340px de large, hero en 38px.",
+    "demo": "/demos/arc-hero"
+  },
+  {
+    "id": "arc-light",
+    "name": "Arc Hero Light",
+    "tagline": "Page clair avec arcs concentriques aux couleurs naturelles du spectre.",
+    "intent": "Design épuré et moderne sur fond blanc où l'arc en demi-cercle est le motif graphique principal dans les couleurs réelles d'un arc-en-ciel.",
+    "keywords": "arc, demi-cercle, clair, naturel, concentrique",
+    "style": [
+      "Fond blanc, arcs dans les couleurs naturelles d'un arc-en-ciel (rouge, orange, jaune, vert, bleu, violet)",
+      "Les demi-cercles sont alignés sur une ligne de sol en bas du hero",
+      "Pastilles de couleur pour indiquer la palette",
+      "Typographie forte, sans serif"
+    ],
+    "tags": ["light", "arc", "semicircle", "natural", "geometric"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#E63946",
+      "secondary": "#457B9D",
+      "bg": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "text": "#111111",
+      "muted": "#888888",
+      "border": "#EEEEEE"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Outfit",
+      "body": "Inter",
+      "google": "Outfit:wght@400;600;800|Inter:wght@400;500",
+      "hero": "60px/800/-1.5px",
+      "h2": "36px/800/0",
+      "body_size": "17px, line-height 1.65",
+      "case": "none",
+      "detail": "Typographie forte et aérée."
+    },
+    "shape": {
+      "radius": "16px",
+      "border": "1px solid #EEEEEE",
+      "shadow": "aucune"
+    },
+    "layout": {
+      "container": "1100px",
+      "hero": "centered",
+      "features": "grid-3",
+      "spacing": "80px entre sections",
+      "grid": "centré"
+    },
+    "motion": {
+      "load": "arcs apparaissent du centre vers l'extérieur",
+      "hover": "cartes soulevées légèrement",
+      "scroll": "standard"
+    },
+    "components": [
+      "Navbar blanche avec border-bottom",
+      "Hero centré avec titre et sous-titre",
+      "6 demi-cercles concentriques (couleurs naturelles de l'arc-en-ciel)",
+      "Rangée de pastilles de couleur",
+      "Grille de 3 cards avec mini arc en badge"
+    ],
+    "do": [
+      "Couleurs naturelles : rouge (#E63946), orange (#F4A261), jaune (#E9C46A), vert (#2A9D8F), bleu (#457B9D), violet (#6A4C93)",
+      "Les arcs doivent s'appuyer sur une ligne horizontale en bas du hero",
+      "Espace blanc généreux autour des arcs"
+    ],
+    "dont": [
+      "Pas de fond coloré",
+      "Pas d'animation sur les arcs (statiques uniquement)",
+      "Ne pas surcharger avec du texte dans les arcs"
+    ],
+    "responsive": "Mobile : arcs en 340px, texte hero en 36px.",
+    "demo": "/demos/arc-light"
+  },
+  {
+    "id": "arc-dashboard",
+    "name": "Arc Dashboard",
+    "tagline": "Interface de données avec graphiques en demi-anneau (donut).",
+    "intent": "Dashboard analytics utilisant les formes d'arc et de demi-cercle comme motif de visualisation de données.",
+    "keywords": "dashboard, arc, donut, graphique, données",
+    "style": [
+      "Graphiques en donut (demi-cercles) comme visualisation principale",
+      "Sidebar sombre, contenu avec cartes de données",
+      "Arcs de couleur spectrales pour les indicateurs de progression",
+      "Design dense et informatif"
+    ],
+    "tags": ["dark", "arc", "dashboard", "data", "charts"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#0A84FF",
+      "secondary": "#30D158",
+      "bg": "#1a1a1a",
+      "surface": "#232323",
+      "text": "#FFFFFF",
+      "muted": "#888888",
+      "border": "#2e2e2e"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700",
+      "hero": "20px/700/0",
+      "h2": "15px/600/0",
+      "body_size": "13px, line-height 1.5",
+      "case": "none",
+      "detail": "Dense et lisible."
+    },
+    "shape": {
+      "radius": "12px",
+      "border": "1px solid #2e2e2e",
+      "shadow": "none"
+    },
+    "layout": {
+      "container": "100%",
+      "hero": "none",
+      "features": "grid-4",
+      "spacing": "16px",
+      "grid": "sidebar 220px + contenu avec graphiques"
+    },
+    "motion": {
+      "load": "les arcs de progression se dessinent du début à la valeur finale",
+      "hover": "tooltip sur les segments d'arc",
+      "scroll": "standard"
+    },
+    "components": [
+      "Sidebar avec navigation FontAwesome",
+      "Carte avec grand donut (demi-cercle) central de progression",
+      "Petits arcs de progression pour chaque métrique",
+      "Barre de données avec segments colorés",
+      "Légende avec points colorés spectraux"
+    ],
+    "do": [
+      "Utiliser SVG ou CSS pour les arcs de donut",
+      "Chaque arc = une couleur différente du spectre",
+      "Animer le remplissage de l'arc au chargement"
+    ],
+    "dont": [
+      "Pas d'arcs pleins (uniquement des contours/bordures)",
+      "Pas de fond blanc",
+      "Ne pas empiler plus de 5 arcs sur un même graphique"
+    ],
+    "responsive": "Mobile : graphiques en pleine largeur, sidebar masquée."
+  },
+  {
+    "id": "arc-brand",
+    "name": "Arc Brand Identity",
+    "tagline": "Site de marque où le demi-cercle est le logo et le motif directeur.",
+    "intent": "Identité visuelle complète basée sur la forme du demi-cercle concentrique comme signature graphique de la marque.",
+    "keywords": "marque, identité, arc, demi-cercle, logo",
+    "style": [
+      "Le logo est un demi-cercle concentrique stylisé",
+      "Le motif se répète à différentes tailles dans toute la page",
+      "Palette limitée : 2-3 couleurs du spectre maximum",
+      "Typographie très grande, contrastée"
+    ],
+    "tags": ["light", "brand", "arc", "identity", "geometric"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#E63946",
+      "secondary": "#457B9D",
+      "bg": "#FFFFFF",
+      "surface": "#F8F8F8",
+      "text": "#0A0A0A",
+      "muted": "#666666",
+      "border": "#EEEEEE"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Outfit",
+      "body": "Inter",
+      "google": "Outfit:wght@400;600;800|Inter:wght@400;500",
+      "hero": "72px/800/-2px",
+      "h2": "40px/800/-1px",
+      "body_size": "16px, line-height 1.65",
+      "case": "none",
+      "detail": "Très grandes tailles, fort contraste."
+    },
+    "shape": {
+      "radius": "0",
+      "border": "none",
+      "shadow": "none"
+    },
+    "layout": {
+      "container": "1200px",
+      "hero": "split",
+      "features": "grid-3",
+      "spacing": "120px entre sections",
+      "grid": "50/50 texte/arc"
+    },
+    "motion": {
+      "load": "rotation lente de l'arc logo (360deg en 20s)",
+      "hover": "les arcs changent de couleur dans la palette",
+      "scroll": "les arcs suivent légèrement le scroll"
+    },
+    "components": [
+      "Logo : demi-cercle concentrique SVG en 2 couleurs",
+      "Hero split : texte à gauche, grand arc à droite",
+      "Section manifeste avec arc décoratif en filigrane",
+      "Galerie de déclinaisons du motif arc",
+      "Footer avec petits arcs décoratifs"
+    ],
+    "do": [
+      "Le demi-cercle est TOUJOURS coupé horizontalement en bas (jamais un cercle complet)",
+      "Répéter le motif à des échelles très différentes (4px jusqu'à 600px)",
+      "Garder seulement 2-3 couleurs du spectre dans toute la page"
+    ],
+    "dont": [
+      "Pas de remplissage plein des arcs (uniquement les contours)",
+      "Pas de background complexe",
+      "Ne pas utiliser toutes les couleurs du spectre simultanément"
+    ],
+    "responsive": "Mobile : arc en pleine largeur sous le texte."
+  },
+  {
+    "id": "arc-portfolio",
+    "name": "Arc Portfolio",
+    "tagline": "Portfolio créatif avec arcs comme éléments de séparation de sections.",
+    "intent": "Portfolio de designer ou d'artiste utilisant les formes d'arc comme éléments de mise en page et de transition entre sections.",
+    "keywords": "portfolio, arc, créatif, sections, transitions",
+    "style": [
+      "Fond sombre avec arcs lumineux en bas de chaque section hero",
+      "Projets présentés dans des cartes avec un arc décoratif en coin",
+      "Transitions d'une section à l'autre via un arc inversé",
+      "Typographie très grande et contrastée"
+    ],
+    "tags": ["dark", "portfolio", "arc", "creative", "geometric"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#FF5500",
+      "secondary": "#FFD700",
+      "bg": "#0A0A0A",
+      "surface": "#141414",
+      "text": "#FFFFFF",
+      "muted": "#666666",
+      "border": "#222222"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Outfit",
+      "body": "Inter",
+      "google": "Outfit:wght@400;700;800|Inter:wght@400;500",
+      "hero": "80px/800/-3px",
+      "h2": "36px/700/-1px",
+      "body_size": "16px, line-height 1.6",
+      "case": "none",
+      "detail": "Très grand et impactant."
+    },
+    "shape": {
+      "radius": "12px",
+      "border": "1px solid #222222",
+      "shadow": "0 20px 40px rgba(0,0,0,0.6)"
+    },
+    "layout": {
+      "container": "1280px",
+      "hero": "centered",
+      "features": "gallery",
+      "spacing": "0 (sections enchaînées par les arcs)",
+      "grid": "2 colonnes pour les projets"
+    },
+    "motion": {
+      "load": "les arcs de transition se dessinent au scroll",
+      "hover": "arc décoratif des cartes de projet passe en couleur primaire",
+      "scroll": "l'arc en bas du hero suit le scroll vers l'intérieur"
+    },
+    "components": [
+      "Hero centré avec arcs en bas (rouge → orange en 4 bandes)",
+      "Section projets avec cartes décorées d'arcs",
+      "Transition arc entre chaque section principale",
+      "Footer avec arc inversé (plat en haut, arrondi en bas)"
+    ],
+    "do": [
+      "Utiliser les arcs comme séparateurs de section (concave/convexe)",
+      "Chaque arc de séparation est monochrome (une seule couleur)",
+      "Les arcs sur les cartes sont petits et discrets sauf au hover"
+    ],
+    "dont": [
+      "Pas d'arcs multicolores sur les séparateurs de section",
+      "Pas de fond clair",
+      "Ne pas remplir les arcs entièrement"
+    ],
+    "responsive": "Mobile : arcs réduits, projets en une colonne."
+  }
+]

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif; background:#1C1C1E; color:#fff; display:flex; flex-direction:column; height:100vh; overflow:hidden; }
+
+        /* TOP PLAYER BAR */
+        .player-bar { height:72px; background:#111; border-bottom:1px solid #2a2a2a; display:flex; align-items:center; padding:0 20px; gap:20px; flex-shrink:0; }
+        .tls { display:flex; gap:6px; }
+        .tl { width:12px; height:12px; border-radius:50%; }
+        .tl.r { background:#FF5F57; } .tl.y { background:#FFBD2E; } .tl.g { background:#28C840; }
+        .now-playing { display:flex; align-items:center; gap:12px; min-width:200px; }
+        .np-cover { width:42px; height:42px; border-radius:8px; background:linear-gradient(135deg,#FF2D55,#5E5CE6); flex-shrink:0; }
+        .np-title { font-size:13px; font-weight:600; }
+        .np-artist { font-size:11.5px; color:#888; }
+        .controls { display:flex; align-items:center; gap:16px; flex:1; justify-content:center; }
+        .ctrl-btn { background:none; border:none; color:#888; cursor:pointer; font-size:18px; transition:.15s; }
+        .ctrl-btn:hover { color:#fff; }
+        .ctrl-btn.play { width:38px; height:38px; border-radius:50%; background:#fff; color:#000; font-size:16px; display:flex; align-items:center; justify-content:center; }
+        .progress-wrap { display:flex; align-items:center; gap:10px; }
+        .time { font-size:11px; color:#666; }
+        .progress { width:200px; height:4px; background:#333; border-radius:2px; cursor:pointer; }
+        .progress-fill { width: 38%; height:100%; background:#fff; border-radius:2px; }
+        .vol-wrap { display:flex; align-items:center; gap:8px; min-width:140px; }
+        .vol-bar { width:80px; height:4px; background:#333; border-radius:2px; }
+        .vol-fill { width:70%; height:100%; background:#888; border-radius:2px; }
+
+        /* BODY */
+        .body { flex:1; display:flex; overflow:hidden; }
+
+        /* SIDEBAR */
+        .sidebar { width:220px; min-width:220px; background:#111; border-right:1px solid #222; display:flex; flex-direction:column; padding:16px 0; }
+        .brand { padding:0 16px 20px; font-size:16px; font-weight:800; color:#fff; letter-spacing:-.3px; }
+        .brand span { color:#FF2D55; }
+        .sb-label { font-size:10px; color:#555; text-transform:uppercase; letter-spacing:.8px; padding:0 16px 8px; }
+        .sb-item { display:flex; align-items:center; gap:10px; padding:8px 12px; margin:0 4px; border-radius:8px; cursor:pointer; color:#888; font-size:13px; text-decoration:none; }
+        .sb-item:hover { background:#1c1c1c; color:#ccc; }
+        .sb-item.active { background:#1a0a0d; color:#FF2D55; }
+        .sb-item i { width:18px; text-align:center; font-size:13px; }
+
+        /* MAIN */
+        .main { flex:1; overflow-y:auto; padding:28px; }
+        .section-title { font-size:22px; font-weight:800; margin-bottom:20px; }
+        .albums-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:18px; margin-bottom:36px; }
+        .album { cursor:pointer; }
+        .album:hover .album-cover { opacity:.8; }
+        .album:hover .play-overlay { opacity:1; }
+        .album-cover-wrap { position:relative; margin-bottom:10px; }
+        .album-cover { width:100%; aspect-ratio:1; border-radius:10px; }
+        .play-overlay { position:absolute; bottom:8px; right:8px; width:34px; height:34px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; font-size:12px; color:#000; opacity:0; transition:.2s; box-shadow:0 4px 12px rgba(0,0,0,.5); cursor:pointer; border:none; }
+        .album-name { font-size:13px; font-weight:600; }
+        .album-artist { font-size:12px; color:#666; }
+    </style>
+</head>
+<body>
+    <div class="player-bar">
+        <div class="tls"><div class="tl r"></div><div class="tl y"></div><div class="tl g"></div></div>
+        <div class="now-playing">
+            <div class="np-cover"></div>
+            <div><div class="np-title">Midnight Drive</div><div class="np-artist">Neon Pulse</div></div>
+        </div>
+        <div class="controls">
+            <button class="ctrl-btn"><i class="fa-solid fa-shuffle"></i></button>
+            <button class="ctrl-btn"><i class="fa-solid fa-backward-step"></i></button>
+            <button class="ctrl-btn play"><i class="fa-solid fa-pause"></i></button>
+            <button class="ctrl-btn"><i class="fa-solid fa-forward-step"></i></button>
+            <button class="ctrl-btn"><i class="fa-solid fa-repeat"></i></button>
+        </div>
+        <div class="progress-wrap">
+            <span class="time">1:42</span>
+            <div class="progress"><div class="progress-fill"></div></div>
+            <span class="time">4:28</span>
+        </div>
+        <div class="vol-wrap">
+            <i class="fa-solid fa-volume-low" style="color:#666;font-size:13px;"></i>
+            <div class="vol-bar"><div class="vol-fill"></div></div>
+            <i class="fa-solid fa-volume-high" style="color:#666;font-size:13px;"></i>
+        </div>
+    </div>
+
+    <div class="body">
+        <aside class="sidebar">
+            <div class="brand">Sound<span>Hub</span></div>
+            <div class="sb-label">Explorer</div>
+            <a class="sb-item active" href="#"><i class="fa-solid fa-house"></i> Accueil</a>
+            <a class="sb-item" href="#"><i class="fa-solid fa-magnifying-glass"></i> Rechercher</a>
+            <a class="sb-item" href="#"><i class="fa-solid fa-record-vinyl"></i> Ma bibliothèque</a>
+            <div class="sb-label" style="margin-top:16px">Playlists</div>
+            <a class="sb-item" href="#"><i class="fa-solid fa-heart"></i> Favoris</a>
+            <a class="sb-item" href="#"><i class="fa-solid fa-list-music"></i> Late Night</a>
+            <a class="sb-item" href="#"><i class="fa-solid fa-list-music"></i> Focus Mode</a>
+            <a class="sb-item" href="#"><i class="fa-solid fa-list-music"></i> Workout</a>
+            <a class="sb-item" href="#"><i class="fa-solid fa-plus"></i> Nouvelle playlist</a>
+        </aside>
+
+        <div class="main">
+            <div class="section-title">Bonne soirée</div>
+            <div class="albums-grid">
+                <div class="album">
+                    <div class="album-cover-wrap">
+                        <div class="album-cover" style="background:linear-gradient(135deg,#FF2D55,#FF9F0A);"></div>
+                        <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="album-name">Midnight Drive</div>
+                    <div class="album-artist">Neon Pulse</div>
+                </div>
+                <div class="album">
+                    <div class="album-cover-wrap">
+                        <div class="album-cover" style="background:linear-gradient(135deg,#5E5CE6,#0A84FF);"></div>
+                        <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="album-name">Solar Bloom</div>
+                    <div class="album-artist">Atlas Echo</div>
+                </div>
+                <div class="album">
+                    <div class="album-cover-wrap">
+                        <div class="album-cover" style="background:linear-gradient(135deg,#30D158,#0A84FF);"></div>
+                        <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="album-name">Forest Rain</div>
+                    <div class="album-artist">Driftwave</div>
+                </div>
+                <div class="album">
+                    <div class="album-cover-wrap">
+                        <div class="album-cover" style="background:linear-gradient(135deg,#FF9F0A,#FF2D55);"></div>
+                        <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="album-name">Ember Coast</div>
+                    <div class="album-artist">Lunar Tide</div>
+                </div>
+                <div class="album">
+                    <div class="album-cover-wrap">
+                        <div class="album-cover" style="background:linear-gradient(135deg,#BF5AF2,#FF2D55);"></div>
+                        <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="album-name">Violet Haze</div>
+                    <div class="album-artist">Spectra</div>
+                </div>
+                <div class="album">
+                    <div class="album-cover-wrap">
+                        <div class="album-cover" style="background:linear-gradient(135deg,#333,#555);"></div>
+                        <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="album-name">Concrete Echo</div>
+                    <div class="album-artist">Greywave</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

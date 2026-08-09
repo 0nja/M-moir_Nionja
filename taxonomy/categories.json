@@ -48,5 +48,15 @@
     "id": "niche-special",
     "name": "Niche & Spécial",
     "description": "Web3, gaming, data viz, automobile, spatial, associatif."
+  },
+  {
+    "id": "mac-sidebar",
+    "name": "Mac Sidebar & Dashboards",
+    "description": "Interfaces avec barre latérale style macOS, points rouge/jaune/vert, icônes FontAwesome."
+  },
+  {
+    "id": "rainbow-gradient",
+    "name": "Arcs & Demi-cercles",
+    "description": "Designs utilisant la forme de l'arc-en-ciel : demi-cercles concentriques empilés comme motif graphique principal."
   }
 ]

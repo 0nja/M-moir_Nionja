@@ -1,0 +1,714 @@
+[
+  {
+    "id": "sidebar-dark-dashboard",
+    "name": "Dark Dashboard Sidebar",
+    "tagline": "Dashboard sombre avec barre latérale gauche style macOS.",
+    "intent": "Interface d'administration complète en mode sombre avec navigation latérale, statistiques et graphiques.",
+    "keywords": "sidebar, dark, dashboard, macos, fontawesome",
+    "style": [
+      "Barre latérale sombre (#111) à gauche avec les 3 points macOS (rouge, jaune, vert)",
+      "Fond général #1a1a1a, cartes en #1c1c1e",
+      "Icônes Font Awesome pour chaque élément du menu",
+      "Cartes de statistiques avec indicateurs de couleur"
+    ],
+    "tags": ["dark", "sidebar", "dashboard", "macos", "fontawesome"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#0A84FF",
+      "secondary": "#30D158",
+      "bg": "#1a1a1a",
+      "surface": "#1c1c1e",
+      "text": "#FFFFFF",
+      "muted": "#888888",
+      "border": "#2a2a2a"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700",
+      "hero": "22px/700/0",
+      "h2": "16px/600/0",
+      "body_size": "14px, line-height 1.5",
+      "case": "none",
+      "detail": "Interface dense, Inter pour la lisibilité."
+    },
+    "shape": {
+      "radius": "12px",
+      "border": "1px solid #2a2a2a",
+      "shadow": "0 10px 30px rgba(0,0,0,0.5)"
+    },
+    "layout": {
+      "container": "100%",
+      "hero": "none",
+      "features": "grid-4",
+      "spacing": "16px",
+      "grid": "sidebar 240px + contenu fluide"
+    },
+    "motion": {
+      "load": "fade-in 300ms",
+      "hover": "fond item nav rgba(255,255,255,0.05)",
+      "scroll": "scroll vertical du contenu uniquement"
+    },
+    "components": [
+      "Sidebar gauche avec points macOS (rouge, jaune, vert) en haut",
+      "Menu de navigation avec icônes FontAwesome",
+      "Topbar avec titre et icônes d'action",
+      "Grille de 4 cartes de statistiques",
+      "Graphique en barres + liste de répartition"
+    ],
+    "do": [
+      "Sidebar fixe, contenu scrollable",
+      "Points macOS toujours visibles en haut de la sidebar",
+      "Utiliser FontAwesome pour chaque icône de menu"
+    ],
+    "dont": [
+      "Aucun emoji autorisé",
+      "Pas de navbar horizontale en haut",
+      "Pas de fond clair"
+    ],
+    "responsive": "Mobile : sidebar masquée, accessible via fa-bars.",
+    "demo": "/demos/sidebar-dark-dashboard"
+  },
+  {
+    "id": "sidebar-light-admin",
+    "name": "Light Admin Sidebar",
+    "tagline": "Panneau d'administration clair avec sidebar style macOS.",
+    "intent": "Interface de gestion clair, structurée et professionnelle avec navigation latérale et contenu principal.",
+    "keywords": "sidebar, light, admin, macos, fontawesome",
+    "style": [
+      "Sidebar blanche (#fff) avec séparation fine à droite",
+      "Points macOS (rouge, jaune, vert) intégrés dans l'en-tête de la sidebar",
+      "Barre de recherche intégrée dans la sidebar",
+      "Contenu sur fond gris clair (#f5f5f5)"
+    ],
+    "tags": ["light", "sidebar", "admin", "macos", "fontawesome"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#007AFF",
+      "secondary": "#34C759",
+      "bg": "#f5f5f5",
+      "surface": "#FFFFFF",
+      "text": "#111111",
+      "muted": "#999999",
+      "border": "#e8e8e8"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700",
+      "hero": "20px/700/0",
+      "h2": "14px/600/0",
+      "body_size": "13px, line-height 1.5",
+      "case": "none",
+      "detail": "Compact et lisible."
+    },
+    "shape": {
+      "radius": "10px",
+      "border": "1px solid #ebebeb",
+      "shadow": "0 4px 12px rgba(0,0,0,0.06)"
+    },
+    "layout": {
+      "container": "100%",
+      "hero": "none",
+      "features": "grid-4",
+      "spacing": "14px",
+      "grid": "sidebar 230px + contenu"
+    },
+    "motion": {
+      "load": "fade simple",
+      "hover": "fond gris clair sur les items de menu",
+      "scroll": "standard"
+    },
+    "components": [
+      "Sidebar blanche avec points macOS en haut",
+      "Barre de recherche intégrée",
+      "Navigation avec icônes FontAwesome et badges",
+      "Topbar avec fil d'ariane et boutons d'action",
+      "Grille de stats + tableau de données"
+    ],
+    "do": [
+      "Sidebar toujours blanche, même sur fond gris",
+      "Points macOS bien visibles en haut à gauche",
+      "FontAwesome pour toutes les icônes"
+    ],
+    "dont": [
+      "Aucun emoji",
+      "Pas de fond sombre",
+      "Pas de typographie trop grande"
+    ],
+    "responsive": "Mobile : sidebar en drawer.",
+    "demo": "/demos/sidebar-light-admin"
+  },
+  {
+    "id": "sidebar-dark-code-editor",
+    "name": "Code Editor Sidebar",
+    "tagline": "Éditeur de code style VS Code avec sidebar d'exploration.",
+    "intent": "Interface d'IDE web avec sidebar de fichiers, onglets et éditeur principal.",
+    "keywords": "code, editor, sidebar, dark, fontawesome",
+    "style": [
+      "Activity bar d'icônes à gauche (très étroite)",
+      "Sidebar d'exploration de fichiers juste à droite",
+      "Points macOS dans la sidebar de fichiers",
+      "Zone d'édition principale avec police monospace"
+    ],
+    "tags": ["dark", "sidebar", "code", "editor", "fontawesome"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#569CD6",
+      "secondary": "#4EC9B0",
+      "bg": "#1E1E1E",
+      "surface": "#252526",
+      "text": "#D4D4D4",
+      "muted": "#808080",
+      "border": "#333333"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "JetBrains Mono",
+      "body": "JetBrains Mono",
+      "google": "JetBrains+Mono:wght@400;500",
+      "hero": "14px/500/0",
+      "h2": "12px/500/0",
+      "body_size": "14px, line-height 1.6",
+      "case": "none",
+      "detail": "Monospace obligatoire."
+    },
+    "shape": {
+      "radius": "0",
+      "border": "1px solid #333333",
+      "shadow": "none"
+    },
+    "layout": {
+      "container": "100%",
+      "hero": "none",
+      "features": "none",
+      "spacing": "0",
+      "grid": "activity bar 48px + sidebar 200px + éditeur"
+    },
+    "motion": {
+      "load": "instantané",
+      "hover": "surlignage de ligne de fichier",
+      "scroll": "vertical dans l'éditeur"
+    },
+    "components": [
+      "Activity bar avec icônes FontAwesome (fa-copy, fa-search, fa-code-branch)",
+      "Sidebar de fichiers avec points macOS en haut",
+      "Barre d'onglets pour les fichiers ouverts",
+      "Éditeur principal avec numéros de ligne"
+    ],
+    "do": [
+      "Points macOS dans l'explorer",
+      "Coins carrés (radius 0) pour simuler VS Code",
+      "FontAwesome pour toute l'iconographie"
+    ],
+    "dont": [
+      "Aucun emoji",
+      "Pas de gradients ni de couleurs vives",
+      "Pas de police sans-serif pour le code"
+    ],
+    "responsive": "Mobile : masquer les sidebars.",
+    "demo": "/demos/sidebar-dark-code-editor"
+  },
+  {
+    "id": "sidebar-kanban",
+    "name": "Kanban Board Sidebar",
+    "tagline": "Outil Kanban avec sidebar de navigation et colonnes de tâches.",
+    "intent": "Application de gestion de projet au design premium avec sidebar macOS et board interactif.",
+    "keywords": "kanban, sidebar, task, dark, fontawesome",
+    "style": [
+      "Sidebar sombre avec points macOS",
+      "Board Kanban en colonnes avec scroll horizontal",
+      "Cartes de tâches avec tags colorés",
+      "Icônes FontAwesome sur les statuts et membres"
+    ],
+    "tags": ["dark", "sidebar", "kanban", "productivity", "fontawesome"],
+    "difficulty": "advanced",
+    "mode": "dark",
+    "colors": {
+      "primary": "#5E5CE6",
+      "secondary": "#0A84FF",
+      "bg": "#1C1C1E",
+      "surface": "#2C2C2E",
+      "text": "#FFFFFF",
+      "muted": "#8E8E93",
+      "border": "#38383A"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600",
+      "hero": "20px/600/0",
+      "h2": "14px/600/0",
+      "body_size": "13px, line-height 1.4",
+      "case": "none",
+      "detail": "Dense et précis."
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #38383A",
+      "shadow": "0 4px 16px rgba(0,0,0,0.4)"
+    },
+    "layout": {
+      "container": "100%",
+      "hero": "none",
+      "features": "kanban",
+      "spacing": "16px",
+      "grid": "sidebar 220px + colonnes kanban en scroll horizontal"
+    },
+    "motion": {
+      "load": "cartes en cascade",
+      "hover": "cartes soulevées de 3px",
+      "scroll": "horizontal sur le board"
+    },
+    "components": [
+      "Sidebar avec espaces de travail et points macOS",
+      "Header de board avec filtres FontAwesome",
+      "Colonnes (Todo, En cours, Terminé)",
+      "Cartes de tâches avec labels colorés et avatars"
+    ],
+    "do": [
+      "Sidebar fixe, board scrollable horizontalement",
+      "Points macOS en haut à gauche de la sidebar",
+      "FontAwesome pour les indicateurs de tâches"
+    ],
+    "dont": [
+      "Aucun emoji",
+      "Pas de scroll vertical global",
+      "Pas de fond clair"
+    ],
+    "responsive": "Mobile : vue liste des tâches uniquement.",
+    "demo": "/demos/sidebar-kanban"
+  },
+  {
+    "id": "sidebar-mail-client",
+    "name": "Mail Client Sidebar",
+    "tagline": "Webmail 3 colonnes type Apple Mail avec sidebar de dossiers.",
+    "intent": "Interface de messagerie structurée en 3 zones distinctes avec sidebar, liste et vue email.",
+    "keywords": "mail, sidebar, 3-colonnes, light, fontawesome",
+    "style": [
+      "Sidebar (dossiers) + liste des messages + vue détaillée",
+      "Points macOS dans la première colonne",
+      "Chaque dossier avec icône FontAwesome",
+      "Bulles de couleur pour les labels"
+    ],
+    "tags": ["light", "sidebar", "mail", "macos", "fontawesome"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#007AFF",
+      "secondary": "#5856D6",
+      "bg": "#FFFFFF",
+      "surface": "#F2F2F7",
+      "text": "#000000",
+      "muted": "#8E8E93",
+      "border": "#C6C6C8"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600",
+      "hero": "16px/600/0",
+      "h2": "14px/500/0",
+      "body_size": "14px, line-height 1.4",
+      "case": "none",
+      "detail": "Compacte et lisible."
+    },
+    "shape": {
+      "radius": "0",
+      "border": "1px solid #C6C6C8",
+      "shadow": "none"
+    },
+    "layout": {
+      "container": "100%",
+      "hero": "none",
+      "features": "none",
+      "spacing": "0",
+      "grid": "sidebar 200px + liste 280px + vue email 1fr"
+    },
+    "motion": {
+      "load": "instantané",
+      "hover": "ligne de mail surlignée en bleu pâle",
+      "scroll": "indépendant par colonne"
+    },
+    "components": [
+      "Sidebar dossiers avec points macOS (fa-inbox, fa-paper-plane)",
+      "Liste de messages avec aperçu",
+      "Vue email avec toolbar FontAwesome",
+      "Bouton Nouveau message"
+    ],
+    "do": [
+      "Points macOS dans la première colonne",
+      "Scroll indépendant pour chaque colonne",
+      "FontAwesome pour les dossiers et actions"
+    ],
+    "dont": [
+      "Aucun emoji",
+      "Pas de scroll global de la page",
+      "Pas d'images d'illustration"
+    ],
+    "responsive": "Mobile : afficher une colonne à la fois.",
+    "demo": "/demos/sidebar-mail-client"
+  },
+  {
+    "id": "sidebar-music-player",
+    "name": "Music Player Sidebar",
+    "tagline": "Lecteur audio sombre avec sidebar de bibliothèque musicale.",
+    "intent": "Interface de streaming musical avec sidebar de navigation, grille d'albums et lecteur fixe.",
+    "keywords": "music, player, sidebar, dark, fontawesome",
+    "style": [
+      "Sidebar sombre avec points macOS et bibliothèque musicale",
+      "Grille d'albums avec pochettes colorées",
+      "Lecteur fixe en haut avec contrôles FontAwesome",
+      "Effets de glassmorphism sur la sidebar"
+    ],
+    "tags": ["dark", "sidebar", "music", "media", "fontawesome"],
+    "difficulty": "intermediate",
+    "mode": "dark",
+    "colors": {
+      "primary": "#FF2D55",
+      "secondary": "#5E5CE6",
+      "bg": "#1C1C1E",
+      "surface": "#2C2C2E",
+      "text": "#FFFFFF",
+      "muted": "#8E8E93",
+      "border": "#38383A"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600;700",
+      "hero": "28px/700/0",
+      "h2": "20px/600/0",
+      "body_size": "14px, line-height 1.4",
+      "case": "none",
+      "detail": "Typographie forte pour les titres."
+    },
+    "shape": {
+      "radius": "12px",
+      "border": "1px solid #38383A",
+      "shadow": "0 8px 24px rgba(0,0,0,0.5)"
+    },
+    "layout": {
+      "container": "100%",
+      "hero": "none",
+      "features": "grid-4",
+      "spacing": "24px",
+      "grid": "sidebar 220px + contenu principal"
+    },
+    "motion": {
+      "load": "fade pochettes d'albums",
+      "hover": "bouton play visible (fa-play-circle)",
+      "scroll": "smooth"
+    },
+    "components": [
+      "Sidebar avec points macOS et navigation (fa-music, fa-microphone, fa-radio)",
+      "Lecteur fixe en haut (fa-play, fa-forward, fa-volume-high)",
+      "Grille d'albums en carrés arrondis",
+      "Barre de progression audio"
+    ],
+    "do": [
+      "Points macOS en haut à gauche de la sidebar",
+      "Lecteur compact visible en permanence",
+      "FontAwesome pour tous les contrôles"
+    ],
+    "dont": [
+      "Aucun emoji",
+      "Pas de fond clair",
+      "Pas de vidéo"
+    ],
+    "responsive": "Mobile : lecteur en bottom sheet.",
+    "demo": "/demos/sidebar-music-player"
+  },
+  {
+    "id": "sidebar-settings",
+    "name": "Settings Panel Sidebar",
+    "tagline": "Panneau de réglages clair style Préférences Système macOS.",
+    "intent": "Interface de configuration simple et structurée avec sidebar de catégories et vue de formulaire.",
+    "keywords": "settings, sidebar, light, macos, fontawesome",
+    "style": [
+      "Icônes de catégories FontAwesome avec fond carré arrondi coloré",
+      "Points macOS en haut de la sidebar",
+      "Formulaires groupés sur fond gris clair",
+      "Toggle switches stylisés en CSS"
+    ],
+    "tags": ["light", "sidebar", "settings", "macos", "fontawesome"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#007AFF",
+      "secondary": "#FF9500",
+      "bg": "#F2F2F7",
+      "surface": "#FFFFFF",
+      "text": "#000000",
+      "muted": "#8E8E93",
+      "border": "#D1D1D6"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500",
+      "hero": "18px/600/0",
+      "h2": "15px/500/0",
+      "body_size": "14px, line-height 1.4",
+      "case": "none",
+      "detail": "Interface système, lisible et dense."
+    },
+    "shape": {
+      "radius": "10px",
+      "border": "1px solid #D1D1D6",
+      "shadow": "0 1px 3px rgba(0,0,0,0.08)"
+    },
+    "layout": {
+      "container": "800px",
+      "hero": "none",
+      "features": "list",
+      "spacing": "20px",
+      "grid": "sidebar 200px + form 1fr"
+    },
+    "motion": {
+      "load": "scale up de la fenêtre",
+      "hover": "gris clair sur les lignes de menu",
+      "scroll": "standard"
+    },
+    "components": [
+      "Sidebar avec points macOS et catégories iconifiées",
+      "Section Profil avec avatar et infos",
+      "Formulaires groupés avec toggles",
+      "Boutons Enregistrer et Annuler"
+    ],
+    "do": [
+      "Icônes FontAwesome dans des carrés arrondis colorés",
+      "Points macOS dans l'en-tête de la sidebar",
+      "Fenêtre compacte centrée"
+    ],
+    "dont": [
+      "Aucun emoji",
+      "Pas de plein écran",
+      "Pas d'images décoratives"
+    ],
+    "responsive": "Mobile : une seule colonne.",
+    "demo": "/demos/sidebar-settings"
+  },
+  {
+    "id": "sidebar-chat-app",
+    "name": "Chat App Sidebar",
+    "tagline": "Application de messagerie avec sidebar de contacts style macOS.",
+    "intent": "Interface de chat ou de support client avec sidebar de conversations et zone de message.",
+    "keywords": "chat, sidebar, messages, light, fontawesome",
+    "style": [
+      "Sidebar de contacts à gauche avec points macOS",
+      "Bulles de messages bleues et grises",
+      "Zone de saisie avec icônes d'outils FontAwesome",
+      "Design épuré et centré sur le contenu"
+    ],
+    "tags": ["light", "sidebar", "chat", "macos", "fontawesome"],
+    "difficulty": "intermediate",
+    "mode": "light",
+    "colors": {
+      "primary": "#007AFF",
+      "secondary": "#E5E5EA",
+      "bg": "#FFFFFF",
+      "surface": "#F2F2F7",
+      "text": "#000000",
+      "muted": "#8E8E93",
+      "border": "#D1D1D6"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500",
+      "hero": "16px/600/0",
+      "h2": "15px/500/0",
+      "body_size": "15px, line-height 1.4",
+      "case": "none",
+      "detail": "Bulles lisibles et messages nets."
+    },
+    "shape": {
+      "radius": "20px",
+      "border": "1px solid #D1D1D6",
+      "shadow": "none"
+    },
+    "layout": {
+      "container": "100%",
+      "hero": "none",
+      "features": "none",
+      "spacing": "0",
+      "grid": "sidebar 260px + zone chat 1fr"
+    },
+    "motion": {
+      "load": "fade",
+      "hover": "coloration légère de la liste de contact",
+      "scroll": "aligné en bas pour les messages"
+    },
+    "components": [
+      "Sidebar contacts avec points macOS et barre de recherche",
+      "Header de conversation avec nom et statut FontAwesome",
+      "Bulles de messages arrondies",
+      "Input avec fa-paper-plane et fa-paperclip"
+    ],
+    "do": [
+      "Points macOS en haut à gauche de la sidebar",
+      "Bulles bleu pour soi, gris pour l'autre",
+      "FontAwesome pour les statuts et actions"
+    ],
+    "dont": [
+      "Absolument aucun emoji",
+      "Pas de texte marketing",
+      "Pas de fond sombre"
+    ],
+    "responsive": "Mobile : plein écran pour la conversation.",
+    "demo": "/demos/sidebar-chat-app"
+  },
+  {
+    "id": "sidebar-file-manager",
+    "name": "File Manager Sidebar",
+    "tagline": "Gestionnaire de fichiers clair style Finder macOS.",
+    "intent": "Interface de gestion de fichiers ou de cloud storage avec sidebar de navigation et vue principale en grille.",
+    "keywords": "finder, files, sidebar, light, fontawesome",
+    "style": [
+      "Sidebar translucide avec raccourcis FontAwesome (Bureau, Téléchargements)",
+      "Points macOS en haut à gauche",
+      "Vue grille avec grandes icônes de dossiers FontAwesome",
+      "Barre d'outils supérieure"
+    ],
+    "tags": ["light", "sidebar", "finder", "files", "fontawesome"],
+    "difficulty": "beginner",
+    "mode": "light",
+    "colors": {
+      "primary": "#007AFF",
+      "secondary": "#5856D6",
+      "bg": "#FFFFFF",
+      "surface": "#F2F2F7",
+      "text": "#000000",
+      "muted": "#8E8E93",
+      "border": "#D1D1D6"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500",
+      "hero": "13px/500/0",
+      "h2": "12px/500/0",
+      "body_size": "13px, line-height 1.4",
+      "case": "none",
+      "detail": "Petite typographie, style Finder."
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #D1D1D6",
+      "shadow": "0 4px 16px rgba(0,0,0,0.08)"
+    },
+    "layout": {
+      "container": "100%",
+      "hero": "none",
+      "features": "grid-5",
+      "spacing": "20px",
+      "grid": "sidebar 200px + grille de fichiers"
+    },
+    "motion": {
+      "load": "fade simple",
+      "hover": "icône fa-folder devient fa-folder-open",
+      "scroll": "standard"
+    },
+    "components": [
+      "Sidebar avec points macOS et icônes FontAwesome par emplacement",
+      "Toolbar supérieure (fa-th-large, fa-list, fa-search)",
+      "Grille principale de fichiers et dossiers colorés",
+      "Barre de statut en bas (taille, date)"
+    ],
+    "do": [
+      "Colorer les dossiers FontAwesome en bleu macOS",
+      "Points macOS alignés parfaitement",
+      "Fenêtre avec ombre portée"
+    ],
+    "dont": [
+      "Aucun emoji",
+      "Pas de grandes polices marketing",
+      "Pas de dégradés multicolores"
+    ],
+    "responsive": "Mobile : vue liste uniquement.",
+    "demo": "/demos/sidebar-file-manager"
+  },
+  {
+    "id": "sidebar-calendar",
+    "name": "Calendar App Sidebar",
+    "tagline": "Calendrier mensuel type iCal avec sidebar de navigation.",
+    "intent": "Interface de planification ou de prise de rendez-vous avec sidebar et grille de calendrier.",
+    "keywords": "calendar, sidebar, planning, light, fontawesome",
+    "style": [
+      "Toolbar supérieure avec points macOS intégrés à gauche",
+      "Sidebar avec mini-calendrier et liste de calendriers",
+      "Grille principale du mois avec événements en blocs colorés",
+      "Contrôles de navigation FontAwesome"
+    ],
+    "tags": ["light", "sidebar", "calendar", "productivity", "fontawesome"],
+    "difficulty": "advanced",
+    "mode": "light",
+    "colors": {
+      "primary": "#FF2D55",
+      "secondary": "#007AFF",
+      "bg": "#FFFFFF",
+      "surface": "#F2F2F7",
+      "text": "#000000",
+      "muted": "#8E8E93",
+      "border": "#E5E5EA"
+    },
+    "bg": "plain",
+    "font": {
+      "heading": "Inter",
+      "body": "Inter",
+      "google": "Inter:wght@400;500;600",
+      "hero": "22px/700/0",
+      "h2": "14px/500/0",
+      "body_size": "13px, line-height 1.4",
+      "case": "none",
+      "detail": "Chiffres bien visibles, typographie système."
+    },
+    "shape": {
+      "radius": "8px",
+      "border": "1px solid #E5E5EA",
+      "shadow": "none"
+    },
+    "layout": {
+      "container": "100%",
+      "hero": "none",
+      "features": "grid",
+      "spacing": "0",
+      "grid": "sidebar 200px + grille calendrier"
+    },
+    "motion": {
+      "load": "scale légère (0.99 → 1)",
+      "hover": "événement plus vif",
+      "scroll": "vertical semaine"
+    },
+    "components": [
+      "Toolbar unique avec points macOS à gauche et contrôles (fa-chevron-left, fa-chevron-right)",
+      "Sidebar : mini-calendrier + liste des calendriers avec fa-check-square",
+      "Grille principale du mois",
+      "Blocs d'événements colorés avec titre"
+    ],
+    "do": [
+      "Points macOS dans la toolbar principale",
+      "FontAwesome strictement pour toute l'iconographie",
+      "Lignes de grille très fines"
+    ],
+    "dont": [
+      "Zéro emoji",
+      "Pas de dégradés sur les événements",
+      "Pas de marges autour du calendrier dans la fenêtre"
+    ],
+    "responsive": "Mobile : vue agenda quotidienne.",
+    "demo": "/demos/sidebar-calendar"
+  }
+]

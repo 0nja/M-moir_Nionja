@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc Hero Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0C0C14;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 24px 60px;
+            position: relative; z-index: 10;
+        }
+        .logo { font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 32px; }
+        .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; }
+        .nav-links a:hover { color: #fff; }
+        .nav-cta {
+            padding: 10px 24px; border-radius: 50px; border: none;
+            background: #fff; color: #0C0C14; font-size: 14px;
+            font-weight: 600; cursor: pointer;
+        }
+
+        /* HERO avec arcs concentriques */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 60px 40px 0;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-text { position: relative; z-index: 5; margin-bottom: 40px; }
+        .hero-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2); font-size: 12px;
+            color: rgba(255,255,255,0.7); margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 800; line-height: 1.1;
+            letter-spacing: -1.5px; margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 17px; color: rgba(255,255,255,0.6);
+            max-width: 500px; margin: 0 auto 32px; line-height: 1.6;
+        }
+        .cta-row { display: flex; gap: 12px; justify-content: center; }
+        .btn-primary {
+            padding: 13px 28px; border-radius: 50px; border: none;
+            background: #fff; color: #0C0C14; font-size: 14px;
+            font-weight: 700; cursor: pointer;
+        }
+        .btn-ghost {
+            padding: 13px 28px; border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.25);
+            background: transparent; color: #fff;
+            font-size: 14px; cursor: pointer;
+        }
+
+        /* ARC CONTAINER - les demi-cercles */
+        .arc-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            height: 450px;
+            margin: 0 auto;
+        }
+
+        .arc {
+            position: absolute;
+            border-radius: 50%;
+            border-style: solid;
+            /* on cache la moitié basse */
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            /* clip-path pour ne garder que la moitié supérieure */
+        }
+
+        /* Arcs concentriques du plus grand au plus petit */
+        /* Chaque arc = un demi-cercle */
+        .arc-1 { width: 900px; height: 450px; border-width: 36px; border-color: #FF0055; opacity: 0.9; }
+        .arc-2 { width: 820px; height: 410px; border-width: 36px; border-color: #FF5500; opacity: 0.9; }
+        .arc-3 { width: 740px; height: 370px; border-width: 36px; border-color: #FFAA00; opacity: 0.9; }
+        .arc-4 { width: 660px; height: 330px; border-width: 36px; border-color: #00CC55; opacity: 0.9; }
+        .arc-5 { width: 580px; height: 290px; border-width: 36px; border-color: #0088FF; opacity: 0.9; }
+        .arc-6 { width: 500px; height: 250px; border-width: 36px; border-color: #6600FF; opacity: 0.9; }
+        .arc-7 { width: 420px; height: 210px; border-width: 36px; border-color: #CC00CC; opacity: 0.9; }
+
+        /* Masquer le bas du cercle (garder que le demi supérieur) */
+        .arc::after {
+            content: '';
+            position: absolute;
+            bottom: -36px; left: -36px; right: -36px;
+            height: 50%;
+            background: #0C0C14;
+        }
+
+        /* Section en dessous */
+        .features {
+            padding: 100px 60px 80px;
+            max-width: 1100px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px; padding: 28px;
+        }
+        .feature-icon {
+            width: 40px; height: 40px; border-radius: 10px;
+            margin-bottom: 16px; display: flex; align-items: center;
+            justify-content: center; font-size: 18px;
+        }
+        .feature-card h3 { font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+        .feature-card p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Arc<span style="color:rgba(255,255,255,0.4);">UI</span></div>
+        <div class="nav-links">
+            <a href="#">Produit</a>
+            <a href="#">Design</a>
+            <a href="#">Tarifs</a>
+        </div>
+        <button class="nav-cta">Commencer</button>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <div class="hero-badge">Design Archive Vol. 01</div>
+            <h1>Demi-cercles<br>et lumière naturelle</h1>
+            <p>Un design inspiré de la forme de l'arc-en-ciel — des courbes concentriques qui portent la lumière.</p>
+            <div class="cta-row">
+                <button class="btn-primary">Explorer</button>
+                <button class="btn-ghost">En savoir plus</button>
+            </div>
+        </div>
+
+        <!-- Les arcs concentriques -->
+        <div class="arc-container">
+            <div class="arc arc-1"></div>
+            <div class="arc arc-2"></div>
+            <div class="arc arc-3"></div>
+            <div class="arc arc-4"></div>
+            <div class="arc arc-5"></div>
+            <div class="arc arc-6"></div>
+            <div class="arc arc-7"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(255,0,85,0.15);color:#FF0055;">&#9711;</div>
+                <h3>Formes naturelles</h3>
+                <p>Les arcs concentriques évoquent la lumière réfractée dans les gouttes d'eau.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(0,136,255,0.15);color:#0088FF;">&#11835;</div>
+                <h3>Géométrie pure</h3>
+                <p>Des demi-cercles parfaits, espacés de manière égale pour un rythme visuel constant.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(102,0,255,0.15);color:#6600FF;">&#9654;</div>
+                <h3>Profondeur optique</h3>
+                <p>La superposition des couches crée une illusion de profondeur et de mouvement.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
