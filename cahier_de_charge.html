@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahier des Charges - DesignHub AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #050505;
+            --bg-surface: rgba(20, 20, 25, 0.6);
+            --text-main: #f8f9fa;
+            --text-muted: #9ca3af;
+            --accent: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.2);
+            --border: rgba(255, 255, 255, 0.1);
+            --gradient: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Glow Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -20%;
+            left: -10%;
+            width: 70vw;
+            height: 70vw;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+            z-index: -1;
+            filter: blur(100px);
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -20%;
+            right: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 60%);
+            z-index: -1;
+            filter: blur(100px);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 5rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+            animation: fadeInUp 1s ease-out both;
+        }
+
+        .section:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .section:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .section:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.7), 0 0 20px var(--accent-glow);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--gradient);
+        }
+
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.5rem;
+            color: #d1d5db;
+        }
+
+        p,
+        ul {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: #cbd5e1;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .btn-print {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.5);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .btn-print:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px -5px rgba(99, 102, 241, 0.7);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* PRINT STYLES - AS REQUESTED */
+        @media print {
+            @page {
+                margin: 0;
+                /* Supprime complètement les en-têtes (date) et pieds de page (1/2) */
+            }
+
+            body {
+                background: white !important;
+                color: black !important;
+                padding: 1cm !important;
+                margin: 0 !important;
+            }
+
+            body::before,
+            body::after {
+                display: none;
+            }
+
+            .btn-print {
+                display: none;
+            }
+
+            .container {
+                padding: 0;
+                margin-top: 0;
+                max-width: 100% !important;
+            }
+
+            header {
+                margin-bottom: 2rem;
+                padding-top: 1rem;
+            }
+
+            h1 {
+                background: none;
+                color: black;
+                -webkit-text-fill-color: black;
+            }
+
+            h2::before {
+                background: black;
+            }
+
+            .section {
+                background: none;
+                border: 1px solid #ccc;
+                box-shadow: none;
+                border-radius: 0;
+                padding: 1.5rem;
+                page-break-inside: avoid;
+                margin-bottom: 1.5rem;
+            }
+
+            p,
+            ul,
+            h3,
+            li {
+                color: black;
+            }
+        }
+        /* Diagram Container for Markdown */
+        .diagram-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .btn-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--accent);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        .btn-link:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        @media print {
+            .btn-link {
+                display: none;
+            }
+            .diagram-container {
+                background: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Cahier des Charges DTS Nionja</h1>
+            <p>Spécifications techniques et fonctionnelles pour le projet <strong>DesignHub AI</strong>.</p>
+            <a href="#diagramme-architecture" class="btn-link">Voir le diagramme d'architecture ↓</a>
+        </header>
+
+        <main>
+            <div class="section">
+                <h2>1. Présentation du Projet</h2>
+                <p><strong>Nom du projet :</strong> DesignHub AI</p>
+                <p><strong>Objectif :</strong> Créer une bibliothèque d'inspirations de design (100 styles répartis en
+                    10 catégories) destinée aux développeurs utilisant l'Intelligence Artificielle (ChatGPT, Claude,
+                    Gemini, etc.).</p>
+                <p>Contrairement aux constructeurs de sites classiques, l'outil fournit une <strong>description
+                        structurée (design.md)</strong> que l'IA peut directement interpréter pour générer un front-end
+                    correspondant à la vision visuelle.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Public Cible</h2>
+                <ul>
+                    <li>Développeurs front-end et full-stack utilisant des assistants de codage IA.</li>
+                    <li>Designers souhaitant transmettre des spécifications claires à des LLMs.</li>
+                    <li>Créateurs de produits tech nécessitant un prototypage rapide et esthétique.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>3. Fonctionnalités Principales</h2>
+                <ul>
+                    <li><strong>Galerie Interactive :</strong> Consultation de 100 modèles de design avec un système de
+                        recherche par mots-clés et filtres (catégories, modes clair/sombre).</li>
+                    <li><strong>Aperçu en Temps Réel :</strong> Visualisation du rendu final généré à partir des tokens
+                        via un moteur de rendu iframe.</li>
+                    <li><strong>Génération de `design.md` :</strong> Export standardisé et unifié d'un style vers un
+                        format texte lisible par l'IA.</li>
+                    <li><strong>Bouton "Copier le design.md" :</strong> Action en un clic pour envoyer le prompt de
+                        design dans le presse-papiers de l'utilisateur.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>4. Architecture Technique</h2>
+                <h3>Front-end</h3>
+                <ul>
+                    <li>HTML5 sémantique, CSS3 (Vanilla, sans framework imposé) et JavaScript (ES Modules).</li>
+                    <li>Design System intégré gérant dynamiquement les tokens (couleurs, typographies, espacements).
+                    </li>
+                </ul>
+                <h3>Back-end & Build</h3>
+                <ul>
+                    <li>Scripts Node.js (`tools/build.mjs`) pour compiler les données JSON (`taxonomy/styles/`) en
+                        documents statiques.</li>
+                    <li>Aucune base de données active en production : génération statique pour garantir la vitesse et la
+                        simplicité de déploiement.</li>
+                </ul>
+                <h3>Données</h3>
+                <ul>
+                    <li>La source de vérité réside dans les fichiers JSON au sein du dossier `taxonomy/`.</li>
+                </ul>
+                <h3>Lien</h3>
+                <ul>
+                    <li>https://github.com/0nja/M-moir_Nionja.git</li>
+                    <li>https://hubdesign-pi.vercel.app/</li>
+                </ul>
+            </div>
+            
+            <div class="section" id="diagramme-architecture">
+                <h2>5. Diagramme d'Architecture</h2>
+                <p>Flux de données et composants du projet DesignHub AI</p>
+                <div class="diagram-container">
+                    <div class="mermaid">
+                        %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffffff', 'primaryBorderColor': '#d1d5db',
+                        'primaryTextColor': '#111827', 'lineColor': '#6b7280', 'fontFamily': 'Inter'}}}%%
+                        graph TD
+                        A[Source de Vérité<br />taxonomy/*.json] -->|Build| B(Script Node.js<br />tools/build.mjs)
+                        A -->|Lecture dynamique| C[Galerie Web<br />index.html / app.js]
+                        B -->|Génération| C
+                        C -->|Sélection du style| D(Générateur MD<br />lib/designmd.js)
+                        D -->|Copie du prompt| E((Intelligence Artificielle<br />ChatGPT, Claude...))
+
+                        classDef default fill:#fff,stroke:#d1d5db,stroke-width:2px,rx:5px,ry:5px;
+                        classDef ai fill:#f3f4f6,stroke:#9ca3af,stroke-width:2px,stroke-dasharray: 5 5;
+                        class E ai;
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <button class="btn-print" onclick="window.print()">
+        <svg style="width:20px;height:20px;vertical-align:middle;margin-right:8px;" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" />
+            <path d="M6 14h12v8H6z" />
+        </svg>
+        Imprimer le cahier
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+
+</html>
